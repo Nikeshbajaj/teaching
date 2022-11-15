@@ -3,6 +3,8 @@ title: Digital Signal Processing for non-engineers
 layout: base
 ---
 <!--<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script> -->
+<div class="divider-10"></div>
+<br><br><br>
 
 The objective of this section is to make signal processing more intutive for non-engineers, such as clinicians, chemists, statisticians, psychologist etc, who have to deal with different kind of signals and processing. In this tutorial, we will try to avoid math as much as possible and solely focus on characterstics of signal and processing methods such filtering as a box.
 

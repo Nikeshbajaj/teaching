@@ -4,6 +4,9 @@ layout: base
 ---
 <!--<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script> -->
 
+<div class="divider-10"></div>
+<br><br><br>
+
 The objective of this e-book or set of tutorials is to not just go through the mathematical details of approaches but discuss the interepretation in great details to have it on finger-tips. We will dive into details, with a little informal way, see the regrouse math behind and most importantly, we would write a small piece of code for understanding the concept. I will try to make it fun to learn about all this, Not for you, for me (at least) and hope you might enjoy too ;).
 
 
