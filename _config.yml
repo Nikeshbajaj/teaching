@@ -1,0 +1,15 @@
+# Name of website
+title: Teaching | Nikesh Bajaj
+email: nikkeshbajaj@gmail.com
+author: Nikesh Bajaj
+url: https://nikeshbajaj.github.io/teaching
+
+navbar-links:
+  Introduction: "introduction"
+  Experiment:
+    - Experiment: "https://PhyAAt.github.io/experiment/index"
+    - Dataset: "https://PhyAAt.github.io/dataset"
+  Author's home: "http://nikeshbajaj.in"
+
+name: nikeshbajaj.github.io
+markdown: kramdown
