@@ -177,7 +177,7 @@ function draw() {
   textSize(38);
   //stroke(0,255,0,20);
   fill(0);
-  text("V1",width+overlay-50,50)
+  text("V1.1",width+overlay-50,50)
   //fill(0);
   textSize(32);
   stroke(0,0,0,20);
@@ -256,9 +256,9 @@ function draw() {
     }
   }
 
-  PlotPoints(Px.x,Px.y,x0=0,y0=height/2+100,r=[2,20],colorx=P.color,100,Marker='rect');
-  PlotPoints(S1x.x,S1x.y,x0=0,y0=height/2+150,r=[2,20],colorx=S1.color,100,Marker='rect');
-  PlotPoints(S2x.x,S2x.y,x0=0,y0=height/2+200,r=[2,20],colorx=S2.color,100,Marker='rect');
+  PlotPoints(Px.x,Px.y,x0=0,y0=height/2+150,r=[2,20],colorx=P.color,100,Marker='rect');
+  PlotPoints(S1x.x,S1x.y,x0=0,y0=height/2+200,r=[2,20],colorx=S1.color,100,Marker='rect');
+  PlotPoints(S2x.x,S2x.y,x0=0,y0=height/2+250,r=[2,20],colorx=S2.color,100,Marker='rect');
 
   strokeWeight(0);
   stroke(0);
@@ -268,17 +268,17 @@ function draw() {
   if (Px.x.length>0) {
     fill(P.color[0],P.color[1],P.color[2]);
     //noFill();
-    text('P ',50, height/2+100);
+    text('P ',50, height/2+150);
     meanplot = true;
   }
   if (S1x.x.length>0){
     fill(S1.color[0],S1.color[1],S1.color[2]);
-    text('G1',50, height/2+150);
+    text('G1',50, height/2+200);
     meanplot = true;
   }
   if (S2x.x.length>0){
     fill(S2.color[0],S2.color[1],S2.color[2]);
-    text('G2',50, height/2+200);
+    text('G2',50, height/2+250);
     meanplot = true;
   }
 
@@ -299,7 +299,7 @@ function draw() {
   text("values", -(height/2+150), (width+20));
   textSize(25);
   if (meanplot){
-  text('means',-(height/2+150), 18);}
+  text('means',-(height/2+200), 18);}
   //line(0, 0, 150, 0);
   //line(-(width+200), -height, -width+200,  -height/2);
   textSize(45);
@@ -472,7 +472,10 @@ class NormSampler{
     this.sample_sd = 0;
     for (let x in this.Sx) { this.sample_sd += pow(this.sample_mean-x,2)}
 
-    this.sample_sd = sqrt(this.sample_sd/n);
+
+    this.sample_sd = sqrt(this.sample_sd/(n-1));
+
+    this.sample_se = this.sample_sd/(sqrt(n));
   }
   plotCurve(Ylevel){
     //PlotXY(x,y,x0=0,y0=height/2,yx=1,color=(0,0,0))
@@ -488,11 +491,14 @@ class NormSampler{
 
   plotSamples(Ylevel=height/2,r=[10,10],alphax=180){
     PlotPoints(this.Six,this.Sy,x0=0,y0=Ylevel,r=r,colorx=this.color,alphax=alphax);
+
   }
 
   plotSamples_X(Ylevel=height/2,r=[10,10],alphax=180){
     let sy = getConstArray(this.Sy.length,0)
-    PlotPoints(this.Six,sy,x0=0,y0=Ylevel,r=r,colorx=this.color,alphax=alphax);
+    let syi = getConstArray(this.Sy.length,0)
+    //PlotPoints(this.Six,sy,x0=0,y0=Ylevel,r=r,colorx=this.color,alphax=alphax);
+    PlotPointsV2(this.Six,syi,x0=0,y0=Ylevel,r=r,colorx=this.color,alphax=alphax);
   }
   plotSamples_Y(Ylevel=height/2 + height/4,Xlevel=width+50,r=[10,10],alphax=180){
     let w = Xlevel;
@@ -561,6 +567,35 @@ function PlotPoints(x,y,x0=0,y0=height/2,r=[10,10],colorx=[0,250,0],alphax=180,M
     rect(xi,-yi,r[0],r[1]);
   }else{
     ellipse(xi,-yi,r[0],r[1]);
+  }
+
+  }
+}
+
+function PlotPointsV2(x,y,x0=0,y0=height/2,r=[10,10],colorx=[0,250,0],alphax=180,Marker='ellp'){
+  stroke(colorx[0],colorx[1],colorx[2],alphax);
+  fill(colorx[0],colorx[1],colorx[2],alphax);
+  strokeWeight(5);
+  for(let i=0; i < y.length; i++){
+    let xi = x[i]-x0
+    let yi = y[i]-y0
+    if (Marker=='rect'){
+    rectMode(CENTER)
+    rect(xi,-yi,r[0],r[1]);
+  }else{
+    strokeWeight(5);
+    ellipse(xi,-yi,r[0],r[1]);
+    noFill();
+    strokeWeight(4);
+    ellipse(xi,-yi+20,r[0]/1.1,r[1]*1.3);
+    fill(colorx[0],colorx[1],colorx[2],alphax);
+    //strokeWeight(5);
+    //ellipse(xi,-yi+20,r[0]/1.1,r[1]*1.5);
+    let hand = 20
+    line(xi, -yi+10, xi+hand, -yi+20-hand)
+    line(xi, -yi+10, xi-hand, -yi+20-hand)
+    line(xi, -yi+30, xi+hand, -yi+20+hand)
+    line(xi, -yi+30, xi-hand, -yi+20+hand)
   }
 
   }
