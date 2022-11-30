@@ -1,2 +1,0 @@
-# teaching
-All teaching material
