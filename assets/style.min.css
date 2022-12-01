@@ -37,11 +37,16 @@ html, body {
   z-index: 1000000
 }
 
-
-.sidesec img{
- float: none;
+/*
+.rightimg img{
+ float: right;
  margin: 0 15px 0 0;
 }
+
+.leftimg img{
+ float: left;
+ margin: 0 15px 0 0;
+} */
 
 @media(min-width:768px) {
   .navbar-nav.navbar-center {
