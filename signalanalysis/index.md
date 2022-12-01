@@ -18,10 +18,10 @@ The objective of this e-book or set of tutorials is to not just go through the m
 
 <br>
 ### Table of Contents (in progress...)
-* [Chapter 1: Linear Algebra](#chapter-1)
-* [Chapter 2: Least Square](#chapter-1)
-* [Chapter 3: Principle Component Analysis](#chapter-1)
-* [Chapter 4: Independent Component Analysis](#chapter-1)
+* [Chapter 1: Linear Algebra](##chapter-1:linearalgebra)
+* [Chapter 2: Least Square](#chapter-2)
+* [Chapter 3: Principle Component Analysis](#chapter-3)
+* [Chapter 4: Independent Component Analysis](#chapter-4)
 * [Appendix: Proofs](#appendix)
 <br>
 <hr>
@@ -167,7 +167,6 @@ For Covariance, denominator terms is not there. Due to normalizing factor in cro
 # Appendix
 
 <hr>
--->
 
 <!--
 ###-------------Commented
