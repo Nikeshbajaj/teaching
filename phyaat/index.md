@@ -43,9 +43,9 @@ layout: base
 
 <br> -->
 
-<h3> Slides </h3>
+<h3> Resources </h3>
+<h4>Slides - <a href="./PhDwork_Seminar_AtImperial.pdf" target="_blank">Here </a></h4>
 <ul>
-  <li><h4>Slides - <a href="./PhDwork_Seminar_AtImperial.pd" target="_blank">Here </a></h4></li>
   <li><h4>Homepage - <a href="https://phyaat.gothub.io" target="_blank">https://Phyaat.github.io </a></h4></li>
   <li><h4>Experiment Design - <a href="https://phyaat.github.io/experiment/" target="_blank">Here </a></h4></li>
   <li><h4>Dataset - <a href="https://phyaat.github.io/dataset" target="_blank">Here </a></h4></li>
