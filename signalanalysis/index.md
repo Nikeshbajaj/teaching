@@ -3,9 +3,12 @@ title: Mathematical Methods for Signal Analysis
 layout: base
 ---
 <!--<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script> -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
   <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
-  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous" onload="renderMathInElement(document.body);"></script> -->
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 <div class="divider-10"></div>
 <br><br><br>
 # Mathematical Methods for Signal Analysis
@@ -110,7 +113,7 @@ $$X^T = \left[\begin{array}{crc}
                         x_1 & x_2 & x_3  & x_4\\
                         |   & |   &  |   &  |\\  \end{array}\right]$$
 
-
+<br><br>
 
  $$C_x =
     \frac{1}{n} X^TX = \frac{1}{n} \left[\begin{array}{rrrr}
@@ -120,24 +123,27 @@ $$X^T = \left[\begin{array}{crc}
  x_4^Tx_1 & x_4^Tx_2 & x_4^Tx_3 & x_4^Tx_4  \\
   \end{array}\right]
 $$
+
+<br>
 <br>
 Notice that $$C_x$$ is symmetric, infect, Covariance Matrix is always Symmetric (Theorem A.1), Check Proof in Appendix. Now observing diagonal elements of $$C_x$$, they are dot-product of a column with it-self divided by **n**. Since each column has zero mean, this value $$\frac{1}{n} x_i^Tx_i$$ is nothing but *variance* of $$x_i$$.
 <br>
-
+<center>
 $$\frac{1}{n} x_i^Tx_i = \frac{1}{n}\sum_k x_i(k)^2 = \frac{1}{n}\sum_k ( x_i(k)-\tilde{x}_i )^2 = \sigma_{x_i}^2$$
+</center>
 <br>
 
-where $$\tilde{x}_i$$ is mean of $$x_i$$ which is zero in our chosen matrix. On the other hand, off-diagonal elements are *cross-variance* or ***covariance** between  
+where $$\tilde{x}_i$$ is mean of $$x_i$$ which is zero in our chosen matrix. On the other hand, off-diagonal elements are #**cross-variance** or **covariance** between  
 two columns (two different measurements, two different features), that is: $$\sigma_{x_i,y_j}^2 = \frac{1}{n} x_i^Tx_j $$.
 
 <br>
 <br>
-#### Covariance and Correlation
+#### **Covariance and Correlation**
 There is direct relation between covariance and cross-correlation. Cross-correlation (typically called as correlation, unless it is computed for same measurement, then it is called as autocorrelation) between two measurements (x, and y ) is defined as:
-
+<br><br>
 * Correlation:  $$P_{xy} = \frac{1}{n}\sum_k ( x(k)-\tilde{x} )( y(k)-\tilde{y})/(\sigma_{x}\sigma_{y})$$
 
-* Covariance:         $$C_{xy} = \frac{1}{n}\sum_k ( x(k)-\tilde{x} )( y(k)-\tilde{y})$$,
+* Covariance:   $$C_{xy} = \frac{1}{n}\sum_k ( x(k)-\tilde{x} )( y(k)-\tilde{y})$$,
 
 <br>
 So for $X \in R^{n\times m}$, $Corr(X) = diag(C_x)^{-1/2} C_x diag(C_x)^{-1/2}$
@@ -161,6 +167,7 @@ For Covariance, denominator terms is not there. Due to normalizing factor in cro
 # Appendix
 
 <hr>
+-->
 
 <!--
 ###-------------Commented
@@ -174,7 +181,6 @@ $$C_x^T = (X^TX)^T = X^T(X^{T})^T = X^TX = C_x$$
 
 <i>QED</i>
 </p>
--->
 <!--
 ###-------------Commented
 <p style="border:2px; border-style:solid; border-color:#3377FF; padding: 1em;">
