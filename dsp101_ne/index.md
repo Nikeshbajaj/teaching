@@ -6,18 +6,20 @@ layout: base
 <div class="divider-10"></div>
 <br><br><br>
 
+# Digital Signal Processing for non-engineers
+
 The objective of this section is to make signal processing more intuitive for non-engineers, such as clinicians, chemists, statisticians, psychologist etc., who have to deal with different kind of signals and processing. In this tutorial, we will try to avoid math as much as possible and solely focus on characteristics of signal and processing methods such filtering as a box.
 
 
-# Table of Contents (in progress...)
+### Table of Contents (in progress...)
 * [Chapter 1: Signal](#chapter-1)
 * [Chapter 2: Filtering](#chapter-2)
 
 <hr>
 
-# Chapter 1: Signal
+### Chapter 1: Signal
 
-## 1.1 What is Signal?
+#### 1.1 What is Signal?
 **Loosely speaking:** I used to explain 'signal' to undergraduate students, as anything that convey information is a signal . Information can be useful (i.e. message) or not (noise), varies over time (voltage) or space (image). This makes everything around you as signal. You see (image) or hear (audio) anything or focus/record any one aspect (voltage, hand movement, monthly pocket money, your grades over the years), ***almost*** everything can be seen as signal. However word almost was a trick there.
 
 **Strictly speaking:** Any phenomenon; physical, electrical, biological, chemical, (even any hypothetical), that varies over time, space, or in any abstract dimension can be seen as a signal. These phenomenon are not mutually exclusive, biological systems have physiological, electrical and chemical processes, electrical systems are physical systems too. The importance here is **the variation**. The variation of any phenomenon over any one or more dimensions can be a signal. A classical example of a signal (in text books) is a speech signal, x(t), where an acoustic pressure (recorded as voltage), varies over time. An image I(x,y), an intensity of light recorded, that varies over 2D space (in x and y coordinate systems). A video or movie, I(x,y,t) is a recording of light intensity varying over space (x,y) and time (t).
