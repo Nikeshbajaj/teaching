@@ -43,3 +43,6 @@ layout: base
 
 </div>
 </div>
+<center>
+<div> <a href="." target="_blank"><img src="cover.gif" alt="slides" width="70%"> </a></div>
+</center>
