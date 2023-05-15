@@ -21,15 +21,15 @@ layout: base
 <!-- ## Lecture Handouts: Download -->
 <h2 style="background-color: #cceeff;"><span style="color: #0000ff;"><strong>Lecture Handouts: Download</strong></span></h2>
 
-<h3><a href="https://nikeshbajaj.files.wordpress.com/2018/03/lec-0-1-introduction-and-visualization_slides.pdf">Lec-1 Introduction and Visualization [slides]</a> <a href="https://nikeshbajaj.files.wordpress.com/2018/03/lec-1-introduction-and-visualization.pdf"><span style="color: #ff5733;"><strong>[handouts]</strong></span></a></h3>
+<h3><a href="https://nikeshbajaj.files.wordpress.com/2018/03/lec-0-1-introduction-and-visualization_slides.pdf">Lec-1: Introduction and Visualization [slides]</a> <a href="https://nikeshbajaj.files.wordpress.com/2018/03/lec-1-introduction-and-visualization.pdf"><span style="color: #ff5733;"><strong>[handouts]</strong></span></a></h3>
  
  
-<h3><a href="https://nikeshbajaj.files.wordpress.com/2018/03/lec-2-measure-of-center-tendancy_slides.pdf">Lec-2 Measure of Center Tendency [slides]</a> <a href="https://nikeshbajaj.files.wordpress.com/2018/03/lec-2-measure-of-center-tendancy.pdf"><span style="color: #ff5733;"><strong>[handouts]</strong></span></a></h3>
+<h3><a href="https://nikeshbajaj.files.wordpress.com/2018/03/lec-2-measure-of-center-tendancy_slides.pdf">Lec-2: Measure of Center Tendency [slides]</a> <a href="https://nikeshbajaj.files.wordpress.com/2018/03/lec-2-measure-of-center-tendancy.pdf"><span style="color: #ff5733;"><strong>[handouts]</strong></span></a></h3>
 
  
-<h3><a href="https://nikeshbajaj.files.wordpress.com/2018/03/lec-3-variability_slides.pdf">Lec-3 Variability [slides]</a> <a href="https://nikeshbajaj.files.wordpress.com/2018/03/lec-3-variability.pdf"><span style="color: #ff5733;"><strong>[handouts]</strong></span></a></h3>
+<h3><a href="https://nikeshbajaj.files.wordpress.com/2018/03/lec-3-variability_slides.pdf">Lec-3: Variability [slides]</a> <a href="https://nikeshbajaj.files.wordpress.com/2018/03/lec-3-variability.pdf"><span style="color: #ff5733;"><strong>[handouts]</strong></span></a></h3>
 
-<h3><a href="https://nikeshbajaj.files.wordpress.com/2018/03/lec-4-correlation-and-regression_slides.pdf">Lec-4 Correlation and Regression [slides]</a> <a href="https://nikeshbajaj.files.wordpress.com/2018/03/lec-4-correlation-and-regression.pdf"><span style="color: #ff5733;"><strong>[handouts]</strong></span></a></h3>
+<h3><a href="https://nikeshbajaj.files.wordpress.com/2018/03/lec-4-correlation-and-regression_slides.pdf">Lec-4: Correlation and Regression [slides]</a> <a href="https://nikeshbajaj.files.wordpress.com/2018/03/lec-4-correlation-and-regression.pdf"><span style="color: #ff5733;"><strong>[handouts]</strong></span></a></h3>
 
 <h3><a href="#">Lec-5: Further Readings</a></h3>
 <span style="text-decoration: underline;">Introduction to Machine Learning</span>: Supervised and Unsupervised learning, Classification and Regression, Gradient decent, LMS, SVM, Neural Network, Clustering, Recommended System, Anomaly Detection etc
