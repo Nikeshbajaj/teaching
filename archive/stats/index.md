@@ -14,7 +14,7 @@ layout: base
 <strong>Contents</strong>: <strong>Visualization of data- Plots</strong>: Pie, Bar (horizontal, Vertical, Segmented, Split-chart). <strong>Center Tendency</strong> (Mean, Mode, Median). <strong>Variability</strong> (Range, Quartiles, Percentile, Variance, Box plot, Standard Deviations). <strong>Correlation</strong> and Regression (Correlation, Linear Line fit, best line fit)
 
 &nbsp;
-<h3><a href="http://nikeshbajaj.in/data-analytics-reports/">STUDENTS PROJECT REPORTS  - SUBMITTED</a></h3>
+<h3><b><a href="http://nikeshbajaj.in/data-analytics-reports/">FINAL REPORTS SUBMITTED BY STUDENTS</a></b></h3>
 &nbsp;
 
 
