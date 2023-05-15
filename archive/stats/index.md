@@ -196,6 +196,9 @@ If you are interested to go for publishing your current work (in journal/Confere
 </tr>
 </tbody>
 </table>
+<br>
+<hr>
+<br>
 <h2 style="background-color: #cceeff;"><strong style="color: #0000ff;">Leaderboard of Case Study 2: </strong></h2>
 <h3>Accuracy of Group after making rules for classification of tissues</h3>
 <h2><span style="font-size: 1em; line-height: 1.5em;">[WpProQuiz_toplist 20]</span></h2>
@@ -214,10 +217,11 @@ If you are interested to go for publishing your current work (in journal/Confere
 
 <span style="border-radius: 2px; text-indent: 20px; width: auto; padding: 0px 4px 0px 0px; text-align: center; font: bold 11px/20px 'Helvetica Neue',Helvetica,sans-serif; color: #ffffff; background: #bd081c no-repeat scroll 3px 50% / 14px 14px; position: absolute; opacity: 1; z-index: 8675309; display: none; cursor: pointer; top: 47px; left: 660px;">Save</span>
 
-
-
+<br>
+<hr>
+<br>
 &nbsp;
-<h2 style="background-color: #cceeff;"><span style="color: #0000ff;"><strong>FINAL REPORTS SUBMITTED BY STUDENTS</strong></span></h2>
+<h2 style="background-color: #cceeff;"><span style="color: #0000ff;"><strong>Final Reports submitted by students</strong></span></h2>
 <h3><b><a href="http://nikeshbajaj.in/data-analytics-reports/">Click here to check</a></b></h3>
 &nbsp;
 
