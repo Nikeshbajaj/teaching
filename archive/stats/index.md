@@ -1,3 +1,14 @@
+---
+title: Statistcs for Data Analysis
+layout: base
+---
+
+
+<div class="divider-10"></div>
+<br>
+
+
+
 <a href="https://nikeshbajaj.files.wordpress.com/2014/12/dataanalysis2.jpg" target="_blank" rel="noopener noreferrer"><img class=" alignright wp-image-1703" style="height: 20%; width: 20%;" src="https://nikeshbajaj.files.wordpress.com/2014/12/dataanalysis2.jpg?w=300" alt="DataAnalysis2" /></a>
 
 <strong>Contents</strong>: <strong>Visualization of data- Plots</strong>: Pie, Bar (horizontal, Vertical, Segmented, Split-chart). <strong>Center Tendency</strong> (Mean, Mode, Median). <strong>Variability</strong> (Range, Quartiles, Percentile, Variance, Box plot, Standard Deviations). <strong>Correlation</strong> and Regression (Correlation, Linear Line fit, best line fit)
