@@ -18,8 +18,8 @@ layout: base
 &nbsp;
 
 
-## Lecture Handouts: Download
-<!-- <h2 style="background-color: #cceeff;"><span style="color: #0000ff;"><strong>Lecture Handouts: Download</strong></span></h2> -->
+<!-- ## Lecture Handouts: Download -->
+<h2 style="background-color: #cceeff;"><span style="color: #0000ff;"><strong>Lecture Handouts: Download</strong></span></h2>
 
 <h3><a href="https://nikeshbajaj.files.wordpress.com/2018/03/lec-0-1-introduction-and-visualization_slides.pdf">Lec-1 Introduction and Visualization [slides]</a> <a href="https://nikeshbajaj.files.wordpress.com/2018/03/lec-1-introduction-and-visualization.pdf"><span style="color: #ff5733;"><strong>[handouts]</strong></span></a></h3>
  
@@ -213,3 +213,14 @@ If you are interested to go for publishing your current work (in journal/Confere
 <span style="border-radius: 2px; text-indent: 20px; width: auto; padding: 0px 4px 0px 0px; text-align: center; font: bold 11px/20px 'Helvetica Neue',Helvetica,sans-serif; color: #ffffff; background: #bd081c no-repeat scroll 3px 50% / 14px 14px; position: absolute; opacity: 1; z-index: 8675309; display: none; cursor: pointer; top: 47px; left: 674px;">Save</span>
 
 <span style="border-radius: 2px; text-indent: 20px; width: auto; padding: 0px 4px 0px 0px; text-align: center; font: bold 11px/20px 'Helvetica Neue',Helvetica,sans-serif; color: #ffffff; background: #bd081c no-repeat scroll 3px 50% / 14px 14px; position: absolute; opacity: 1; z-index: 8675309; display: none; cursor: pointer; top: 47px; left: 660px;">Save</span>
+
+
+
+&nbsp;
+<h2 style="background-color: #cceeff;"><span style="color: #0000ff;"><strong>FINAL REPORTS SUBMITTED BY STUDENTS</strong></span></h2>
+<h3><b><a href="http://nikeshbajaj.in/data-analytics-reports/">Click here to check</a></b></h3>
+&nbsp;
+
+
+
+
