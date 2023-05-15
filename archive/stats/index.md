@@ -1,17 +1,26 @@
 ---
-title: Statistcs for Data Analysis
+title: Statistics for Data Analysis
 layout: base
 ---
+<div class="divider-10"></div>
+<br>
 
+# Statistics for Data Analysis
 
 <div class="divider-10"></div>
 <br>
 
+This course was provided to students in summer-school. After completing this course, each student was required to submit a report on assigned data analytics task.
 
+<img align="right" width="20%" height="20%" src="https://nikeshbajaj.files.wordpress.com/2014/12/dataanalysis2.jpg?w=300">
 
-<a href="https://nikeshbajaj.files.wordpress.com/2014/12/dataanalysis2.jpg" target="_blank" rel="noopener noreferrer"><img class=" alignright wp-image-1703" style="height: 20%; width: 20%;" src="https://nikeshbajaj.files.wordpress.com/2014/12/dataanalysis2.jpg?w=300" alt="DataAnalysis2" /></a>
+<!-- <a href="https://nikeshbajaj.files.wordpress.com/2014/12/dataanalysis2.jpg" target="_blank" rel="noopener noreferrer"><img class=" alignright wp-image-1703" style="height: 20%; width: 20%;" src="https://nikeshbajaj.files.wordpress.com/2014/12/dataanalysis2.jpg?w=300" alt="DataAnalysis2" /></a> -->
 
-<strong>Contents</strong>: <strong>Visualization of data- Plots</strong>: Pie, Bar (horizontal, Vertical, Segmented, Split-chart). <strong>Center Tendency</strong> (Mean, Mode, Median). <strong>Variability</strong> (Range, Quartiles, Percentile, Variance, Box plot, Standard Deviations). <strong>Correlation</strong> and Regression (Correlation, Linear Line fit, best line fit)
+<strong>Contents</strong>: <strong>
+ * Visualization of data- Plots</strong>: Pie, Bar (horizontal, Vertical, Segmented, Split-chart). 
+ * <strong>Center Tendency</strong> (Mean, Mode, Median). 
+ * <strong>Variability</strong> (Range, Quartiles, Percentile, Variance, Box plot, Standard Deviations). 
+ * <strong>Correlation</strong> and Regression (Correlation, Linear Line fit, best line fit)
 
 &nbsp;
 <h3><b><a href="http://nikeshbajaj.in/data-analytics-reports/">FINAL REPORTS SUBMITTED BY STUDENTS</a></b></h3>
@@ -32,7 +41,8 @@ layout: base
 <h3><a href="https://nikeshbajaj.files.wordpress.com/2018/03/lec-4-correlation-and-regression_slides.pdf">Lec-4: Correlation and Regression [slides]</a> <a href="https://nikeshbajaj.files.wordpress.com/2018/03/lec-4-correlation-and-regression.pdf"><span style="color: #ff5733;"><strong>[handouts]</strong></span></a></h3>
 
 <h3><a href="#">Lec-5: Further Readings</a></h3>
-<span style="text-decoration: underline;">Introduction to Machine Learning</span>: Supervised and Unsupervised learning, Classification and Regression, Gradient decent, LMS, SVM, Neural Network, Clustering, Recommended System, Anomaly Detection etc
+
+* <span style="text-decoration: underline;">Introduction to Machine Learning</span>: Supervised and Unsupervised learning, Classification and Regression, Gradient decent, LMS, SVM, Neural Network, Clustering, Recommended System, Anomaly Detection etc,.
 
 <hr>
 <br>
@@ -45,13 +55,16 @@ layout: base
 <hr>
 <br>
 <h2 style="background-color: #cceeff;"><span style="color: #0000ff;"><strong>Links for Online Datasets</strong></span></h2>
-<a href="http://www.tableausoftware.com/public/community/sample-data-sets">http://www.tableausoftware.com/public/community/sample-data-sets
-</a><a href="http://calcnet.mth.cmich.edu/org/spss/Prj_carsdata.htm">http://calcnet.mth.cmich.edu/org/spss/Prj_carsdata.htm
-</a><a href="http://dss.wikidot.com/panel-data-analysis">http://dss.wikidot.com/panel-data-analysis
-</a><a href="http://www.kdnuggets.com/datasets/index.html">http://www.kdnuggets.com/datasets/index.html
-</a><a href="http://www.models.kvl.dk/datasets">http://www.models.kvl.dk/datasets </a>  (Lot's of data available on)
-<a href="http://catalog.data.gov/dataset">http://catalog.data.gov/dataset</a>         <a href="http://data.gov.uk/dataset">http://data.gov.uk/dataset</a><strong><a href="http://nikeshbajaj.in/wp-content/uploads/2014/07/nunew_e0.gif">
-</a></strong><a href="http://data.gov.in">http://data.gov.in</a> <strong>                Data about India</strong>
+
+* <a href="http://www.tableausoftware.com/public/community/sample-data-sets">http://www.tableausoftware.com/public/community/sample-data-sets</a>
+* <a href="http://calcnet.mth.cmich.edu/org/spss/Prj_carsdata.htm">http://calcnet.mth.cmich.edu/org/spss/Prj_carsdata.htm</a>
+* <a href="http://dss.wikidot.com/panel-data-analysis">http://dss.wikidot.com/panel-data-analysis</a>
+* <a href="http://www.kdnuggets.com/datasets/index.html">http://www.kdnuggets.com/datasets/index.html</a>
+* <a href="http://www.models.kvl.dk/datasets">http://www.models.kvl.dk/datasets </a>  (Lot's of data available on)
+* <a href="http://catalog.data.gov/dataset">http://catalog.data.gov/dataset</a>
+* <a href="http://data.gov.uk/dataset">http://data.gov.uk/dataset</a>
+<!-- * <strong><a href="http://nikeshbajaj.in/wp-content/uploads/2014/07/nunew_e0.gif"></a></strong> -->
+* <a href="http://data.gov.in">http://data.gov.in</a> <strong>Data about India</strong>
 
 <br>
 <hr>
