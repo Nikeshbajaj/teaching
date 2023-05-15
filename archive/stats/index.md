@@ -16,7 +16,10 @@ layout: base
 &nbsp;
 <h3><a href="http://nikeshbajaj.in/data-analytics-reports/">STUDENTS PROJECT REPORTS  - SUBMITTED</a></h3>
 &nbsp;
-<h2 style="background-color: #cceeff;"><span style="color: #0000ff;"><strong>Lecture Handouts: Download</strong></span></h2>
+
+
+## Lecture Handouts: Download
+<!-- <h2 style="background-color: #cceeff;"><span style="color: #0000ff;"><strong>Lecture Handouts: Download</strong></span></h2> -->
 
 <h3><a href="https://nikeshbajaj.files.wordpress.com/2018/03/lec-0-1-introduction-and-visualization_slides.pdf">Lec-1 Introduction and Visualization [slides]</a> <a href="https://nikeshbajaj.files.wordpress.com/2018/03/lec-1-introduction-and-visualization.pdf"><span style="color: #ff5733;"><strong>[handouts]</strong></span></a></h3>
  
@@ -28,9 +31,10 @@ layout: base
 
 <h3><a href="https://nikeshbajaj.files.wordpress.com/2018/03/lec-4-correlation-and-regression_slides.pdf">Lec-4 Correlation and Regression [slides]</a> <a href="https://nikeshbajaj.files.wordpress.com/2018/03/lec-4-correlation-and-regression.pdf"><span style="color: #ff5733;"><strong>[handouts]</strong></span></a></h3>
 
-<h3><span style="font-size: 1.17em; line-height: 1.5em;">Lec-5: Further Readings </span></h3>
+<h3><a href="#">Lec-5: Further Readings</a></h3>
 <span style="text-decoration: underline;">Introduction to Machine Learning</span>: Supervised and Unsupervised learning, Classification and Regression, Gradient decent, LMS, SVM, Neural Network, Clustering, Recommended System, Anomaly Detection etc
 
+<hr>
 <br>
 <h2 style="background-color: #cceeff;"><span style="color: #0000ff;"><strong>Data and Exercises:</strong></span></h2>
 <ol>
@@ -38,8 +42,8 @@ layout: base
  	<li><span style="font-size: 1.17em;">For Pivot Table: Download Data file </span><span style="color: #ff0000;"><strong><a style="font-size: 1.17em;" href="http://nikeshbajaj.in/wp-content/uploads/2014/07/All-Results.xls"><span style="color: #ff0000;">All Results</span></a></strong></span></li>
 </ol>
 
+<hr>
 <br>
-
 <h2 style="background-color: #cceeff;"><span style="color: #0000ff;"><strong>Links for Online Datasets</strong></span></h2>
 <a href="http://www.tableausoftware.com/public/community/sample-data-sets">http://www.tableausoftware.com/public/community/sample-data-sets
 </a><a href="http://calcnet.mth.cmich.edu/org/spss/Prj_carsdata.htm">http://calcnet.mth.cmich.edu/org/spss/Prj_carsdata.htm
@@ -49,7 +53,8 @@ layout: base
 <a href="http://catalog.data.gov/dataset">http://catalog.data.gov/dataset</a>         <a href="http://data.gov.uk/dataset">http://data.gov.uk/dataset</a><strong><a href="http://nikeshbajaj.in/wp-content/uploads/2014/07/nunew_e0.gif">
 </a></strong><a href="http://data.gov.in">http://data.gov.in</a> <strong>                Data about India</strong>
 
-
+<br>
+<hr>
 <br>
 <h2 style="background-color: #cceeff;"><span style="color: #0000ff;"><strong>Final Topics for Project</strong></span></h2>
 After discussion with instructor Fill your final topic for project on following link  --&gt;<b><a href="http://tinyurl.com/FinalTopic">LINK</a> <strong><strong> </strong></strong></b>Submit Your Final Topic
@@ -59,6 +64,11 @@ Before you choose topic for yourselves Check List of final and approved topics 
 <h4>Check following submitted Proposal<strong><strong><strong><a href="http://nikeshbajaj.in/wp-content/uploads/2014/07/nunew_e0.gif" target="_blank" rel="noopener noreferrer">
 </a></strong></strong></strong><a href="https://nikeshbajaj.files.wordpress.com/2018/03/eg14-project-proposal-final.pdf">1. EG14 - Project Proposal Final   </a>(Very good proposal by <span style="color: #ff0000;">Vivekraj Jayram</span>)<strong><strong><strong><a href="http://nikeshbajaj.in/wp-content/uploads/2014/07/nunew_e0.gif" target="_blank" rel="noopener noreferrer">
 </a></strong></strong></strong><a href="https://nikeshbajaj.files.wordpress.com/2018/03/eg19-statistical-analysis-of-road-accidents-fatality.pdf">2. EG19 Statistical Analysis of Road Accidents Fatality</a></h4>
+
+<br>
+<hr>
+<br>
+
 <h2 style="background-color: #cceeff;"><strong style="color: #0000ff;">Case Studies</strong></h2>
 <table border="1" width="100%">
 <tbody>
@@ -111,6 +121,10 @@ Cancer is severe disease. Early it is detected more chances to save the patient.
 </tr>
 </tbody>
 </table>
+
+<br>
+<hr>
+<br>
 <h2 style="background-color: #cceeff;"><strong style="color: #0000ff;">Final Report submission and Presentation</strong></h2>
 Your final Report and Presentation should contain
 <ol>
@@ -154,6 +168,10 @@ If you are interested to go for publishing your current work (in journal/Confere
 
 <span style="color: #ff6600;"><strong>MANDATORY</strong></span>
 <strong>All of you are Required to submit "ONE PAGE" of your work as Suggested by <span style="text-decoration: underline;">Loviraj  Sir</span>. Prepare that ONE PAGE and mail it to me (nikesh.14730@lpu.co.in) <span style="text-decoration: underline;">by 26th July</span>. Those who did not attend last class and interaction session with Loviraj Sir are advised to talk to classmates and submit One page of Summary.</strong>
+<br>
+<br>
+<hr>
+<br>
 <h2 style="background-color: #cceeff;"><strong style="color: #0000ff;">Useful links for Data Analytics </strong></h2>
 <table>
 <tbody>
