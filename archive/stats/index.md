@@ -17,17 +17,29 @@ layout: base
 <h3><a href="http://nikeshbajaj.in/data-analytics-reports/">STUDENTS PROJECT REPORTS  - SUBMITTED</a></h3>
 &nbsp;
 <h2 style="background-color: #cceeff;"><span style="color: #0000ff;"><strong>Lecture Handouts: Download</strong></span></h2>
-<h3><a href="https://nikeshbajaj.files.wordpress.com/2018/03/lec-0-1-introduction-and-visualization_slides.pdf">Lec-1 Introduction and Visualization [slides]</a> <a href="https://nikeshbajaj.files.wordpress.com/2018/03/lec-1-introduction-and-visualization.pdf"><span style="color: #ff5733;"><strong>[handouts]</strong></span></a>
-<a href="https://nikeshbajaj.files.wordpress.com/2018/03/lec-2-measure-of-center-tendancy_slides.pdf">Lec-2 Measure of Center Tendency [slides]</a> <a href="https://nikeshbajaj.files.wordpress.com/2018/03/lec-2-measure-of-center-tendancy.pdf"><span style="color: #ff5733;"><strong>[handouts]</strong></span></a>
-<a href="https://nikeshbajaj.files.wordpress.com/2018/03/lec-3-variability_slides.pdf">Lec-3 Variability [slides]</a> <a href="https://nikeshbajaj.files.wordpress.com/2018/03/lec-3-variability.pdf"><span style="color: #ff5733;"><strong>[handouts]</strong></span></a>
-<a href="https://nikeshbajaj.files.wordpress.com/2018/03/lec-4-correlation-and-regression_slides.pdf">Lec-4 Correlation and Regression [slides]</a> <a href="https://nikeshbajaj.files.wordpress.com/2018/03/lec-4-correlation-and-regression.pdf"><span style="color: #ff5733;"><strong>[handouts]</strong></span></a></h3>
+
+<h3><a href="https://nikeshbajaj.files.wordpress.com/2018/03/lec-0-1-introduction-and-visualization_slides.pdf">Lec-1 Introduction and Visualization [slides]</a> <a href="https://nikeshbajaj.files.wordpress.com/2018/03/lec-1-introduction-and-visualization.pdf"><span style="color: #ff5733;"><strong>[handouts]</strong></span></a></h3>
+ 
+ 
+<h3><a href="https://nikeshbajaj.files.wordpress.com/2018/03/lec-2-measure-of-center-tendancy_slides.pdf">Lec-2 Measure of Center Tendency [slides]</a> <a href="https://nikeshbajaj.files.wordpress.com/2018/03/lec-2-measure-of-center-tendancy.pdf"><span style="color: #ff5733;"><strong>[handouts]</strong></span></a></h3>
+
+ 
+<h3><a href="https://nikeshbajaj.files.wordpress.com/2018/03/lec-3-variability_slides.pdf">Lec-3 Variability [slides]</a> <a href="https://nikeshbajaj.files.wordpress.com/2018/03/lec-3-variability.pdf"><span style="color: #ff5733;"><strong>[handouts]</strong></span></a></h3>
+
+<h3><a href="https://nikeshbajaj.files.wordpress.com/2018/03/lec-4-correlation-and-regression_slides.pdf">Lec-4 Correlation and Regression [slides]</a> <a href="https://nikeshbajaj.files.wordpress.com/2018/03/lec-4-correlation-and-regression.pdf"><span style="color: #ff5733;"><strong>[handouts]</strong></span></a></h3>
+
 <h3><span style="font-size: 1.17em; line-height: 1.5em;">Lec-5: Further Readings </span></h3>
 <span style="text-decoration: underline;">Introduction to Machine Learning</span>: Supervised and Unsupervised learning, Classification and Regression, Gradient decent, LMS, SVM, Neural Network, Clustering, Recommended System, Anomaly Detection etc
+
+<br>
 <h2 style="background-color: #cceeff;"><span style="color: #0000ff;"><strong>Data and Exercises:</strong></span></h2>
 <ol>
  	<li><span style="font-size: 1.17em;">Problem: Students marks for Predicting their level of performance </span><span style="color: #ff0000;"><strong><a style="font-size: 1.17em;" href="http://nikeshbajaj.in/wp-content/uploads/2014/06/Training.xls"><span style="color: #ff0000;">Dataset 1</span></a></strong></span><span style="font-size: 1.17em;"><span style="color: #ff0000;"> </span>(Download)</span></li>
  	<li><span style="font-size: 1.17em;">For Pivot Table: Download Data file </span><span style="color: #ff0000;"><strong><a style="font-size: 1.17em;" href="http://nikeshbajaj.in/wp-content/uploads/2014/07/All-Results.xls"><span style="color: #ff0000;">All Results</span></a></strong></span></li>
 </ol>
+
+<br>
+
 <h2 style="background-color: #cceeff;"><span style="color: #0000ff;"><strong>Links for Online Datasets</strong></span></h2>
 <a href="http://www.tableausoftware.com/public/community/sample-data-sets">http://www.tableausoftware.com/public/community/sample-data-sets
 </a><a href="http://calcnet.mth.cmich.edu/org/spss/Prj_carsdata.htm">http://calcnet.mth.cmich.edu/org/spss/Prj_carsdata.htm
@@ -36,6 +48,9 @@ layout: base
 </a><a href="http://www.models.kvl.dk/datasets">http://www.models.kvl.dk/datasets </a>  (Lot's of data available on)
 <a href="http://catalog.data.gov/dataset">http://catalog.data.gov/dataset</a>         <a href="http://data.gov.uk/dataset">http://data.gov.uk/dataset</a><strong><a href="http://nikeshbajaj.in/wp-content/uploads/2014/07/nunew_e0.gif">
 </a></strong><a href="http://data.gov.in">http://data.gov.in</a> <strong>                Data about India</strong>
+
+
+<br>
 <h2 style="background-color: #cceeff;"><span style="color: #0000ff;"><strong>Final Topics for Project</strong></span></h2>
 After discussion with instructor Fill your final topic for project on following link  --&gt;<b><a href="http://tinyurl.com/FinalTopic">LINK</a> <strong><strong> </strong></strong></b>Submit Your Final Topic
 
@@ -49,7 +64,9 @@ Before you choose topic for yourselves Check List of final and approved topics 
 <tbody>
 <tr>
 <td colspan="3">
-<h3><span style="text-decoration: underline;"><span style="font-size: 1.17em;"><strong>Case Study 1</strong> : New Employee's performance </span></span></h3>
+
+ <br>
+ <h3><span style="text-decoration: underline;"><span style="font-size: 1.17em;"><strong>Case Study 1</strong> : New Employee's performance </span></span></h3>
 <h3><strong>Problem Domain</strong></h3>
 A company hires many individuals from various colleges across the country. After a year, they do a comprehensive performance appraisal for all these individuals. The appraisal is based on their on-job performance: a combination of objective metrics met by them and subjective rating by their managers. Each candidate is rated as a best performer (BP), mid performer (MP) or a low performer (LP). During the hiring process, the company had taken these candidates through 15 different tests and an incredible set of profiling. Yet, they landed up with mid and low performers!
 <ul>
@@ -64,6 +81,7 @@ A company hires many individuals from various colleges across the country. After
 </tr>
 <tr>
 <td colspan="3">
+ <br>
 <h3><span style="font-size: 1.17em;">Case Study 2 : Classification of Cancer Tissues</span></h3>
 <h4><strong>Problem Domain</strong></h4>
 Cancer is severe disease. Early it is detected more chances to save the patient. There are many expert system that are being developing to classify a patient as Cancer patient or not. Accuracy in this kind of problem is very important. As you don’t want to make even 0.0001% mistake to say a patient that you don’t have cancer. There are many different ways to detect and take observation for same. Finding out the class of tissue can help to make some decision for cancer. Here we have 6 different classes of tissue with 9 observed properties under some experimental situation
