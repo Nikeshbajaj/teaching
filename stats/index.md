@@ -3,6 +3,11 @@ title: Statistics for Medical Students
 layout: base
 ---
 
+
+
+# Statistics for Medical Students
+**Date: Sep 2022**
+
 <div class="divider-10"></div>
 <br>
 
