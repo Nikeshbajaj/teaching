@@ -7,6 +7,8 @@ layout: base
 
 # Statistics for Data Analysis
 **Date: June-July 2013**
+<hr>
+<br>
 
 <div class="divider-10"></div>
 <br>
@@ -23,10 +25,13 @@ This course was provided to students in summer-school. After completing this cou
  * <strong>Variability</strong> (Range, Quartiles, Percentile, Variance, Box plot, Standard Deviations). 
  * <strong>Correlation</strong> and Regression (Correlation, Linear Line fit, best line fit)
 
+<hr>
+<br>
 &nbsp;
-<h3><b><a href="http://nikeshbajaj.in/data-analytics-reports/">FINAL REPORTS SUBMITTED BY STUDENTS</a></b></h3>
+<h3><b><a href="http://nikeshbajaj.in/data-analytics-reports/">FINAL REPORTS SUBMITTED BY STUDENTS - click here</a></b></h3>
 &nbsp;
-
+<hr>
+<br>
 
 <!-- ## Lecture Handouts: Download -->
 <h2 style="background-color: #cceeff;"><span style="color: #0000ff;"><strong>Lecture Handouts: Download</strong></span></h2>
