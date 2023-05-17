@@ -6,6 +6,7 @@ layout: base
 <br>
 
 # Statistics for Data Analysis
+**Date: June-July 2013**
 
 <div class="divider-10"></div>
 <br>
