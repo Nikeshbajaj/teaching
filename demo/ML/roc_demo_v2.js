@@ -328,8 +328,13 @@ function draw() {
   // let showProbRatio=false;
 
   if (showNormPx){
-    PlotLine(S1.IX,PxS1,0, height/2-100,[0,255,0],100,2);
-    PlotLine(S2.IX,PxS2,0, height/2-100,[0,0,255],100,2);
+    if (D_aboveT_blue){
+      PlotLine(S1.IX,PxS1,0, height/2-100,[0,100,0],100,5);
+      PlotLine(S2.IX,PxS2,0, height/2-100,[0,0,150],100,2);
+    }else{
+      PlotLine(S1.IX,PxS1,0, height/2-100,[0,100,0],100,2);
+      PlotLine(S2.IX,PxS2,0, height/2-100,[0,0,150],100,5);
+    }
   }
 
   if (showProbRatio){
