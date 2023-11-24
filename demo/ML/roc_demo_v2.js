@@ -615,12 +615,27 @@ function RedrawSamplr(){
   fill(255);
   //rect(width-310, height/2+165, 300, 100);
   strokeWeight(1);
+  stroke(0);
   rect(0, 0, 300, 200);
+  let rr =150;
+  let bb =255;
+  let gg =255;
+  
+  fill(rr + (255-rr)*(1-A1), 255-int(float(bb)*A1),255-int(float(gg)*A1),250)
+  rect(0, 0, 150, 100);
+  fill(rr+ (255-rr)*(1-C1), 255-int(float(bb)*C1),255-int(float(gg)*C1),250)
+  rect(150, 0, 150, 100);
+  fill(rr+ (255-rr)*(1-C2), 255-int(float(bb)*C2),255-int(float(gg)*C2),250)
+  rect(0, 100, 150, 100);
+  fill(rr+ (255-rr)*(1-A2), 255-int(float(bb)*A2),255-int(float(gg)*A2),250)
+  rect(150, 100, 150, 100);
+  strokeWeight(1);
   //rect(width-310+150, height/2+165, 150, 100);
   //rect(0, 0+165+50, 300, 50);
   line(0+150,0,0+150,0+200)
   line(0,100,300,100)
-
+  strokeWeight(1);
+  
   textSize(28);
   textAlign('left')
   //fill(0);
