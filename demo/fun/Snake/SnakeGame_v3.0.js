@@ -31,9 +31,9 @@ var TwoPlayers =tempTwoPlayers;
 
 var eatS, dieS,BackS;
 function preload(){
-	eatS = loadSound("Event4.wav");
-	dieS = loadSound("Event_Die.mp3");
-	BackS = loadSound("Background1.wav");
+	eatS = loadSound("sounds/Event_Eat.mp3");
+	dieS = loadSound("sounds/Event_Die.mp3");
+	BackS = loadSound("sounds/Background.mp3");
 	BackS.loop();
 }
 function setup() {
