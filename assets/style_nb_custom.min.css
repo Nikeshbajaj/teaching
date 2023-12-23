@@ -1,0 +1,527 @@
+/*
+ * Panels, Collapsables, and Accordions
+ * panel/collapsable/accordion headers SHOULD use H2 elements, but just in case... all
+ * H* elements are set to the same fz/lh. This is because we have a show/hide toggle,
+ * or maybe a button link, fixed on the right side of the bar, both with set/known heights
+ *
+  <div class="panel panel-collapsable">
+    <div class="panel-header">
+      <h2>Panel/Collapsable/Accordion Header</h2>
+    </div>
+    <div class="panel-content">
+      <p>...</p>
+    </div>
+  </div>
+  source: Stanford.see
+ */
+
+ .panel {
+  margin-bottom: 15px;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  -webkit-box-shadow: 0 0px 1px rgba(95, 87, 79, 0.25), 1px 1px 3px rgba(95, 87, 79, 0.33);
+     -moz-box-shadow: 0 0px 1px rgba(95, 87, 79, 0.25), 1px 1px 3px rgba(95, 87, 79, 0.33);
+          box-shadow: 0 0px 1px rgba(95, 87, 79, 0.25), 1px 1px 3px rgba(95, 87, 79, 0.33);
+  -webkit-background-clip: padding-box;
+     -moz-background-clip: padding;
+          background-clip: padding-box;
+}
+
+.panel.panel-alt {
+  background-color: #fbfbf9;
+}
+
+.panel .panel-heading {
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  margin-bottom: 0;
+  color: #1f1e1f;
+  background: #5f574f;
+  background-color: #e3dfd5;
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  -webkit-background-clip: padding-box;
+     -moz-background-clip: padding;
+          background-clip: padding-box;
+}
+
+.panel .panel-heading:before,
+.panel .panel-heading:after {
+  display: table;
+  content: " ";
+}
+
+.panel .panel-heading:after {
+  clear: both;
+}
+
+.panel .panel-heading h1,
+.panel .panel-heading h2,
+.panel .panel-heading h3,
+.panel .panel-heading h4 {
+  margin: 0;
+  color: #ffffff;
+}
+
+.panel .panel-heading small,
+.panel .panel-heading span,
+.panel .panel-heading a {
+  color: #f2f1eb;
+}
+
+.panel .panel-heading .heading-left {
+  float: left;
+  width: 70%;
+}
+
+.panel .panel-heading .heading-right {
+  float: right;
+  width: 25%;
+  text-align: right;
+}
+
+.panel .panel-heading h1,
+.panel .panel-heading h2,
+.panel .panel-heading h3,
+.panel .panel-heading h4 {
+  margin: 0;
+  font-size: 18px;
+  line-height: 21px;
+  color: inherit;
+}
+
+.panel .panel-heading span,
+.panel .panel-heading small {
+  color: #5f574f;
+}
+
+.panel .panel-heading a {
+  color: #007c92;
+}
+
+.panel .panel-heading .btn {
+  position: relative;
+  height: 29px;
+  padding: 0 15px;
+  margin-top: -4px;
+  margin-right: -9px;
+  margin-bottom: -4px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 29px;
+  color: #ffffff;
+  background-color: #b6b1a9;
+}
+
+.panel .panel-heading .btn:hover {
+  background-color: #c2beb7;
+}
+
+.panel .panel-content {
+  padding: 15px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.panel .panel-content :last-child {
+  margin-bottom: 0;
+}
+
+.panel-collapsable {
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
+}
+
+.panel-collapsable .panel-heading {
+  /* color: #007c92; */
+  /* background: #e0eff2; */
+  cursor: pointer;
+  color: #163058;
+  background: #c8dfee;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  -webkit-transition-duration: 0.2s;
+     -moz-transition-duration: 0.2s;
+       -o-transition-duration: 0.2s;
+          transition-duration: 0.2s;
+  -webkit-transition-property: background-color;
+     -moz-transition-property: background-color;
+       -o-transition-property: background-color;
+          transition-property: background-color;
+}
+
+.panel-collapsable .panel-heading:before,
+.panel-collapsable .panel-heading:after {
+  display: table;
+  content: " ";
+}
+
+.panel-collapsable .panel-heading:after {
+  clear: both;
+}
+
+.panel-collapsable .panel-heading:hover {
+  /* background: #d5e9ed; */
+  background: #dae1ecbc;
+}
+
+.panel-collapsable .panel-heading h1,
+.panel-collapsable .panel-heading h2,
+.panel-collapsable .panel-heading h3,
+.panel-collapsable .panel-heading h4 {
+  float: left;
+  width: 100%;
+  margin-right: -31px;
+}
+
+.panel-collapsable .panel-heading .panel-collapsable-trigger {
+  position: relative;
+  top: 0px;
+  display: block;
+  float: right;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  /* background-image: url('./images/graduate-icons.png'); */
+  /* background-image: url('./images/plus_gfull.png'); */
+  background-image: url('./images/down_arror_b.png');
+  /* background-image: linear-gradient(90deg, white, white, white, darkblue, white, white, white); */
+  /* background-position: -176px -249px; */
+  background-position: -10px -10px;
+  background-repeat: no-repeat;
+  /* padding: 10px; */;
+  opacity: 0.7;
+}
+
+.panel-collapsable .panel-content {
+  display: none;
+}
+
+.panel-collapsable.is-expanded {
+  -webkit-box-shadow: 0 0px 1px rgba(95, 87, 79, 0.25), 1px 1px 3px rgba(95, 87, 79, 0.33);
+     -moz-box-shadow: 0 0px 1px rgba(95, 87, 79, 0.25), 1px 1px 3px rgba(95, 87, 79, 0.33);
+          box-shadow: 0 0px 1px rgba(95, 87, 79, 0.25), 1px 1px 3px rgba(95, 87, 79, 0.33);
+}
+
+.panel-collapsable.is-expanded .panel-heading {
+  color: #8c1515;
+  /* background: #e3dfd5; */
+  /* color: #062954; */
+  background:#e7e2ce;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 5px;
+}
+
+.panel-collapsable.is-expanded .panel-heading .panel-collapsable-trigger {
+  width: 16px;
+  height: 16px;
+  background-image: url('./images/minus_k.png');
+  /* background-position: -212px -249px; */
+  background-position: -0px -0px;
+  background-repeat: no-repeat;
+}
+
+.collapsables {
+  margin-bottom: 15px;
+}
+
+.collapsables .heading,
+.collapsables .panel {
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+
+.collapsables .heading:first-child,
+.collapsables .panel:first-child {
+  margin-top: 0;
+}
+
+
+
+.btnX {
+  border-radius: 3px;
+  /* -webkit-transition-property: background-color; */
+  /* transition-property: background-color; */
+  /* -webkit-transition-duration: .2s; */
+  /* transition-duration: .2s; */
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 14px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  background: #8c1515;
+  color: #471515;
+  min-width: 40px;
+  border: 0;
+  outline: 0;
+  background-color: #bb8b1a;
+}
+
+.btn {
+    border-radius: 3px;
+    -webkit-transition-property: background-color;
+    transition-property: background-color;
+    -webkit-transition-duration: .2s;
+    transition-duration: .2s;
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 14px;
+    line-height: 1.1;
+    text-transform: uppercase;
+    background: #8c1515;
+    color: #fff;
+    min-width: 40px;
+    border: 0;
+    outline: 0;
+}
+
+
+.btn:hover {
+    text-decoration: none;
+    background-color: #af1a1a;
+    color: #fff
+}
+
+.btn.disabled {
+    background-color: #E9E6DF;
+    color: #555246;
+    cursor: not-allowed
+}
+
+.btn-small {
+    font-weight: 400;
+    min-width: 30px;
+    padding: 10px 24px;
+    font-size: 13px;
+    background-color: #009b76;
+}
+
+.btn-tiny {
+    font-weight: 400;
+    min-width: 30px;
+    padding: 10px 24px;
+    font-size: 13px;
+    padding: 10px 12px;
+    font-size: 12px
+}
+
+.btn-large {
+    font-size: 16px;
+    min-width: 160px;
+    padding: 12px 24px;
+    text-align: center
+}
+
+.btn-link {
+    color: #007c92;
+    background-color: #d9ebef
+}
+
+.btn-link:hover {
+    background-color: #c7e2e7;
+    color: #007c92
+}
+
+.btn-secondary {
+    background-color: #5f574d
+}
+
+.btn-secondary:hover {
+    background-color: #6d6458
+}
+
+.btn-highlight {
+    background-color: #009b76
+}
+
+.btn-highlight:hover {
+    background-color: #00aa82
+}
+
+.btn-block {
+    font-size: 16px;
+    min-width: 160px;
+    padding: 12px 24px;
+    display: block;
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+    white-space: normal;
+    height: auto;
+    padding: 10px 15px;
+    line-height: 1.2;
+    font-size: 400
+}
+
+/* ROWS COLS */
+
+
+.row:before,
+.row:after {
+    content: " ";
+    display: table
+}
+
+.row:after {
+    clear: both
+}
+
+.master-content {
+    background: #fff;
+    padding-top: 30px;
+    padding-bottom: 30px
+}
+
+@media (max-width:720px) {
+    .master-content {
+        padding-top: 15px;
+        padding-bottom: 15px
+    }
+}
+
+.master-content-bottom {
+    background-image: -webkit-linear-gradient(top, #f2f1eb 0, #fff 100%);
+    background-image: -o-linear-gradient(top, #f2f1eb 0, #fff 100%);
+    background-image: linear-gradient(to bottom, #f2f1eb 0, #fff 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff2f1eb', endColorstr='#ffffffff', GradientType=0);
+    padding-top: 35px;
+    padding-bottom: 35px
+}
+
+@media (max-width:720px) {
+    .master-content-bottom {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        background: #fff;
+        border-top: 1px solid #EEEBE5
+    }
+}
+
+.col-66 {
+    float: right;
+    width: 63.91752577%
+}
+
+.col-66:first-child {
+    float: left
+}
+
+.col-33 {
+    float: right;
+    width: 30.92783505%;
+    margin-left: 3.60824742%
+}
+
+.col-33:first-child {
+    margin-left: 0;
+    float: left
+}
+
+.col-33+.col-33 {
+    float: left
+}
+
+.col-25 {
+    float: left;
+    width: 22.68041237%;
+    margin-left: 3.09278351%
+}
+
+.col-25:first-child {
+    margin-left: 0
+}
+
+.col-50 {
+    float: right;
+    width: 47.42268041%
+}
+
+.col-50:first-child {
+    float: left
+}
+
+@media (max-width:720px) {
+
+    .col-66,
+    .col-33,
+    .col-50,
+    .col-25 {
+        float: none;
+        clear: both;
+        width: 100%;
+        margin-left: 0;
+        margin-bottom: 15px
+    }
+}
+
+@media (max-width:720px) {
+
+    .no-collapse .col-66,
+    .no-collapse .col-33,
+    .no-collapse .col-50,
+    .no-collapse .col-25 {
+        clear: none;
+        margin-bottom: 0;
+        float: right
+    }
+
+    .no-collapse .col-66 {
+        width: 66.67%;
+        padding-left: 10px
+    }
+
+    .no-collapse .col-66:first-child {
+        float: left;
+        padding-left: 0;
+        padding-right: 5px
+    }
+
+    .no-collapse .col-33 {
+        width: 33.33%;
+        margin-left: 0;
+        padding-left: 5px
+    }
+
+    .no-collapse .col-33:first-child {
+        float: left;
+        padding-left: 0
+    }
+
+    .no-collapse .col-33+.col-33 {
+        float: left;
+        padding-left: 10px
+    }
+
+    .no-collapse .col-25 {
+        float: left;
+        width: 25%;
+        margin-left: 0;
+        padding-left: 10px
+    }
+
+    .no-collapse .col-25:first-child {
+        padding-left: 0
+    }
+
+    .no-collapse .col-50 {
+        width: 50%;
+        margin-bottom: 0
+    }
+
+    .no-collapse .col-50+.col-50 {
+        padding-left: 5px
+    }
+
+    .no-collapse .col-50:first-child {
+        float: left;
+        padding-right: 5px
+    }
+}
