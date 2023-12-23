@@ -1,0 +1,12 @@
+# Name of website
+title: Teaching | Nikesh Bajaj
+email: nikkeshbajaj@gmail.com
+author: Nikesh Bajaj
+url: https://nikeshbajaj.github.io/teaching
+
+navbar-links:
+  Introduction: "Introduction"
+  Author's home: "http://nikeshbajaj.in"
+
+name: nikeshbajaj
+markdown: kramdown

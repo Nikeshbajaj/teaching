@@ -1,135 +1,13 @@
-<!DOCTYPE html>
+---
+title: Introduction to Data Science Programming
+layout: base_art_sidebar
+---
 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
-<head>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<!--   
-    _     _  _____  _   _     _____  ___    ___       ___    ___    ___    _   _  _  _   _  ___               
-    ( )   ( )(  _  )( ) ( )   (  _  )|  _`\ (  _`\    (  _`\ (  _`\ (  _`\ ( ) ( )(_)( ) ( )(  _`\             
-    `\`\_/'/'| ( ) || | | |   | (_) || (_) )| (_(_)   | |_) )| (_(_)| (_(_)| |/'/'| || `\| || ( (_)            
-      `\ /'  | | | || | | |   |  _  || ,  / |  _)_    | ,__/'|  _)_ |  _)_ | , <  | || , ` || |___             
-       | |   | (_) || (_) |   | | | || |\ \ | (_( )   | |    | (_( )| (_( )| |\`\ | || |`\ || (_, )    _  _  _ 
-       (_)   (_____)(_____)   (_) (_)(_) (_)(____/'   (_)    (____/'(____/'(_) (_)(_)(_) (_)(____/'   (_)(_)(_) 
-      
-  -->
+# Introduction to Data Science Programming
+**Date: March-June 2023**
 
 
-    <title>Nikesh Bajaj | Teaching</title>
-
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><!--<base href="../../">-->
-    <base href=".">
-    <title>Teaching</title>
-    <link href="https://nikeshbajaj.github.io/teaching" rel="canonical">
-
-    <!-- CSS -->
-    <link href="/assets/bootstrap.min.css" rel="stylesheet">
-    <link href="/assets/style.min.css" rel="stylesheet" type="text/css">
-    <link href="/assets/fonts/font-awesome.min.css" rel="stylesheet">
-    <link href="/assets/katex.min.css" rel="stylesheet">
-    <link href="/assets/article.min.css" rel="stylesheet">
-    <link href="/assets/style_nb_custom.min.css" rel="stylesheet" type="text/css">
-    <!-- JS -->
-    <script src="/assets/jquery.min.js"></script>
-    <script src="/assets/bootstrap.min.js"></script>
-    <script defer="" src="/assets/underscore-min.js" type="text/javascript"></script>
-    <script async="" src="/assets/js"></script>
-    <script src="/assets/ga.min.js"></script>
-    <script defer="" src="/assets/article.min.js"></script>
-    <script defer="" src="/assets/lang.min.js"></script>
-    <script defer="" src="/assets/katex.min.js"></script>
-    <script crossorigin="anonymous" defer="" src="/assets/auto-render.min.js"></script>
-    <script defer="" src="/assets/buttons.js"></script>
-    <script defer="" src="/assets/style_nb_custom.min.js"></script>
-  
-
-    <meta content="True" name="HandheldFriendly">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-    <meta name="keywords" content="auditory attention, EEG, GSP, PPG, python, predictive modeling">
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
-    <script type="text/javascript" id="MathJax-script" async
-     src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
-    </script>
-    <script type="text/javascript" async
-     src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
-    </script>
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({
-            tex2jax: {
-                skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-                displayMath: [['$$','$$']],
-                inlineMath: [['$','$']],
-            },
-        });
-    </script>
-</head>
-
-<body>
-
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<!--<base href="../../">-->
-<base href=".">
-<!-- <link href="https://nikeshbajaj.github.io/teaching" rel="canonical">
-<link href="./assets/bootstrap.min.css" rel="stylesheet">
-<link href="./assets/style.min.css" rel="stylesheet" type="text/css"> -->
-<!-- <link href="./assets/font-awesome.min.css" rel="stylesheet"> -->
-<!-- <body data-offset="50" data-spy="scroll" data-target=".navbar"> -->
-<nav class="navbar navbar-inverse navbar-static-top">
-  <div class="container-fluid">
-    <div class="navbar-header"> <button class="navbar-toggle" data-target="#myNavbar" data-toggle="collapse" type="button"> <span class="icon-bar"></span>
-      <span class="icon-bar"></span> <span class="icon-bar"></span> </button> <a
-        class="navbar-brand" href="https://nikeshbajaj.github.io/teaching" onclick="trackOutboundLink(this);"> <img alt="NikB" src="/assets/home-art.svg" style="padding: 15px 15px; width: 60px; margin-left: 15px; margin-right: 5px;"> </a>
-      <p class="navbar-text">
-        <font color="#dddddd">Nikesh Bajaj</font>
-      </p>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav">
-        <li><a href="http://nikeshbajaj.in/profile" onclick="trackOutboundLink(this);">About</a></li>
-      </ul>
-      <ul class="nav navbar-nav navbar-center">
-        <li><a href="/" onclick="trackOutboundLink(this);">Teaching</a></li>
-        <li><a href="/demos" onclick="trackOutboundLink(this);">Demos</a></li>
-        <li><a href="https://github.com/Nikeshbajaj" onclick="trackOutboundLink(this);">Github</a></li>
-        <li><a href="http://nikeshbajaj.in/repositories/" onclick="trackOutboundLink(this);">Software/Code</a></li>
-      </ul>
-      <div class="collapse navbar-collapse" data-target="None" id="HiddenNavbar">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="http://nikeshbajaj.in/" onclick="trackOutboundLink(this);">Homepage</a></li>
-          <p class="navbar-text">
-            <font color="#dddddd">|</font>
-          </p> <a class="navbar-brand" href="https://www.imperial.ac.uk/people/n.bajaj" onclick="trackOutboundLink(this);" style="padding: 0px;"> <img alt="ICL" src="/assets/logo.png"
-              style="padding: 15px 15px; width: 60px; margin-left: 15px; margin-right: 5px;"> </a>
-        </ul>
-      </div>
-    </div>
-  </div>
-</nav>
-
-
-<!-- <div id="wrapper">
-    <div id="sidebar-wrapper">
-    <div class="sidebar-top">
-        <li class="sidebar-title">Nikesh Bajaj</li>
-        <li class="sidebar-brand">
-            <a href="#"><div> <span style="color:white">Introduction to Data Science Programming</span> </div></a>
-        </li>
-    </div>
-    <ul class="sidebar-nav">
-        
-        
-      
-    </ul>
-</div>
-</div> -->
-<div id="wrapper">
-    <!-- <div class="document"> -->
-    <article class="markdown-body entry-content" itemprop=text>
-    <h1 id="introduction-to-data-science-programming">Introduction to Data Science Programming</h1>
-<p><strong>Date: March-June 2023</strong></p>
-
-<p><br /></p>
+<br>
 <div class="panel panel-collapsable is-expanded">
     <div class="panel-heading">
         <h3>Course Description</h3>
@@ -137,7 +15,7 @@
         </div>
     <div class="panel-content" style="display: block;">
         <p>Data Science is transforming how companies, researchers, governments and other organisations over the world address traditional problems. A Data Scientist is a highly skilled professional, who is able to combine state of the art computer scientes techniques eith modern mathematical and statistical methods to extract understanding from data and create new knowledge-based services. The job market is currently in shortage of trained professionals with this set of skills and the demand is expected to increase significantly over the next years.
-        <br /><br />
+        <br><br>
         QHP4701 Introduction to Data Science Programming is designed to help students start developing the computer science skills that they will need to successfully manage complex Data Science projects. We will be using Python environments and powerful libraries to represent, process and visualise different types of data. In future modules, you will be using and developing further all the skills that you will acquire in QHP4701 Introduction to Data Science Programming.
         </p>
         <ul>
@@ -146,6 +24,8 @@
         </ul>
         </div>
     </div>
+
+
 
 <div class="panel panel-collapsable ">
     <div class="panel-heading">
@@ -186,6 +66,7 @@
         </div>
     </div>
 
+
 <div class="panel panel-collapsable ">
     <div class="panel-heading">
         <h3>Lecture Week 2 - Arrays in Numpy and visualisation in Matplotlib</h3>
@@ -201,7 +82,7 @@
                 <td><b>2.1 Vectors, Matrices, and Numpy Arrays</b>
                 <p>This session starts with a brief introduction of for-loop and its applications in linear algebra, followed by a details of NumPy Arrays.</p>
                 </td>
-                <td><a href="files/2.1_Vectors_Matrices_Numpy_Arrays.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
+                <td><a href="files/2.1_Vectors_Matrices_Numpy_Arrays.pdf" target="_blank" ><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
             </tr>
             <tr>
                 <td><b>2.2 More on Numpy Arrays</b>
@@ -251,7 +132,7 @@
                 <td><b>3.4 Visualisation with Matplotlib</b>
                 <p>This session covers visualisation of data using Matplotlib library</p>
                 </td>
-                <td><a href="files/3.4_Visualisation_with_Matplotlib.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
+                <td><a href="files/3.4_Visualisation_with_Matplotlib.pdf" target="_blank" ><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
             </tr>
             </table>
         </div>
@@ -345,36 +226,6 @@
     </div>
 
 <div class="row">
-<div class="col-66">
+<div class='col-66'>
 </div>
 </div>
-
-    </article>
-      <!-- </div> -->
-</div>
-<div class="clearer"></div></div>
-  <footer class="footer">
-  <div class="footer" id="contact">
-    <div class="container">
-      <a href="https://github.com/nikeshbajaj" onclick="trackOutboundLink(this);"><img alt="NikB" src="/assets/images/github-art.svg" style="width:80px;height:60px;"></a>
-      <a href="https://linkedin.com/in/bajajnikesh" onclick="trackOutboundLink(this);"><img alt="NikB" src="/assets/images/linkedin-art.svg" style="width:80px;height:50px;"></a>
-      <a href="https://twitter.com/nikeshbajaj" onclick="trackOutboundLink(this);"><img alt="NikB" src="/assets/images/twitter-art.svg" style="width:80px;height:50px;"></a>
-      <a href="https://scholar.google.com/citations?user=UEOU4boAAAAJ&hl" onclick="trackOutboundLink(this);"><img alt="NikB" src="/assets/images/google-scholar.svg" style="width:80px;height:50px;"></a>
-      <a href="http://nikeshbajaj.in" onclick="trackOutboundLink(this);"><img alt="NikB" src="/assets/images/home-art.svg" style="width:80px;height:50px;"></a>
-    
-    <div class="mapp">
-<!--       <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=080808&w=a&t=n&d=vpHC-etFr8zpKrvxeNWU7YvMQQuQYKB3CO42YOpmx1U&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=808080'></script> -->
-    
-      <a href='https://clustrmaps.com/site/1btfu'  title='Visit tracker'><img src='//clustrmaps.com/map_v2.png?cl=080808&w=a&t=tt&d=vpHC-etFr8zpKrvxeNWU7YvMQQuQYKB3CO42YOpmx1U&co=ffffff&ct=808080' style="width:100px;height:50px;"/></a>
-      
-      </div>  
-    </div>
-    </div>
-  
-  <!--   <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=080808&w=a&t=n&d=vpHC-etFr8zpKrvxeNWU7YvMQQuQYKB3CO42YOpmx1U&co=ffffff&cmo=3acc3a&cmn=ff5353&ct=808080'></script> -->
-  
-</footer>
-
-
-</body>
-</html>
