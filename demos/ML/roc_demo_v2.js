@@ -186,8 +186,8 @@ function draw() {
    fill(0);
 
    textSize(20);
-   text('σ', 330, 15); //Sigmas
-   text('μ', 330, 45);
+   text('σ', 340, 15); //Sigmas
+   text('μ', 340, 45);
 
    text('σ', width/2+150, 15); //Sigmas
    text('μ', width/2+150, 45);
