@@ -553,7 +553,7 @@ function SaveROC(){
   //text([ROC_curves.length, ROC_curves[0].length, ROC_curves[1].length ], 530, height/2+320);
 
   push();
-  let ssx = 100;
+  let ssx = 50;
   let ssy = height/2
   translate(ssx, ssy);
   for(let i=0; i < ROC_curves.length-1; i++){
