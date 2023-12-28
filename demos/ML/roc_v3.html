@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<!-- //Receiver Operating Characteristic: 1D Demo  V3
+//=======================================
+//Author: Nikesh Bajaj (nikkeshbajaj@gmail.com)
+//Date: 28/12/2023
+//http://nikeshbajaj.in/
+//shared on ::
+//https://nikeshbajaj.github.io/teaching/demos/ML/roc_v3.html
+//(c)nikeshbajaj
+//License:: Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <!-- <title>NikB: ROC Demo</title> -->
+  <title>Nikesh Bajaj | Teaching -  ROC-DEMO</title>
+  <style>
+    body {
+      padding: 0;
+      margin: 0;
+    }
+  </style>
+  <script src="p5.js"></script>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><!--<base href="../../">-->
+  <base href=".">
+  <title>Teaching</title>
+  <link href="https://nikeshbajaj.github.io/teaching" rel="canonical">
+  <link href="../assets/style_nb_custom.min.css" rel="stylesheet" type="text/css">
+
+  <!-- JS -->
+  <script src="../assets/jquery.min.js" ></script>
+  <script defer="" src="../assets/style_nb_custom.min.js"></script>
+  <!-- <script src="../assets/knobs.js"></script> -->
+  <script language="javascript" type="text/javascript" src="../assets/KnobMakerC.js"></script>
+
+
+  <meta content="True" name="HandheldFriendly">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta name="keywords" content="machine-learning roc demo ai teaching">
+  <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
+  <script type="text/javascript" id="MathJax-script" async
+   src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js">
+  </script>
+  <script type="text/javascript" async
+   src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+  </script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+  <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+          tex2jax: {
+              skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+              displayMath: [['$$','$$']],
+              inlineMath: [['$','$']],
+          },
+      });
+  </script>
+  <script>
+    window.onresize = function(){ location.reload(); }
+  </script>
+  <script src="roc_demo_v3.js"></script>
+</head>
+
+<body>
+  <!-- <img scr="ROC_1D_Case1_Ideal.png" width="100px"> -->
+  <main>
+    <!-- <input type="range" class="input-knob" data-diameter="120"/> -->
+    <div class="mainbox">
+      <center>
+        <div style="background-color: rgb(177, 212, 236);width:1010px;">
+          <font size=6>Receiver Operating Characteristic: 1D Demo</font>
+        </center>
+      <!-- <div class="insidebox">This div is centered vertically and horizontally.</div> -->
+      <div class="descriptionbox">
+        <hr>
+        <div class="panel panel-collapsable ">
+          <div class="panel-heading">
+              <h3>Description and details </h3>
+              <span class="panel-collapsable-trigger"></span>
+              </div>
+          <div class="panel-content">
+              <div class="heading" style="margin-top: 0"><h3>Introduction:</h3></div>
+              In Machine Learning, ROC is one of approches to evaluate the quality of a trained model by computing the AUC (Area under the curve) of ROC. Although, it is straightforword to understand that higher the AUC better it is, which is good enough to compare two or more models for the purpose of model selection.
+              However, the interpretation of the value of AUC is not so intutive. The objective of this web-based interative widget is to help develop the missing intutive insight of AUC of ROC.
+              <p>In addition, this widget helps to undertand the tuning of a threshold for a trained model, in order to accommondate the cost of misclassification of classes.</p>
+
+              <div class="heading" style="margin-top: 0"><h3>Description of the widget components:</h3></div>
+              Above widget represents, the binary class problem, class 1 is <font color="green"><b>green</b></font> ($C_{green}$) and class 2 is <font color="blue"><b>blue</b></font> ($C_{blue}$).
+              This is specifically for the case, where a trained model on the data learns a single latent variable (say $x$) such that $input \rightarrow x$. Based on value of $x$, a posterier probability is computed for each class, as follow;
+                $$P(C_{green} |x)  \rightarrow Green Curve$$
+                $$P(C_{blue} |x)  \rightarrow Blue Curve, $$
+              which are the green and blue curves in the graph above.
+
+              It depends on the problem, data and a model, how these two curves look like, in terms of their distribuation shape and their distance from each other. For simplicity, we condider a gaussian distribuation and
+              we have control over their means $\mu$ and standard deviations $\sigma$. You could try to change $\mu$ and $\sigma$ from top-left ($C_{green}$) and top-right ($C_{blue}$) sliders.
+
+              There are two boxes to write the number of sample for each class, labeled as <b>N1</b> and <b>N2</b>. After typing the values for <b>N1</b> and <b>N2</b>, by clicking on <button type="button"><i>Sample</i></button> will generate samples from the respective distribuations.
+
+              Another important component of the widget is to control the <b>threshold value</b> to make a classification decision. This threshold value is the one used to create ROC curve.
+              This can be done by using <b>Threshold knob</b> or slider just above it. By moving it, you could see a trace of ROC on bottom-left and respective confusion matrix.
+
+              Confusion matrix contains following four values;
+              <ul>
+                <li><font color="green"><b>$A_o$</b></font> $-$ Accuracy of green class ($C_{green}$)</li>
+                <li><font color="blue"><b>$A_o$</b></font>  $-$ Accuracy of blue class ($C_{blue}$)</li>
+                <li><font color="green"><b>$E_o$</b></font> $-$ Error rate of green class ($C_{green}$)</li>
+                <li><font color="blue"><b>$E_o$</b></font>  $-$ Error rate of blue class ($C_{blue}$)</li>
+              </ul>
+
+
+              <div class="heading" style="margin-top: 0"><h3>Making decision:</h3></div>
+              There are usually, three ways to make decision to classify given sample, based on posterier probability. These are as follow:
+              <br><br>
+              <ol>
+                <li>One of the straightforword way to make a decision is to compare values of both $P(C_{green} |x)$ and $P(C_{blue} |x)$ for given $x$ and see which one is greater.
+                if $P(C_{green} |x) > P(C_{blue} |x)$ then sample is classified as class green, otherwise class blue.
+                </li>
+                <br>
+                <li>Second approach is to compute normalized probability for each class. For binary class, computing normalized probabilty score for one class is enough. For our example of green and blue class, normalized probability score for green class can be computed as follow;
+                $$ P_N(C_{green} |x)  = \frac{P(C_{green} |x)}{P(C_{green} |x)+P(C_{blue} |x)}$$
+                <!-- $$ P_N(C_{blue} |x)  = \frac{P(C_{blue} |x)}{P(C_{green} |x)+P(C_{blue} |x)}$$ -->
+                These normalised probabilty scores for each class ranges from 0 to 1, which are shown as dark green and dark blue curves, resepectively. Sum of normalised probabilty scores for given $x$ is equal to one.
+                Try clicking <button type="button"><i>Show/Hide norm P(x)</i></button> button to identify these curves.
+                </li>
+                <br>
+                A decision to classify is based on either $P_N(C_{green} |x)$ or $P_N(C_{blue} |x)$.
+                For binary class, if $P_N(C_{green} |x) >0.5$, sample if classified as green class, else blue class.
+                Similarly, $P_N(C_{blue} |x)$ can be computed and same decision can be made based on it.
+                <li>Third way is to compute the ratio of probability scores;
+                $$T_g = \frac{P(C_{green} |x)}{P(C_{blue} |x)}$$
+
+                $T_g$ ranges from 0 to very high ($\infty$). If $T_g>1$ then sample is classified as class green, else class blue. Similarly, $T_b$ can be computed.
+                Try clicling <button type="button"><i>Show/Hide P(x1)/P(x2)</i></button> to see the computed ration for each class.
+                </li>
+              </ol>
+
+              All three approaches produce similar results, however, approach (2) and (3) have extra property to allow us to choose a threshold. Approach (2) might be very familier to most, as majority of the models produce this score as output,
+              which is consider as probality of sample being in a class. And to make a decision for binary class problem, 0.5 (USUALLY) threshold is chosen. These threshlod allow us to incorparate cost of missclassification of a class.
+
+              If missclassification cost of $C_{blue}$ is higher than $C_{green}$, then we could increase threshold from 0.5 to say 0.8, which is to say that we classify a sample to green only if we are 80% confident, else we will classify sample to blue.
+              In this case, we will have higher <font color="green">$E_o$</font> than <font color="blue">$E_o$</font>, however overall cost will be lower.
+              Similarly, using approach (3), using threshlod $T_g>1$ for green class, means, if $P(C_{green} |x)>P(C_{blue} |x)$. To incorporate cost, we could increase threshold to 10 instead of 1.
+              This means, we classify a sample to $C_{green}$ if $T_g>10$, which entails that $P(C_{green} |x) > 10*P(C_{blue} |x)$.
+
+              A detailed explanation on this will in our Book - <a href="https://PMLBook.github.io" target="_blank"><b>Principles of Machine Learning</b></a>
+            </div>
+
+          </div>
+          <br>
+          <div class="panel panel-collapsable ">
+            <div class="panel-heading">
+                <h3>ROC, Cost and Three cases</h3>
+                <span class="panel-collapsable-trigger"></span>
+                </div>
+            <div class="panel-content">
+                <div class="heading" style="margin-top: 0"><h3>ROC Curve</h3></div>
+                A curve of ROC for any trained model is produced by using either approach (2) or (3) (see previous section). Approach (2) is much easier to use, since $P_N(C_{green} | x)$ ranges from 0 to 1. To make a decision usually 0.5 threshold is used, which is to say,
+                if probability of sample being green is more than 0.5, we classify sample as $C_{green}$. However, to produce ROC curve, we start varying threshold from 0 to 1, and compute accuracy and error rate of each class at every value of threshold. This can be seen in above
+                widget by either changing Threshold Knob or slider. At every value of threshold, two values, namley; <font color="green"><b>$A_o$</b></font> and <font color="blue"><b>$A_o$</b></font> are used. On a square plot, trace of <font color="green"><b>$A_o$</b></font> Vs $1-$<font color="blue"><b>$A_o$</b></font>
+                is plotted, which is ROC Curve. As shown in Figure 1 below.
+                <!-- <center><img src="./images/3points_on_roc.png" width="50%"></center> -->
+                <!-- <img src="./images/3points_on_roc.png" width="50%" align = "right" display="inline-block"> -->
+                <!-- <center> -->
+                <!-- <div align="left" style="display:inline-block"> -->
+                <!-- <figure>
+                  <img src="./images/3points_on_roc.png" alt="ROC Curve" style="width:50%" aling="center">
+                  <figcaption>Fig.1 - 3 Points on ROC Curve.</figcaption>
+                </figure> -->
+                <!-- </div> -->
+                <!-- <div align="right" style="display:inline-block"></div> -->
+                <!-- <figure>
+                  <img src="./images/At_thr_1_roc_cm_1d.png" alt="ROC Curve" style="width:50%" aling="center">
+                  <figcaption>Fig.2 - 3 Points on ROC Curve.</figcaption>
+                </figure> -->
+                <!-- </div> -->
+                <!-- </center> -->
+
+                <div class="row">
+                  <div class="col-50">
+                    <center>
+                    <figure>
+                      <img src="./images/3points_on_roc.png" alt="ROC Curve" style="width:110%" aling="center">
+                      <figcaption>Fig.1 - 3 Points on ROC Curve.</figcaption>
+                    </figure>
+                    </center>
+                  </div>
+                  <div class="col-50">
+                    <center>
+                    <br><br>
+                    <figure>
+                      <img src="./images/At_thr_0_roc_cm_1d.png" alt="ROC Curve" style="width:100%" aling="center">
+                      <figcaption><br>Fig.2 - At threshold=1</figcaption>
+                    </figure>
+                  </center>
+                  </div>
+                </div>
+                <br><br>
+                In above figure (Figure 1), there are three points marked at threshold value of 0, 0.5 and 1. Notice the red-dot on the curve at threshold 0, which is at top-right corner, where
+                <font color="green"><b>$A_o$</b></font>$=1$ and <font color="blue"><b>$A_o$</b></font>$=0$ (e.g. $1-$<font color="blue"><b>$A_o$</b></font>$=1$).
+                Since $P_N(C_{green} | x)$ ranges from 0 to 1 threshold =0 means, every sample will be classified as $C_{green}$, which will produce 100% accuracy for class-green, (all samples in $C_{green}$ correctly classified as green).
+                However, this will lead to 0% accuracy for class-blue ($C_{blue}$). This is shown in Figure 2, above. Similary, another extream point of threshold=1 can be seen at bottom-left, producing <font color="green">$A_o$</font>$=0$ and <font color="blue">$A_o$</font>$=1$.
+                We avoid to use terms like True Positive Rate, False Positive Rate, Precision, Recall, Sensitivity and Specificity, as they have meaning for detection problem only. Detection problem is a special case of Classification problems, which is limited to binary class.
+                Terms like Accuracy Per Class, and Error Rate are more generalised for classification problems and they are easily extended to multi-class problems.
+                <br>
+                A middle ground is a of threshold of 0.5, usually considered in case of equal cost of misclassification for both classes. In above figure, it can be seen, that threshold of 0.5 is leading to good enough accuracy for both classes.
+
+                <div class="heading" style="margin-top: 0"><h3>Cost of missclassification</h3></div>
+                A system, where missclassification of one class is higher than other, 0.5 threshold or overall accuracy of the systems is not considered, instead, a different threshold is choosen.
+                Consider an example of a system that diagnose a disease, which can be cured by very aggressive and intensive medication, however medication produces undesirable side-effects affecting life-style. Now in this case,
+                cost of misdiagnosis is huge. You do not want to medicate any petient who might not have disease. Also, a doctor saying, I am 51% sure that you have a disease is not good enough. As a petient, you want your doctor to
+                be confindent, definitely, more than 51%. In such cases, you could probabily choose a threshold on (2) approach to somewhere 0.8 or 0.9.
+
+                <br><br>
+
+                Now question is why do we need to plot ROC Curve, and how do we use it to compare two models. To answer this question, let's examine three cases in next section.
+
+                <div class="heading" style="margin-top: 0"><h3>Comparing models with AUC</h3></div>
+                We will see three cases here, case of an ideal system, usual-case system and worst-case system.
+                <div class="heading" style="margin-top: 0"><h4>Idea model (desired):</h4></div>
+                A good model is one which learns latent variable $x$ such that, green and blue curves of distribuation are far away. In other words, a value of $x$ is very different for a green class ($C_{green}$) then blue class ($C_{blue}$). In that case, a simple threhold on variable $x$ would be enough to discern green and blue classes.
+                Or using approach (2), threshold with 0.5 will be good enough, becuase, all the values of $P_N(C_{green} | x)$  will be far away from 0.5.
+
+                This can be seen in Figure 3 (below), where model learns a $x$ such that, all the values for green class are one side and for blue class on the other side. It's corresponding ROC curve is shown in Figure 4 below. In this case, as it can be seen that
+                the curve is occupying all the area and computed Area Under the Curve (AUC) will be maximum which is 1.
+                To visualise this, use above widget in default setting, and move green and blue curves far away by using slider $\mu$ on left-top and right-top, then click on <button type="button"><i>Sample</i></button> button, then use either slider or knob to create ROC Curve. They should look like as shown in figures below.
+
+                <div class="row">
+                  <div class="col-66">
+                    <center>
+                    <figure>
+                      <img src="./images/case1_ideal_distb_1d.png" alt="ROC Curve" style="width:120%" aling="center">
+                      <figcaption>Fig.3 - An ideal-case system.</figcaption>
+                    </figure>
+                    </center>
+                  </div>
+                  <div class="col-33">
+                    <center>
+                    <figure>
+                      <img src="./images/case1_ideal_roc_only_1d.png" alt="ROC Curve" style="width:85%" aling="center">
+                      <figcaption>Fig.4 - ROC of an ideal-case system</figcaption>
+                    </figure>
+                  </center>
+                  </div>
+                </div>
+
+
+                <br>
+                <div class="heading" style="margin-top: 0"><h4>Usual-case model:</h4></div>
+                Eventhough, we like a model work as ideal-case, in practive, they rarely are that good. If your model really work like that, beware, there must be something wrong.
+                In usual-case, distribuation of posterier probabilities of classes overlaps, typically, they look like as shown in Figure 5. Their respective ROC curve also look like as shown in Figure 6.
+                It can be seen, the curve is not not occupying all the area, which is less than 1.
+                Again, to visualise this, use above widget.
+                <br>
+                <br>
+                <div class="row">
+                  <div class="col-66">
+                    <center>
+                    <figure>
+                      <img src="./images/case2_usual_distb_1d.png" alt="ROC Curve" style="width:120%" aling="center">
+                      <figcaption>Fig.5 - Usual-case system.</figcaption>
+                    </figure>
+                    </center>
+                  </div>
+                  <div class="col-33">
+                    <center>
+                    <figure>
+                      <img src="./images/case2_usual_roc_only_1d.png" alt="ROC Curve" style="width:85%" aling="center">
+                      <figcaption>Fig.6 - ROC of usual-case system</figcaption>
+                    </figure>
+                  </center>
+                  </div>
+                </div>
+                <br>
+                <div class="heading" style="margin-top: 0"><h4>Worst case model:</h4></div>
+                A worst case sceanario would be, when distribuation of posterier probabilities completly overall, and no value of threshold can be better than chance level or flipping a coin.
+                Changing threshold value from 0 to 1 will produce a curve on diagonal line, which will lead to 0.5 of AUC (half of the unit-square).
+                Again, to visualise this, use above widget.
+                <br>
+                <br>
+                <div class="row">
+                  <div class="col-66">
+                    <center>
+                    <figure>
+                      <img src="./images/case3_worst_distb_1d.png" alt="ROC Curve" style="width:120%" aling="center">
+                      <figcaption>Fig.7 - A worst-case system.</figcaption>
+                    </figure>
+                    </center>
+                  </div>
+                  <div class="col-33">
+                    <center>
+                    <figure>
+                      <img src="./images/case3_worst_roc_only_1d.png" alt="ROC Curve" style="width:85%" aling="center">
+                      <figcaption>Fig.8 - ROC of a worst-case system</figcaption>
+                    </figure>
+                  </center>
+                  </div>
+                </div>
+
+
+              <div class="heading" style="margin-top: 0"><h3>Some final notes:</h3></div>
+              <ul>
+                <li>
+                  Examine worst-case sceanario, a very quick thought might come to mind, that what-if blue curve goes to right side and green goes to left, wouldn't that be even worst?
+                  Answer in no, try it and see. They are still good to make a decsion.
+                </li>
+                <li>
+                  It is said many times in many books and courses that for the worst-case sceanario AUC would be 0.5. However, sometimes, after training a model, producing a curve on a testing data will look as it goes below diagonal line,
+                  which leads to AUC $<0.5$. This is actually normal, it only means, that model's rule to classify is opposite for testing data than from training.
+                </li>
+                <li>A horizontal black line moves up and down with threshold knob, and decision on dark-green curve $P_N(C_{green} | x)$ is used. Try using "Flip decision", it will use dark-blue curve $P_N(C_{blue} | x)$ for the decision. </li>
+              </ul>
+            </div>
+      </div>
+      <br><br><br><br><br><br>
+    </div>
+    <!-- <br><br><br><br><br><br> -->
+  </main>
+</body>
+</html>
