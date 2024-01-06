@@ -205,7 +205,8 @@ div.dropdown-container span:not([class="ltr"])::before {
 
 @media(min-width:950px) {
   #wrapper {
-    padding-left: 250px
+    padding-left: 50px;
+/*     padding-left: 250px; */
   }
 
   #sidebar-wrapper {
