@@ -47,7 +47,7 @@ let ROC_values_y =[];
 
 let ROC_curves = [];
 let D_aboveT_blue = true;
-let showNormPx=true;
+let showNormPx=false;
 let showProbRatio=false;
 
 var ThKnob;
@@ -83,11 +83,11 @@ function setup() {
   //Tv = createSlider(-5, 5,0,0.01);
   //Tv.style('width', '1000px');
 
-  N1_input = createInput('100');
+  N1_input = createInput(N1);
   N1_input.size(35, 35);
   N1_input.style("font-size", "20px");
 
-  N2_input = createInput('100');
+  N2_input = createInput(N2);
   N2_input.size(35, 35);
   N2_input.style("font-size", "20px");
 
@@ -118,7 +118,7 @@ function setup() {
   buttonFlipD.style("font-family", "Comic Sans MS");
   buttonFlipD.style("font-size", "20px");
 
-  buttonNormPX = createButton('Show/Hide norm P(c)');
+  buttonNormPX = createButton('Show/Hide Posterier');
   buttonNormPX.mousePressed(NormPX);
   buttonNormPX.size(150, 40);
   buttonNormPX.style("font-family", "Comic Sans MS");
@@ -213,7 +213,7 @@ function draw() {
    text('N2 =',width-150, cy+35);
   // text('N3=',N1_input.x, N1_input.y);
   // text('N4=',N2_input.x, N2_input.y);
-  
+
 
 
    N1 = int(N1_input.value());
@@ -267,7 +267,7 @@ function draw() {
   //line(S1.mapXtoI(THRESHOLD), 0,S1.mapXtoI(THRESHOLD), height/2);
   line(0,height/2-THRESHOLD*150-100,width,height/2-THRESHOLD*150-100);
 
-  
+
 
 
   // if (D_aboveT_blue){
@@ -673,7 +673,7 @@ strokeWeight(4);
   let bb =255;
   let gg =255;
 
-  
+
   // fill(rr, 255-int(float(bb)*A1),255-int(float(gg)*A1),250)
   // rect(0, 0, 150, 100);
   // fill(rr, 255-int(float(bb)*C1),255-int(float(gg)*C1),250)
@@ -694,7 +694,7 @@ strokeWeight(4);
   rect(150, 100, 150, 100);
 
   //text(str(int(float(255)*A1)), 0,  0);
-  
+
   strokeWeight(1);
   //rect(width-310+150, height/2+165, 150, 100);
   //rect(0, 0+165+50, 300, 50);
@@ -1069,7 +1069,7 @@ function dwargrid(xd,yd,wd,ws){
   // setLineDash([1,1])
 }
 
-function mousePressed() { 
+function mousePressed() {
   ThKnob.active();
   // text('MP1',400,500);
   if (ThKnob.mouseOver){

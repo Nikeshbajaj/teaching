@@ -79,71 +79,97 @@
               <h3>Description and details </h3>
               <span class="panel-collapsable-trigger"></span>
               </div>
-          <div class="panel-content">
-              <div class="heading" style="margin-top: 0"><h3>Introduction:</h3></div>
-              In Machine Learning, ROC is one of approches to evaluate the quality of a trained model by computing the AUC (Area under the curve) of ROC. Although, it is straightforword to understand that higher the AUC better it is, which is good enough to compare two or more models for the purpose of model selection.
-              However, the interpretation of the value of AUC is not so intutive. The objective of this web-based interative widget is to help develop the missing intutive insight of AUC of ROC.
-              <p>In addition, this widget helps to undertand the tuning of a threshold for a trained model, in order to accommondate the cost of misclassification of classes.</p>
-
-              <div class="heading" style="margin-top: 0"><h3>Description of the widget components:</h3></div>
-              Above widget represents, the binary class problem, class 1 is <font color="green"><b>green</b></font> ($C_{green}$) and class 2 is <font color="blue"><b>blue</b></font> ($C_{blue}$).
-              This is specifically for the case, where a trained model on the data learns a single latent variable (say $x$) such that $input \rightarrow x$. Based on value of $x$, a posterier probability is computed for each class, as follow;
-                $$P(C_{green} |x)  \rightarrow Green Curve$$
-                $$P(C_{blue} |x)  \rightarrow Blue Curve, $$
-              which are the green and blue curves in the graph above.
-
-              It depends on the problem, data and a model, how these two curves look like, in terms of their distribuation shape and their distance from each other. For simplicity, we condider a gaussian distribuation and
-              we have control over their means $\mu$ and standard deviations $\sigma$. You could try to change $\mu$ and $\sigma$ from top-left ($C_{green}$) and top-right ($C_{blue}$) sliders.
-
-              There are two boxes to write the number of sample for each class, labeled as <b>N1</b> and <b>N2</b>. After typing the values for <b>N1</b> and <b>N2</b>, by clicking on <button type="button"><i>Sample</i></button> will generate samples from the respective distribuations.
-
-              Another important component of the widget is to control the <b>threshold value</b> to make a classification decision. This threshold value is the one used to create ROC curve.
-              This can be done by using <b>Threshold knob</b> or slider just above it. By moving it, you could see a trace of ROC on bottom-left and respective confusion matrix.
-
-              Confusion matrix contains following four values;
-              <ul>
-                <li><font color="green"><b>$A_o$</b></font> $-$ Accuracy of green class ($C_{green}$)</li>
-                <li><font color="blue"><b>$A_o$</b></font>  $-$ Accuracy of blue class ($C_{blue}$)</li>
-                <li><font color="green"><b>$E_o$</b></font> $-$ Error rate of green class ($C_{green}$)</li>
-                <li><font color="blue"><b>$E_o$</b></font>  $-$ Error rate of blue class ($C_{blue}$)</li>
-              </ul>
-
-
-              <div class="heading" style="margin-top: 0"><h3>Making decision:</h3></div>
-              There are usually, three ways to make decision to classify given sample, based on posterier probability. These are as follow:
-              <br><br>
-              <ol>
-                <li>One of the straightforword way to make a decision is to compare values of both $P(C_{green} |x)$ and $P(C_{blue} |x)$ for given $x$ and see which one is greater.
-                if $P(C_{green} |x) > P(C_{blue} |x)$ then sample is classified as class green, otherwise class blue.
-                </li>
+              <div class="panel-content">
+                <div class="heading" style="margin-top: 0"><h3>Introduction:</h3></div>
+                In Machine Learning, ROC Curve is one of approches to evaluate the quality of a trained model by computing the AUC (Area under the curve) of ROC Curve. Although, it is straightforword to understand that higher the AUC, better it is, which is good enough to compare two or more models for the purpose of model selection.
+                However, unlike accuracy, the interpretation of the value of AUC is not so intutive. The objective of this web-based interative widget is to help develop the missing intutive insight of AUC of ROC Curve.
+                <p>In addition, this widget helps to undertand the tuning of a threshold for a trained model, in order to accommondate the cost of misclassification of classes.</p>
+  
+                <div class="heading" style="margin-top: 0"><h3>Description of the widget components:</h3></div>
+                Above widget represents, the binary class problem, class 1 is <font color="green"><b>green</b></font> ($C_{green}$) and class 2 is <font color="blue"><b>blue</b></font> ($C_{blue}$).
+                This is specifically for the case, where a trained model on the data learns a single latent variable (say $x$) such that $input \rightarrow x$ with the <b>class density</b>, as follow;
+  
+                <br><br><br><b>Class Density</b>
+                $$P(x | C_{green})  \rightarrow Green Curve$$
+                $$P(x | C_{blue})  \rightarrow Blue Curve, $$
+  
+                which are the green and blue curves in the graph above. $P(x | C_{green})$ tells us the probability of x given that it belongs to green class.
+  
+                It is also called as <i>Likelihood</i>
+                <br><br>
+  
+                <b>Posterier probability</b>
                 <br>
-                <li>Second approach is to compute normalized probability for each class. For binary class, computing normalized probabilty score for one class is enough. For our example of green and blue class, normalized probability score for green class can be computed as follow;
-                $$ P_N(C_{green} |x)  = \frac{P(C_{green} |x)}{P(C_{green} |x)+P(C_{blue} |x)}$$
-                <!-- $$ P_N(C_{blue} |x)  = \frac{P(C_{blue} |x)}{P(C_{green} |x)+P(C_{blue} |x)}$$ -->
-                These normalised probabilty scores for each class ranges from 0 to 1, which are shown as dark green and dark blue curves, resepectively. Sum of normalised probabilty scores for given $x$ is equal to one.
-                Try clicking <button type="button"><i>Show/Hide norm P(x)</i></button> button to identify these curves.
-                </li>
-                <br>
-                A decision to classify is based on either $P_N(C_{green} |x)$ or $P_N(C_{blue} |x)$.
-                For binary class, if $P_N(C_{green} |x) >0.5$, sample if classified as green class, else blue class.
-                Similarly, $P_N(C_{blue} |x)$ can be computed and same decision can be made based on it.
-                <li>Third way is to compute the ratio of probability scores;
-                $$T_g = \frac{P(C_{green} |x)}{P(C_{blue} |x)}$$
-
-                $T_g$ ranges from 0 to very high ($\infty$). If $T_g>1$ then sample is classified as class green, else class blue. Similarly, $T_b$ can be computed.
-                Try clicling <button type="button"><i>Show/Hide P(x1)/P(x2)</i></button> to see the computed ration for each class.
-                </li>
-              </ol>
-
-              All three approaches produce similar results, however, approach (2) and (3) have extra property to allow us to choose a threshold. Approach (2) might be very familier to most, as majority of the models produce this score as output,
-              which is consider as probality of sample being in a class. And to make a decision for binary class problem, 0.5 (USUALLY) threshold is chosen. These threshlod allow us to incorparate cost of missclassification of a class.
-
-              If missclassification cost of $C_{blue}$ is higher than $C_{green}$, then we could increase threshold from 0.5 to say 0.8, which is to say that we classify a sample to green only if we are 80% confident, else we will classify sample to blue.
-              In this case, we will have higher <font color="green">$E_o$</font> than <font color="blue">$E_o$</font>, however overall cost will be lower.
-              Similarly, using approach (3), using threshlod $T_g>1$ for green class, means, if $P(C_{green} |x)>P(C_{blue} |x)$. To incorporate cost, we could increase threshold to 10 instead of 1.
-              This means, we classify a sample to $C_{green}$ if $T_g>10$, which entails that $P(C_{green} |x) > 10*P(C_{blue} |x)$.
-
-              A detailed explanation on this will in our Book - <a href="https://PMLBook.github.io" target="_blank"><b>Principles of Machine Learning</b></a>
+                Using Bayes, we can compute Postier probabilities as follows:
+  
+                $$P(C_{green} | x) =  \frac{P (x | C_{green} ) P(C_{green})}{P(x)}$$
+                $$P(C_{blue} | x) =  \frac{P (x | C_{blue} ) P(C_{blue})}{P(x)}$$
+  
+                which can be seen above by using button <button type="button"><i>Show/Hide Posterier</i></button>
+                <br><br>
+  
+                <!-- Based on value of $x$, a posterier probability is computed for each class, as follow;
+                  $$P(C_{green} |x)  \rightarrow Green Curve$$
+                  $$P(C_{blue} |x)  \rightarrow Blue Curve, $$
+                which are the green and blue curves in the graph above. -->
+  
+                It depends on the problem, data and a model, how these two curves look like, in terms of their distribuation shape and their distance from each other. For simplicity, we condider a gaussian distribuation and
+                we have control over their means $\mu$ and standard deviations $\sigma$. You could try to change $\mu$ and $\sigma$ from top-left ($C_{green}$) and top-right ($C_{blue}$) sliders.
+  
+                There are two boxes to write the number of sample for each class, labeled as <b>N1</b> and <b>N2</b>. After typing the values for <b>N1</b> and <b>N2</b>, by clicking on <button type="button"><i>Sample</i></button> will generate samples from the respective distribuations.
+  
+                Another important component of the widget is to control the <b>threshold value</b> to make a classification decision. This threshold value is the one used to create ROC curve.
+                This can be done by using <b>Threshold knob</b> or slider just above it. By moving it, you could see a trace of ROC on bottom-left and respective confusion matrix.
+  
+                Confusion matrix contains following four values;
+                <ul>
+                  <li><font color="green"><b>$A_o$</b></font> $-$ Accuracy of green class ($C_{green}$)</li>
+                  <li><font color="blue"><b>$A_o$</b></font>  $-$ Accuracy of blue class ($C_{blue}$)</li>
+                  <li><font color="green"><b>$E_o$</b></font> $-$ Error rate of green class ($C_{green}$)</li>
+                  <li><font color="blue"><b>$E_o$</b></font>  $-$ Error rate of blue class ($C_{blue}$)</li>
+                </ul>
+  
+  
+                <div class="heading" style="margin-top: 0"><h3>Making decision:</h3></div>
+                There are usually, three ways to make decision to classify given sample, based on class density and posterier probability. These are as follow:
+                <br><br>
+                <ol>
+                  <li>One of the straightforword way to make a decision is to compare the class density values of both $P(x | C_{green})$ and $P(x | C_{blue})$ for given $x$ and see which one is greater.
+                  If $P(x | C_{green}) > P(x | C_{blue})$ then sample is classified as class green, otherwise class blue. This is also called as Maximum Likelihood approach.
+                  </li>
+                  <br>
+                  <li>Second approach is to compute posterier probability for each class. For binary class, computing posterier probabilty score for one class is enough. For our example of green and blue class, posterier probability score for green class can be computed as follow;
+                  <!-- $$ P_N(C_{green} |x)  = \frac{P(C_{green} |x)}{P(C_{green} |x)+P(C_{blue} |x)}$$ -->
+                  <!-- $$ P_N(C_{blue} |x)  = \frac{P(C_{blue} |x)}{P(C_{green} |x)+P(C_{blue} |x)}$$ -->
+                  $$P(C_{green} | x) =  \frac{P (x | C_{green} ) P(C_{green})}{P(x)}$$
+  
+                  where $P(C_{green})$ is prior, (e.g. Number of samples of green / total number of samples).
+                  These posterier probabilty scores for each class ranges from 0 to 1, which are shown as dark green and dark blue curves, resepectively. Sum of posterier probabilty scores for given $x$ is equal to one.
+                  Try clicking <button type="button"><i>Show/Hide Posterier</i></button> button to identify these curves.
+                  </li>
+                  <br>
+                  A decision to classify is based on either $P(C_{green} | x)$ or $P(C_{blue} | x)$.
+                  For binary class, if $P(C_{green} | x) >0.5$, sample if classified as green class, else blue class.
+                  Similarly, $P(C_{blue} | x)$ can be computed and same decision can be made based on it.
+                  <li>Third way is to compute the ratio of class density scores;
+                  $$T_g = \frac{P(x | C_{green} )}{P(x | C_{blue})}$$
+  
+                  $T_g$ ranges from 0 to very high ($\infty$). If $T_g>1$ then sample is classified as class green, else class blue. Similarly, $T_b$ can be computed.
+                  Try clicling <button type="button"><i>Show/Hide P(x1)/P(x2)</i></button> to see the computed ration for each class.
+                  </li>
+                </ol>
+  
+                All three approaches produce similar results, however, approach (2) and (3) have extra property to allow us to choose a threshold. Approach (2) might be very familier to most, as majority of the models produce this score as output,
+                which is consider as probality of sample being in a class. And to make a decision for binary class problem, 0.5 (USUALLY) threshold is chosen. These threshlod allow us to incorparate cost of missclassification of a class.
+  
+                If missclassification cost of $C_{blue}$ is higher than $C_{green}$, then we could increase threshold from 0.5 to say 0.8, which is to say that we classify a sample to green only if we are 80% confident, else we will classify sample to blue.
+                In this case, we will have higher <font color="green">$E_o$</font> than <font color="blue">$E_o$</font>, however overall cost will be lower.
+                Similarly, using approach (3), using threshlod $T_g>1$ for green class, means, if $P(C_{green} |x)>P(C_{blue} |x)$. To incorporate cost, we could increase threshold to 10 instead of 1.
+                This means, we classify a sample to $C_{green}$ if $T_g>10$, which entails that $P(C_{green} |x) > 10*P(C_{blue} |x)$.
+  
+                A detailed explanation on this will in our Book - <a href="https://PMLBook.github.io" target="_blank"><b>Principles of Machine Learning</b></a>
+              </div>
+  
             </div>
 
           </div>
