@@ -95,17 +95,25 @@
   
                 which are the green and blue curves in the graph above. $P(x | C_{green})$ tells us the probability of x given that it belongs to green class.
   
-                It is also called as <i>Likelihood</i>
+                It is also called as <b><i>Likelihood</i></b>
                 <br><br>
   
                 <b>Posterier probability</b>
                 <br>
                 Using Bayes, we can compute Postier probabilities as follows:
-  
+
+                \begin{align}
+                  P(C_{green} | x) &= \frac{P (x | C_{green} ) P(C_{green})}{P(x)} \label{eq1}\tag{1} \\
+                  P(C_{blue} | x)  &= \frac{P (x | C_{blue} ) P(C_{blue})}{P(x)}   \label{eq2}\tag{2}
+                \end{align}
+
+                <!-- See (\ref{eq1}) and (\ref{eq2}) -->
+                <!--   
                 $$P(C_{green} | x) =  \frac{P (x | C_{green} ) P(C_{green})}{P(x)}$$
-                $$P(C_{blue} | x) =  \frac{P (x | C_{blue} ) P(C_{blue})}{P(x)}$$
+                $$P(C_{blue} | x) =  \frac{P (x | C_{blue} ) P(C_{blue})}{P(x)}$$ 
+                 -->
   
-                which can be seen above by using button <button type="button"><i>Show/Hide Posterier</i></button>
+                which can be seen (dark green and dark blue curves) above by using button <button type="button"><i>Show/Hide Posterier</i></button>
                 <br><br>
   
                 <!-- Based on value of $x$, a posterier probability is computed for each class, as follow;
@@ -113,11 +121,23 @@
                   $$P(C_{blue} |x)  \rightarrow Blue Curve, $$
                 which are the green and blue curves in the graph above. -->
   
-                It depends on the problem, data and a model, how these two curves look like, in terms of their distribuation shape and their distance from each other. For simplicity, we condider a gaussian distribuation and
+                It depends on the problem, data and a model, how these two class density curves ($P(x|C_{green})$ and $P(x|C_{blue})$) look like, in terms of their distribuation shape and their distance from each other. 
+                Given the data a model tries to learn a latent variable $x$ which have different class densities.
+                
+                For simplicity, we condider a gaussian distribuation and
                 we have control over their means $\mu$ and standard deviations $\sigma$. You could try to change $\mu$ and $\sigma$ from top-left ($C_{green}$) and top-right ($C_{blue}$) sliders.
   
                 There are two boxes to write the number of sample for each class, labeled as <b>N1</b> and <b>N2</b>. After typing the values for <b>N1</b> and <b>N2</b>, by clicking on <button type="button"><i>Sample</i></button> will generate samples from the respective distribuations.
-  
+                These <b>N1</b> and <b>N2</b> are used to compute prior probabilities, which are:
+
+                \begin{align}
+                  P(C_{green}) = \frac{N1}{N1+N2} \quad \& \quad  P(C_{blue}) = \frac{N2}{N1+N2}  \label{eq3}\tag{3}
+                \end{align}
+
+                <!-- $$P(C_{green}) = \frac{N1}{N1+N2} \quad P(C_{blue}) = \frac{N2}{N1+N2}$$ -->
+
+                If $N1=N2$, then $P(C_{green}) = P(C_{blue})= 0.5$
+                <br><br>
                 Another important component of the widget is to control the <b>threshold value</b> to make a classification decision. This threshold value is the one used to create ROC curve.
                 This can be done by using <b>Threshold knob</b> or slider just above it. By moving it, you could see a trace of ROC on bottom-left and respective confusion matrix.
   
@@ -138,34 +158,56 @@
                   If $P(x | C_{green}) > P(x | C_{blue})$ then sample is classified as class green, otherwise class blue. This is also called as Maximum Likelihood approach.
                   </li>
                   <br>
-                  <li>Second approach is to compute posterier probability for each class. For binary class, computing posterier probabilty score for one class is enough. For our example of green and blue class, posterier probability score for green class can be computed as follow;
+                  <li>Second approach is to compute posterier probability for each class. For binary class, computing posterier probabilty score for 
+                    one class is enough. For our example of green and blue class, 
+                    posterier probability score for green class can be computed as follow (using eqautions  (\ref{eq1}) and (\ref{eq2}));
                   <!-- $$ P_N(C_{green} |x)  = \frac{P(C_{green} |x)}{P(C_{green} |x)+P(C_{blue} |x)}$$ -->
                   <!-- $$ P_N(C_{blue} |x)  = \frac{P(C_{blue} |x)}{P(C_{green} |x)+P(C_{blue} |x)}$$ -->
+                  <!-- \begin{align}
+                      g &= \int_a^b f(x)dx \label{eq1}\tag{1} \\
+                      a &= b + c \label{eq2}\tag{2}
+                  \end{align}
+
+                  See (\ref{eq1}) and (\ref{eq2}) -->
+                  
                   $$P(C_{green} | x) =  \frac{P (x | C_{green} ) P(C_{green})}{P(x)}$$
   
-                  where $P(C_{green})$ is prior, (e.g. Number of samples of green / total number of samples).
-                  These posterier probabilty scores for each class ranges from 0 to 1, which are shown as dark green and dark blue curves, resepectively. Sum of posterier probabilty scores for given $x$ is equal to one.
+                  where $P(C_{green})$ is prior, i.e.  ${N1}/({N1+N2})$.
+                  These posterier probabilty scores for each class ranges from 0 to 1, which are shown as dark green and dark blue curves, resepectively. Sum of posterier probabilty scores for given $x$ is equal to one, 
+                  which can be worked out by checking $P(C_{green} | x) + P(C_{blue} | x)$
+                  
                   Try clicking <button type="button"><i>Show/Hide Posterier</i></button> button to identify these curves.
                   </li>
                   <br>
                   A decision to classify is based on either $P(C_{green} | x)$ or $P(C_{blue} | x)$.
                   For binary class, if $P(C_{green} | x) >0.5$, sample if classified as green class, else blue class.
                   Similarly, $P(C_{blue} | x)$ can be computed and same decision can be made based on it.
+                  <br><br>
                   <li>Third way is to compute the ratio of class density scores;
-                  $$T_g = \frac{P(x | C_{green} )}{P(x | C_{blue})}$$
+
+                    \begin{align}
+                      T_g &=  \frac{P(x | C_{green} )}{P(x | C_{blue})}  \label{eq4}\tag{4}
+                    \end{align}
+
+                  <!-- $$T_g = \frac{P(x | C_{green} )}{P(x | C_{blue})}$$ -->
   
                   $T_g$ ranges from 0 to very high ($\infty$). If $T_g>1$ then sample is classified as class green, else class blue. Similarly, $T_b$ can be computed.
                   Try clicling <button type="button"><i>Show/Hide P(x1)/P(x2)</i></button> to see the computed ration for each class.
                   </li>
                 </ol>
   
-                All three approaches produce similar results, however, approach (2) and (3) have extra property to allow us to choose a threshold. Approach (2) might be very familier to most, as majority of the models produce this score as output,
-                which is consider as probality of sample being in a class. And to make a decision for binary class problem, 0.5 (USUALLY) threshold is chosen. These threshlod allow us to incorparate cost of missclassification of a class.
-  
-                If missclassification cost of $C_{blue}$ is higher than $C_{green}$, then we could increase threshold from 0.5 to say 0.8, which is to say that we classify a sample to green only if we are 80% confident, else we will classify sample to blue.
+                <b>All three approaches produce similar results</b>, however, approach (2) and (3) have extra property to allow us to choose a <b>threshold</b>. 
+                Approach (2) might be very familier to most, as majority of the models produce this score as output,
+                which is consider as probality of sample being in a class. And to make a decision for binary class problem, 0.5 (Usually) threshold is chosen.
+                
+                <br><br>
+                These threshlod allow us to incorparate cost of missclassification of a class.
+                If missclassification cost of $C_{blue}$ is higher than $C_{green}$, then we could increase threshold from 0.5 to say 0.8, which is to say that we classify a sample to green only if model is at least 80% confident (loosly speaking), 
+                else we will classify sample to blue.
                 In this case, we will have higher <font color="green">$E_o$</font> than <font color="blue">$E_o$</font>, however overall cost will be lower.
-                Similarly, using approach (3), using threshlod $T_g>1$ for green class, means, if $P(C_{green} |x)>P(C_{blue} |x)$. To incorporate cost, we could increase threshold to 10 instead of 1.
-                This means, we classify a sample to $C_{green}$ if $T_g>10$, which entails that $P(C_{green} |x) > 10*P(C_{blue} |x)$.
+                Similarly, using approach (3), using threshlod a threshold $T=1$ and $T_g>T$ for green class, means, if $P(x | C_{green})>P( x| C_{blue})$. 
+                To incorporate cost, we could increase threshold to $T=10$ instead of 1.
+                This means, we classify a sample to $C_{green}$ if $T_g>10$, which entails that $P(x | C_{green}) > 10*P(x | C_{green})$.
   
                 A detailed explanation on this will in our Book - <a href="https://PMLBook.github.io" target="_blank"><b>Principles of Machine Learning</b></a>
               </div>
