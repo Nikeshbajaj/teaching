@@ -155,7 +155,8 @@
                 <br><br>
                 <ol>
                   <li>One of the straightforword way to make a decision is to compare the class density values of both $P(x | C_{green})$ and $P(x | C_{blue})$ for given $x$ and see which one is greater.
-                  If $P(x | C_{green}) > P(x | C_{blue})$ then sample is classified as class green, otherwise class blue. This is also called as Maximum Likelihood approach.
+                  If $P(x | C_{green}) > P(x | C_{blue})$ then sample is classified as class green, otherwise class blue. 
+                  This is famously called as <b>Maximum Likelihood approach</b>.
                   </li>
                   <br>
                   <li>Second approach is to compute posterier probability for each class. For binary class, computing posterier probabilty score for 
@@ -169,29 +170,38 @@
                   \end{align}
 
                   See (\ref{eq1}) and (\ref{eq2}) -->
-                  
                   $$P(C_{green} | x) =  \frac{P (x | C_{green} ) P(C_{green})}{P(x)}$$
   
                   where $P(C_{green})$ is prior, i.e.  ${N1}/({N1+N2})$.
                   These posterier probabilty scores for each class ranges from 0 to 1, which are shown as dark green and dark blue curves, resepectively. Sum of posterier probabilty scores for given $x$ is equal to one, 
                   which can be worked out by checking $P(C_{green} | x) + P(C_{blue} | x)$
-                  
-                  Try clicking <button type="button"><i>Show/Hide Posterier</i></button> button to identify these curves.
+                  <br><br>
+                  This is called as <b>Maximum a Posteriori (MAP)</b>.
+                  <br>
                   </li>
                   <br>
                   A decision to classify is based on either $P(C_{green} | x)$ or $P(C_{blue} | x)$.
                   For binary class, if $P(C_{green} | x) >0.5$, sample if classified as green class, else blue class.
                   Similarly, $P(C_{blue} | x)$ can be computed and same decision can be made based on it.
                   <br><br>
-                  <li>Third way is to compute the ratio of class density scores;
+                  Try clicking <button type="button"><i>Show/Hide Posterier</i></button> button to identify these curves.
+                  <br><br>
+                  <li>Third way is to compute the ratio of class density scores or posterier probabilties;
 
                     \begin{align}
                       T_g &=  \frac{P(x | C_{green} )}{P(x | C_{blue})}  \label{eq4}\tag{4}
                     \end{align}
+                    Or
+                    \begin{align}
+                    T_g &=  \frac{P(C_{green}|x)}{P(C_{blue} | x)}  \label{eq5}\tag{5}
+                  \end{align}
 
                   <!-- $$T_g = \frac{P(x | C_{green} )}{P(x | C_{blue})}$$ -->
   
-                  $T_g$ ranges from 0 to very high ($\infty$). If $T_g>1$ then sample is classified as class green, else class blue. Similarly, $T_b$ can be computed.
+                  $T_g$ ranges from 0 to very high ($\infty$). If $T_g>1$ then sample is classified as class green, else class blue. 
+                  Similarly, $T_b$ can be computed.
+                  For $N1=N2$, equation (\ref{eq5} reduces to (\ref{eq4})).
+                  <br><br>
                   Try clicling <button type="button"><i>Show/Hide P(x1)/P(x2)</i></button> to see the computed ration for each class.
                   </li>
                 </ol>
