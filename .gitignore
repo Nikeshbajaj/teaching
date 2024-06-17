@@ -7,3 +7,4 @@
 *.sh
 *.ipynb
 *.ipynb_checkpoints
+*_site/
