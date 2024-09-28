@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<!-- //Sinusoidal Player | NikB
+//=======================================
+//Author: Nikesh Bajaj (nikkeshbajaj@gmail.com)
+//Date: Sep 2024
+//https://nikeshbajaj.in/
+//shared on ::
+//https://nikeshbajaj.github.io/Demos/SP/
+//(c)nikeshbajaj
+//License:: Attribution-ShareAlike 4.0 International (CC BY-SA 4.0) -->
+<html lang="en">
+<head>
+  <title>Sinusoidal Player | NikB</title>
+  <script src="../libmx/maxiLib.js"></script>
+  <script src="../libmx/wavemx.js"></script>
+  <link rel="stylesheet" href="../libmx/sliders.css" type="text/css" />
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=default'></script>
+</head>
+<body>
+  <style>
+    body {
+      margin: 2px;
+      padding: 2px;
+      background: white;
+    }
+  </style>
+  <center>
+    <h1>Sinusoidal Wave</h1>
+    <h3>
+    $$ x(t) = A \cdot sin(2 \pi f) $$
+    </h3>
+  </center>
+  <script>
+  </script>
+  <div style="margin: 0 40 0 40;">
+    <!-- <p><span id="fmin"></span> - <span id="fmax"></span> Hz | <span id="fstep"></span> Hz</p> -->
+    <table width="100%" border="0" bgcolor="#ffffff">
+      <colgroup>
+        <col width="11%"><col width="75%"><col width="9%">
+    </colgroup>
+    <tr>
+      <td ><p>Frequency: <span id="f1value"></span> Hz</p></td>
+      <td ><div class="slidecontainer">
+        <input type="range" min="1" max="1000" value="43"  step="1" class="slider" id="f1">
+      </div>
+      <td>
+        <div align="right">
+          <button onClick="window.location.href=window.location.href">Refresh Page</button>
+        </div> 
+      </td>
+    </td>
+    </tr>
+    <tr>
+        <td>Amplitude: <span id="a1value"></span></td>
+        <td><div class="slidecontainer">
+          <input type="range" min="0.0" max="3.0" value="0.9" step="0.1" class="slider" id="a1">
+        </div></td>
+        <td>
+          <div align="center">
+            <b> Frequency Range </b>  
+            <select id = "frqList" onchange = "frqSelect()" >  
+            <option value ="1">0 - 1 KHz  | 1 Hz </option>  
+            <option value ="2">1 - 8 KHz  | 100 Hz</option>  
+            <option value ="3">8 - 30 KHz | 250 Hz</option>  
+            </select>
+            <!-- <p><span id="fmin"></span> - <span id="fmax"></span> Hz | <span id="fstep"></span> Hz</p> -->
+          </div> 
+        </td>
+    </tr>
+    </table>
+  </div>
+
+  <script>
+    var slider1 = document.getElementById("f1");
+    var slider2 = document.getElementById("a1");
+    var output1 = document.getElementById("f1value");
+    output1.innerHTML = slider1.value;
+    slider1.oninput = function() {output1.innerHTML = this.value;}
+    var output2 = document.getElementById("a1value");
+    output2.innerHTML = parseFloat(slider2.value);
+    slider2.oninput = function() {output2.innerHTML = this.value;}
+
+    function frqSelect() {  
+    var freq = document.getElementById("frqList");
+    var fOpt = frqList.options[frqList.selectedIndex].value;
+    // document.getElementById("showtext").value = fOpt;
+    if(fOpt=="1"){
+      // document.getElementById("fmin").innerHTML = "0";
+      // document.getElementById("fmax").innerHTML = "1000";
+      // document.getElementById("fstep").innerHTML = "1";
+      document.getElementById("f1").min = "0";
+      document.getElementById("f1").max = "1000";
+      document.getElementById("f1").step = "1";
+      document.getElementById("f1").value = "43";
+    }
+    if(fOpt=="2"){
+      // document.getElementById("fmin").innerHTML = "1000";
+      // document.getElementById("fmax").innerHTML = "8000";
+      // document.getElementById("fstep").innerHTML = "100";
+      document.getElementById("f1").min = "1000";
+      document.getElementById("f1").max = "8000";
+      document.getElementById("f1").step = "100";
+      document.getElementById("f1").value = "1500";
+    }
+    if(fOpt=="3"){
+      // document.getElementById("fmin").innerHTML = "8000";
+      // document.getElementById("fmax").innerHTML = "30000";
+      // document.getElementById("fstep").innerHTML = "250";
+      document.getElementById("f1").min = "8000";
+      document.getElementById("f1").max = "30000";
+      document.getElementById("f1").step = "250";
+      document.getElementById("f1").value = "8000";
+    }
+    document.getElementById("f1value").innerHTML = document.getElementById("f1").value;
+
+   }
+   frqSelect()
+  </script>
+
+  <canvas>
+  </canvas>
+  <!-- Our javascript code -->
+  <script type="text/javascript">
+    // var fvalue = 200;
+    // var fvalue = parseInt(slider.value);
+    var fvalue = parseInt(slider1.value);
+    // console.log(slider1.value);
+    // console.log(fvalue);
+
+    var maximJs;
+    var maxiAudio = new maximJs.maxiAudio();
+    maxiAudio.init();
+    var output;
+    var drawOutput = new Array(1024);
+    var counter = 0;
+    var myOsc = new maximJs.maxiOsc();
+    var myOsc2 = new maximJs.maxiOsc();
+    //change this.output to an array
+    //maximJs.maxiAudio.outputIsArray(true, 2);
+
+
+    maxiAudio.play = function () {
+      var fvalue = parseInt(slider1.value);
+      var avalue = parseFloat(slider2.value);
+      // console.log(fvalue);
+      // console.log(avalue);
+      counter++;
+      // var sum = myOsc.sinewave(200 + (myOsc2.sinewave(0.1) * 2)) * 1;
+      var sum = myOsc.sinewave(fvalue) * 1;
+      this.output = sum * avalue;
+      drawOutput[counter % 1024] = this.output;
+
+    };
+
+    var canvas = document.querySelector("canvas");
+    var width = window.innerWidth;
+    var height = window.innerHeight;
+    var context = canvas.getContext("2d");
+
+    canvas.setAttribute("width", width);
+    canvas.setAttribute("height", height);
+
+    var spacing = (width / 1024);
+
+    function draw() {
+
+      //This is basically the same as any other 2D processing draw routine.
+
+      //clear the screen
+      context.clearRect(0, 0, width, height);
+      //draw a square
+
+      var avalue = parseFloat(slider2.value);
+      if(avalue>1){
+      context.strokeStyle = `rgb(
+        ${Math.floor(0 + 255*(avalue/3) )}
+        0
+        0
+        )`;
+      }else{
+        context.strokeStyle = `rgb(0 0 0)`;
+      }
+      context.lineWidth = 1;
+      for (var i = 0; i < 1024; i++) {
+        // context.strokeStyle = `rgb(
+        // ${Math.floor(255 - 0.25 * i)}
+        // 0
+        // 0
+        // )`;
+        context.beginPath();
+        context.moveTo(i * spacing, height / 2 - height / 8);
+        context.lineTo(i * spacing, height / 2 - height / 8 + (drawOutput[i] * height / 4));
+        context.stroke();
+        context.closePath();
+      }
+    }
+
+    setInterval(draw, 1);
+
+  </script>
+
+</body>
+
+</html>
