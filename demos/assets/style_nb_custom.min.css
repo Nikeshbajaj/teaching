@@ -555,3 +555,12 @@
   /* left: 50%; */
   margin: 0;
 }
+
+.column-box{
+  display: inline-block;
+  width:fit-content;
+  margin:auto;
+  /* padding-right: 10px; */
+
+
+}
