@@ -72,6 +72,9 @@ layout: base_art_sidebar
         </div>
     <div class="panel-content">
         <div class="heading" style="margin-top: 0">
+        <div style="float: right;">
+        <a href="https://www.youtube.com/playlist?list=PLdb7wbToE3cK5VikE25mYb9FLi1ETxOSj" target="_blank"><aa class="btn btn-small btn-highlight">Watch on Youtube (youtube playlist)</aa></a>
+        </div>
         <h3>List of Videos: </h3>
         </div>
         <h3>Video: Introduction to Statistics: Part 1: Describe your Data</h3>
