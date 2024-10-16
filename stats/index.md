@@ -76,7 +76,8 @@ layout: base_art_sidebar
         </div>
         <h3>Video: Introduction to Statistics: Part 1: Describe your Data</h3>
         <div class="video-container">
-        <iframe width="860" height="415" src="https://www.youtube.com/embed/nuAAVOg93iE?si=7_XlBOQ6X18h46pm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="860" height="415" src="https://www.youtube.com/embed/LOrdgvZ7yMY?si=iCoKkRHVZULDOF4s" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/nuAAVOg93iE?si=7_XlBOQ6X18h46pm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> -->
         </div>
         <br>
         <hr>
