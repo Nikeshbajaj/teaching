@@ -6,7 +6,7 @@ layout: base_art_sidebar
 # Principles of Machine Learning
 **Date: Oct-Dec 2024**
 
-
+## In progress ...
 
 <hr>
 <br>

@@ -1049,3 +1049,27 @@ a:active {
 
 
 }
+
+
+
+.wide-show{
+  display: inline-block;
+  width:fit-content;
+  margin:auto;
+}
+
+.narrow-show{
+  display: none;
+  width:fit-content;
+  margin:auto;
+}
+
+@media(max-width:800px) {
+  .wide-show {
+    display: none;
+  }
+  .narrow-show {
+    display: inline-block;
+  }
+
+}

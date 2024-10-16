@@ -6,7 +6,7 @@ layout: base_art_sidebar
 ### Teaching/Stats
 
 # Statistics for Medical Students
-**Date: Sep 2022**
+**Dates: (Sep 2022), (Sep 2023), (Oct 2024)**
 
 
 <div class="panel panel-collapsable is-expanded">
@@ -49,14 +49,15 @@ layout: base_art_sidebar
 
 <div class="panel panel-collapsable ">
     <div class="panel-heading">
-        <h3>Session Material</h3>
+        <h3>Session Material 2022, 2023</h3>
         <span class="panel-collapsable-trigger"></span>
         </div>
     <div class="panel-content">
         <div class="heading" style="margin-top: 0">
-            <!-- <p>Overview</p> -->
+        <!-- <h3>2023</h3> -->
         </div>
         <ul class='list-inline'>
+        <li><h3>2023</h3></li>
         <li><a href="files/Introduction_to_Statistics.pdf" target="_blank"><aa class="btn btn-small btn-highlight">Slides - PDF</aa></a></li>
         <li><a href="https://nikeshbajaj.github.io/teaching/stats_demo" target="_blank"><aa class="btn btn-small btn-highlight">Web-demo</aa></a></li>
         <li><a href="https://nikeshbajaj.github.io/teaching/spss_session/WorkSheet_SPSS_Session.pdf" target="_blank"><aa class="btn btn-small btn-highlight">SPSS Worksheet</aa></a></li>
@@ -64,6 +65,22 @@ layout: base_art_sidebar
         </div>
     </div>
 
+<div class="panel panel-collapsable ">
+    <div class="panel-heading">
+        <h3>Video Recordings 2023</h3>
+        <span class="panel-collapsable-trigger"></span>
+        </div>
+    <div class="panel-content">
+        <div class="heading" style="margin-top: 0">
+            <!-- <p>Overview</p> -->
+        </div>
+        <!-- <ul class='list-inline'>
+        <li><a href="files/Introduction_to_Statistics.pdf" target="_blank"><aa class="btn btn-small btn-highlight">Slides - PDF</aa></a></li>
+        <li><a href="https://nikeshbajaj.github.io/teaching/stats_demo" target="_blank"><aa class="btn btn-small btn-highlight">Web-demo</aa></a></li>
+        <li><a href="https://nikeshbajaj.github.io/teaching/spss_session/WorkSheet_SPSS_Session.pdf" target="_blank"><aa class="btn btn-small btn-highlight">SPSS Worksheet</aa></a></li>
+        </ul> -->
+        </div>
+    </div>
 
 <div class="row">
 <div class='col-50'>
