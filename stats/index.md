@@ -57,7 +57,7 @@ layout: base_art_sidebar
         <!-- <h3>2023</h3> -->
         </div>
         <ul class='list-inline'>
-        <li><h3>2023</h3></li>
+        <li><h3>2022</h3></li>
         <li><a href="files/Introduction_to_Statistics.pdf" target="_blank"><aa class="btn btn-small btn-highlight">Slides - PDF</aa></a></li>
         <li><a href="https://nikeshbajaj.github.io/teaching/stats_demo" target="_blank"><aa class="btn btn-small btn-highlight">Web-demo</aa></a></li>
         <li><a href="https://nikeshbajaj.github.io/teaching/spss_session/WorkSheet_SPSS_Session.pdf" target="_blank"><aa class="btn btn-small btn-highlight">SPSS Worksheet</aa></a></li>
@@ -72,15 +72,77 @@ layout: base_art_sidebar
         </div>
     <div class="panel-content">
         <div class="heading" style="margin-top: 0">
-            <!-- <p>Overview</p> -->
+        <h3>List of Videos: </h3>
         </div>
-        <!-- <ul class='list-inline'>
-        <li><a href="files/Introduction_to_Statistics.pdf" target="_blank"><aa class="btn btn-small btn-highlight">Slides - PDF</aa></a></li>
-        <li><a href="https://nikeshbajaj.github.io/teaching/stats_demo" target="_blank"><aa class="btn btn-small btn-highlight">Web-demo</aa></a></li>
-        <li><a href="https://nikeshbajaj.github.io/teaching/spss_session/WorkSheet_SPSS_Session.pdf" target="_blank"><aa class="btn btn-small btn-highlight">SPSS Worksheet</aa></a></li>
-        </ul> -->
+        <h3>Video: Introduction to Statistics: Part 1: Describe your Data</h3>
+        <div class="video-container">
+        <iframe width="860" height="415" src="https://www.youtube.com/embed/nuAAVOg93iE?si=7_XlBOQ6X18h46pm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <br>
+        <hr>
+        <h3>Video: Introduction to Statistics: Part 2: Inferential Statistics</h3>
+        <div class="video-container">
+        <iframe width="860" height="415" src="https://www.youtube.com/embed/JouUe72Uwtg?si=YvSbUmv7u2oL2prv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <hr>
+        <h3>Video: Introduction to Statistics: Part 3: Hypothesis Design</h3>
+        <div class="video-container">
+        <iframe width="860" height="415" src="https://www.youtube.com/embed/LH7vSBP8dYc?si=Klkr4jbDQRPHGbLz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+        <hr>
         </div>
     </div>
+
+
+<!-- 
+<div class="panel panel-collapsable ">
+    <div class="panel-heading">
+        <h3>Video Recordings 2023</h3>
+        <span class="panel-collapsable-trigger"></span>
+        </div>
+    <div class="panel-content">
+        <div class="heading" style="margin-top: 0">
+        <h3>List of Videos: </h3>
+        </div>
+        <div class="panel panel-collapsable ">
+            <div class="panel-heading">
+                <h3>Video: Introduction to Statistics: Part 1: Describe your Data</h3>
+                <span class="panel-collapsable-trigger"></span>
+            </div>
+            <div class="panel-content">
+                <div class="heading" style="margin-top: 0">
+                </div>
+                <iframe width="860" height="415" src="https://www.youtube.com/embed/nuAAVOg93iE?si=7_XlBOQ6X18h46pm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+        <hr>
+        <div class="panel panel-collapsable ">
+            <div class="panel-heading">
+                <h3>Video: Introduction to Statistics: Part 2: Inferential Statistics</h3>
+                <span class="panel-collapsable-trigger"></span>
+            </div>
+            <div class="panel-content">
+                <div class="heading" style="margin-top: 0">
+                </div>
+                <iframe width="860" height="415" src="https://www.youtube.com/embed/JouUe72Uwtg?si=YvSbUmv7u2oL2prv" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>
+        <hr>
+                <div class="panel panel-collapsable ">
+            <div class="panel-heading">
+                <h3>Video: Introduction to Statistics: Part 3: Hypothesis Design</h3>
+                <span class="panel-collapsable-trigger"></span>
+            </div>
+            <div class="panel-content">
+                <div class="heading" style="margin-top: 0">
+                </div>
+                <h3>Introduction to Statistics: Part 3: Hypothesis Design & Testing</h3>
+                <iframe width="860" height="415" src="https://www.youtube.com/embed/nuAAVOg93iE?si=7_XlBOQ6X18h46pm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+        </div>      
+        <hr>
+        </div>
+    </div> -->
 
 <div class="row">
 <div class='col-50'>
