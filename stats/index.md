@@ -49,7 +49,7 @@ layout: base_art_sidebar
 
 <div class="panel panel-collapsable ">
     <div class="panel-heading">
-        <h3>Session Material 2022, 2023</h3>
+        <h3>Session Material 2022, 2023, 2024</h3>
         <span class="panel-collapsable-trigger"></span>
         </div>
     <div class="panel-content">
@@ -57,9 +57,22 @@ layout: base_art_sidebar
         <!-- <h3>2023</h3> -->
         </div>
         <ul class='list-inline'>
+        <li><h3>2024</h3></li>
+        <li><a href="files/Introduction_to_Statistics_2024.pdf" target="_blank"><aa class="btn btn-small btn-highlight">Slides - PDF</aa></a></li>
+        <li><a href="https://nikeshbajaj.github.io/teaching/demos/Stats/sampling" target="_blank"><aa class="btn btn-small btn-highlight">Sampling-demo</aa></a></li>
+        <li><a href="https://nikeshbajaj.github.io/teaching/demos/Stats/hypothesis" target="_blank"><aa class="btn btn-small btn-highlight">Hypothesis-demo</aa></a></li>
+        <li><a href="files/WorkSheet_SPSS_Session_2024.pdf" target="_blank"><aa class="btn btn-small btn-highlight">SPSS Worksheet</aa></a></li>
+        </ul>
+        <ul class='list-inline'>
+        <li><h3>2023</h3></li>
+        <li><a href="files/Introduction_to_Statistics_2023.pdf" target="_blank"><aa class="btn btn-small btn-highlight">Slides - PDF</aa></a></li>
+        <li><a href="https://nikeshbajaj.github.io/teaching/demos/Stats/sampling" target="_blank"><aa class="btn btn-small btn-highlight">Sampling-demo</aa></a></li>
+        <li><a href="files/WorkSheet_SPSS_Session_2023.pdf" target="_blank"><aa class="btn btn-small btn-highlight">SPSS Worksheet</aa></a></li>
+        </ul>
+        <ul class='list-inline'>
         <li><h3>2022</h3></li>
         <li><a href="files/Introduction_to_Statistics.pdf" target="_blank"><aa class="btn btn-small btn-highlight">Slides - PDF</aa></a></li>
-        <li><a href="https://nikeshbajaj.github.io/teaching/stats_demo" target="_blank"><aa class="btn btn-small btn-highlight">Web-demo</aa></a></li>
+        <li><a href="https://nikeshbajaj.github.io/teaching/stats_demo" target="_blank"><aa class="btn btn-small btn-highlight">Sampling-demo</aa></a></li>
         <li><a href="https://nikeshbajaj.github.io/teaching/spss_session/WorkSheet_SPSS_Session.pdf" target="_blank"><aa class="btn btn-small btn-highlight">SPSS Worksheet</aa></a></li>
         </ul>
         </div>
