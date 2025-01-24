@@ -165,13 +165,13 @@ In addition, this widget helps to undertand the tuning of a threshold for a trai
   <!-- <hr> -->
   <br>
   <!-- <br> -->
-  In Statistics, Hypothesis testing is one of the tool used to decide if a claim has any scientific merits. 
-  The widget help is desgined from 'Sampling' widgted by adding addtional features to understands following concepts:
-    <ul >
+  In Deeplerning, often a question comes up, how many layers should I have, and/or how many nodes/neurons I have have in my artchitecture. The answer rely on the complexity of the problem and available data.
+  This widget is desgined understand, how adding a layer of neuron increase the complexity of the decision boundary.
+<!--     <ul >
     <li>• <b>Meaning of p-value</b>: By sampling multiple time for 2 groups and testing, it can be seen, than even with fixed prior of distributation, sometimes, p-value suggestes to falsely reject/accept null hypothesis.</li>
     <li>• <b>Effect of sample size</b>:  By adjusting two groups close enough, it can be shown, if we have large sample size,t-test can detect the small difference. This is bases of <b>computation of Power and minimum required sample size</b></li>
     <li>• Effect/meaning of alpha (cut-off): By changing 0.01, 0.05, 0.001</li>
-    </ul>
+    </ul> -->
   </td>
   </tr>
   </table>
