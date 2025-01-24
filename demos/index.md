@@ -143,6 +143,42 @@ In addition, this widget helps to undertand the tuning of a threshold for a trai
 
 </div>
 
+
+<!-- Nueral Network -->
+<div style="width:90%; border:1px solid black;border-radius:20px 0 0 20px;margin:20px 0 20px 0;">
+  <table>
+  <tr>
+  <td>
+  <div class="column-box" style="width: 300px; margin:10px;">
+    <div class="card" style="height: 280px;padding-top:5px;">
+    <center><b>Neural Networks</b></center>
+    <hr style="margin-top:5px;margin-bottom:0px;">
+        <div class="card-body">
+          <p><strong>Statistics:</strong> <a class="reference external" href="./Stats/hypothesis" target="_blank">For Hypothesis Testing and T-test</a></p>
+          <a class="reference external image-reference" href="./Stats/hypothesis" target="_blank">
+          <img alt="sampling" src="./GIFs/stats_sampling_demo.gif" target="_blank" style="width: 300px;"/></a>
+      </div>
+    </div>
+  </div>
+  </td>
+  <td style="vertical-align:top;">
+  <!-- <hr> -->
+  <br>
+  <!-- <br> -->
+  In Statistics, Hypothesis testing is one of the tool used to decide if a claim has any scientific merits. 
+  The widget help is desgined from 'Sampling' widgted by adding addtional features to understands following concepts:
+    <ul >
+    <li>• <b>Meaning of p-value</b>: By sampling multiple time for 2 groups and testing, it can be seen, than even with fixed prior of distributation, sometimes, p-value suggestes to falsely reject/accept null hypothesis.</li>
+    <li>• <b>Effect of sample size</b>:  By adjusting two groups close enough, it can be shown, if we have large sample size,t-test can detect the small difference. This is bases of <b>computation of Power and minimum required sample size</b></li>
+    <li>• Effect/meaning of alpha (cut-off): By changing 0.01, 0.05, 0.001</li>
+    </ul>
+  </td>
+  </tr>
+  </table>
+</div>
+
+
+
 <div class="narrow-show">
 
 <div style="width:90%">
