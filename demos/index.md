@@ -167,6 +167,12 @@ In addition, this widget helps to undertand the tuning of a threshold for a trai
   <!-- <br> -->
   In Deeplerning, often a question comes up, how many layers should I have, and/or how many nodes/neurons I have have in my artchitecture. The answer rely on the complexity of the problem and available data.
   This widget is desgined understand, how adding a layer of neuron increase the complexity of the decision boundary.
+   In given GIF, you could identify 
+    <ul >
+    <li>• the cases, where layers are adding the complexity of of boundary that is required. requored complexity.</li>
+    <li>• the cases, where some on nodes/neurons are learning same things -  reducndancy of nodes.</li>
+   </ul>
+    
 <!--     <ul >
     <li>• <b>Meaning of p-value</b>: By sampling multiple time for 2 groups and testing, it can be seen, than even with fixed prior of distributation, sometimes, p-value suggestes to falsely reject/accept null hypothesis.</li>
     <li>• <b>Effect of sample size</b>:  By adjusting two groups close enough, it can be shown, if we have large sample size,t-test can detect the small difference. This is bases of <b>computation of Power and minimum required sample size</b></li>
