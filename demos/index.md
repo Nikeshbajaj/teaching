@@ -154,9 +154,9 @@ In addition, this widget helps to undertand the tuning of a threshold for a trai
     <center><b>Neural Networks</b></center>
     <hr style="margin-top:5px;margin-bottom:0px;">
         <div class="card-body">
-          <p><strong>Statistics:</strong> <a class="reference external" href="./Stats/hypothesis" target="_blank">For Hypothesis Testing and T-test</a></p>
-          <a class="reference external image-reference" href="./Stats/hypothesis" target="_blank">
-          <img alt="sampling" src="./GIFs/stats_sampling_demo.gif" target="_blank" style="width: 300px;"/></a>
+          <p><strong>Neural Network:</strong> <a class="reference external" href="../mldl101/cover.gif" target="_blank">For Deeplearning</a></p>
+          <a class="reference external image-reference" href="../mldl101/cover.gif" target="_blank">
+          <img alt="sampling" src="../mldl101/cover.gif" target="_blank" style="width: 300px;"/></a>
       </div>
     </div>
   </div>
