@@ -15,9 +15,18 @@ layout: base_art_sidebar
     <div class="panel-heading">
         <h3>Course Description</h3>
             <span class="panel-collapsable-trigger"></span>
+            
     </div>
     
     <div class="panel-content" style="display: block;">
+            Welcome to Statiscal Foundations for AI!
+
+            This module aims to develop a critical understanding of the mathematical and statistical foundations that underpin artificial intelligence (AI) solutions. You will engage with a range of quantitative approaches, exploring how statistical reasoning, hypothesis testing, and data modelling contribute to the design, evaluation, and interpretation of AI systems. 
+            Through the integration of computing, data visualisation, and exploratory analysis, you will apply appropriate techniques to analyse complex datasets and draw meaningful, context-sensitive conclusions. Emphasis is placed on the ability to select, justify, and apply methods autonomously in support of robust, and interpretable AI solutions.
+
+            By the end of this module, you will have a strong foundations that allow you to critically assess the engineering/bussiness/medical solutions, with <b> scientific-view  and NOT a magical-view</b>
+
+            We hope you enjoy the journey!
         <p></p>
         <ul>
             <li><a href="" target="_blank">Syllabus</a></li>
@@ -39,25 +48,30 @@ layout: base_art_sidebar
         <table>
             <tr><th colspan="2"></th></tr>
             <tr>
-                <td><b>1.1 Introduction </b>
+                <td><b>1 Introduction </b>
                 <p>This </p>
                 </td>
                 <td><a href="#.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
             </tr>
             <tr>
-                <td><b>1.2 </b>
+                <td><b>2 Descriptive Statistics I</b>
                 <p>This is .</p>
                 </td>
                 <td><a href="#.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
             </tr>
             <tr>
-                <td><b>1.3 </b>
+                <td><b>3 Descriptive Statistics II</b>
                 <p>This  </p>
                 </td>
                 <td><a href="#.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
             </tr>
             <tr>
-                <td><b>1.4 </b>
+                <td><b>4 Mathematical Foudations I</b>
+                <p></p>
+                </td>
+                <td><a href="#.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
+            </tr>
+                <td><b>5 Mathematical Foudations II</b>
                 <p></p>
                 </td>
                 <td><a href="#.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
