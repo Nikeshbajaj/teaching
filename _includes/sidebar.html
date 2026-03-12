@@ -1,0 +1,23 @@
+<div id="sidebar-wrapper">
+    <div class="sidebar-top">
+        <li class="sidebar-title">Nikesh Bajaj</li>
+        <li class="sidebar-brand">
+            <a href="#"><div> <span style="color:white">{{page.title}}</span> </div></a>
+        </li>
+    </div>
+    <ul class="sidebar-nav">
+        {% for item in page.content %}
+        {% if item.tag == 'h1' %}
+          <li>
+              {% for sub_item in item.next %}
+                {% if sub_item.tag == 'h2' %}
+                <div class="dropdown-container">
+                  <a href="#{{ sub_item.id }}">{{ sub_item.text }}</a>
+                </div>
+                {% endif %}
+              {% endfor %}
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+</div>
