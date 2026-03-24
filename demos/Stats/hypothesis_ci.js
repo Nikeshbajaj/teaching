@@ -1036,6 +1036,7 @@ function setLineDash(list) {
   drawingContext.setLineDash(list);
 }
 function dwargrid(xd,yd){
+  setLineDash([0,0])
   stroke(255);
   strokeWeight(0.5);
   let x1 = 0; x2= width +overlay;
