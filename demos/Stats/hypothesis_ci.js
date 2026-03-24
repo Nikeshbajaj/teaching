@@ -204,7 +204,8 @@ palpha_choose.selected('0.05');
 }
 
 function draw() {
-  background(127);
+  // background(127);
+  background(254, 255, 224);
   dwargrid(50,50);
   textSize(10);
   fill(0);
@@ -403,7 +404,8 @@ function draw() {
 
 
 function redraw_curves(){
-  background(127);
+  // background(127);
+  background(254, 255, 224);
   dwargrid(50,50);
   textSize(10);
   fill(0);
@@ -1035,9 +1037,10 @@ function PlotPointsV2(x,y,x0=0,y0=height/2,r=[10,10],colorx=[0,250,0],alphax=180
 function setLineDash(list) {
   drawingContext.setLineDash(list);
 }
-function dwargrid(xd,yd){
+// function dwargrid(xd,yd){
   setLineDash([0,0])
-  stroke(255);
+  // stroke(255);
+  stroke(10,10,10);
   strokeWeight(0.5);
   let x1 = 0; x2= width +overlay;
   let y1 = 0; y2= height;
