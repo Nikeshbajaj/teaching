@@ -364,7 +364,7 @@ function draw() {
   //line(0, 0, 150, 0);
   //line(-(width+200), -height, -width+200,  -height/2);
   textSize(45);
-  text("Statistics", -width/5, (width+270));
+  text("Statistics", -width/5 + 30, (width+270));
   textSize(20);
   textStyle(ITALIC);
   text("©nikeshbajaj", -width/2 - 100, (width+280));
@@ -529,7 +529,7 @@ function redraw_curves(){
   //line(0, 0, 150, 0);
   //line(-(width+200), -height, -width+200,  -height/2);
   textSize(45);
-  text("Statistics", -width/5, (width+270));
+  text("Statistics", -width/5 + 30, (width+270));
   pop();
   stroke(0,0,0);
   strokeWeight(2);
