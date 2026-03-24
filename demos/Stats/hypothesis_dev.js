@@ -539,6 +539,15 @@ function redraw_curves(){
     P.plotSamples_X(Ylevel=height/2+40,r=[20,20],alphax=100);
     if (P.Sx.length>0){
       Px.add(P.mapXtoI(P.sample_mean),random(-jitter, jitter),P.get1ProbOf(P.sample_mean));
+      if (checkboxCIs.checked()){
+        let ci = float(inputCI.value());
+        stroke(200,0,0);
+        strokeWeight(3);
+        ellipse(P.mapXtoI(P.sample_mean),height/2+150,10,10);
+        line(P.mapXtoI(P.sample_mean-ci*P.sample_se), height/2+150, P.mapXtoI(P.sample_mean+ci*P.sample_se),  height/2+150);
+        stroke(0,0,0,20);
+        strokeWeight(1);
+      }
     }
   }
 
@@ -550,6 +559,15 @@ function redraw_curves(){
     S1.plotSamples_X(Ylevel=height/2+40,r=[20,20],alphax=100);
     if (S1.Sx.length>0){
       S1x.add(S1.mapXtoI(S1.sample_mean),random(-jitter, jitter),S1.get1ProbOf(S1.sample_mean));
+      if (checkboxCIs.checked()){
+        let ci = float(inputCI.value());
+        stroke(200,0,0);
+        strokeWeight(3);
+        ellipse(S1.mapXtoI(S1.sample_mean),height/2+200,10,10);
+        line(S1.mapXtoI(S1.sample_mean-ci*S1.sample_se), height/2+200, S1.mapXtoI(S1.sample_mean+ci*S1.sample_se),  height/2+200);
+        stroke(0,0,0,20);
+        strokeWeight(1);
+      }
 
     }
   }
@@ -563,6 +581,16 @@ function redraw_curves(){
     if (S2.Sx.length>0){
       v = (5+S2x.getLength()/4)
       S2x.add(S2.mapXtoI(S2.sample_mean),random(-jitter, jitter),S2.get1ProbOf(S2.sample_mean));
+      if (checkboxCIs.checked()){
+        let ci = float(inputCI.value());
+        stroke(200,0,0);
+        strokeWeight(3);
+        ellipse(S2.mapXtoI(S2.sample_mean),height/2+250,10,10);
+        line(S2.mapXtoI(S2.sample_mean-ci*S2.sample_se), height/2+250, S2.mapXtoI(S2.sample_mean+ci*S2.sample_se),  height/2+250);
+        stroke(0,0,0,20);
+        strokeWeight(1);
+      }
+
       }
   }
 
