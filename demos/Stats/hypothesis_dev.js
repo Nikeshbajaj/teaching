@@ -1,8 +1,8 @@
 //Staticsts Demo for Hypothesis testing
 //=======================================
 //Author: Nikesh Bajaj (nikkeshbajaj@gmail.com)
-//Date: 23/10/2022
-//http://nikeshbajaj.in/
+//Date: 24/04/2026
+//https://nikeshbajaj.in/
 //shared on ::
 //https://nikeshbajaj.github.io/teaching/demos/Stats/hypothesis
 //(c)nikeshbajaj
@@ -150,11 +150,13 @@ function setup() {
   checkboxS1 = createCheckbox(' Group 1', false);
   checkboxS2 = createCheckbox(' Group 2', false);
   checkboxHide = createCheckbox('Hide True curve', false);
-  checkboxCI   = createCheckbox('Show CI', false);
+  checkboxCI   = createCheckbox('P: CI', false);
+  checkboxCIs   = createCheckbox('S: CI', false);
   checkbox_background_color   = createCheckbox('BG theme', false);
   // checkbox_keep_means   = createCheckbox('keep means', true);
   checkboxHide.changed(hidetoggle)
   checkboxCI.changed(hidetoggle)
+  checkboxCIs.changed(hidetoggle)
   checkbox_background_color.changed(hidetoggle)
   // checkbox_keep_means.changed(hidetoggle)
 
@@ -163,7 +165,8 @@ function setup() {
   checkboxS2.position(width-170, 210);
   checkboxHide.position(width-170, 250);
   checkboxCI.position(width-170, 270-1);
-  checkbox_background_color.position(width-80, 270-1);
+  checkboxCIs.position(width-110, 270-1);
+  checkbox_background_color.position(width-100, 130-1);
   // checkbox_keep_means.position(width-80, 285);
 
   checkboxP.style("font-size", "25px");
@@ -282,7 +285,18 @@ function draw() {
     }
     if (P.Sx.length>0){
       //v = (5+Px.getLength()/4)
-      Px.add(P.mapXtoI(P.sample_mean),random(-jitter, jitter),P.get1ProbOf(P.sample_mean));
+
+      Px.add(P.mapXtoI(P.sample_mean),random(-jitter, jitter),P.get1ProbOf(P.sample_mean),0);
+
+      if (checkboxCIs.checked()){
+        let ci = float(inputCI.value());
+        stroke(200,0,0);
+        strokeWeight(3);
+        ellipse(P.mapXtoI(P.sample_mean),height/2+150,10,10);
+        line(P.mapXtoI(P.sample_mean-ci*P.sample_se), height/2+150, P.mapXtoI(P.sample_mean+ci*P.sample_se),  height/2+150);
+        stroke(0,0,0,20);
+        strokeWeight(1);
+      }
     }
   }
 
@@ -305,7 +319,17 @@ function draw() {
 
     if (S1.Sx.length>0){
       //v = (5+S1x.getLength()/4)
-      S1x.add(S1.mapXtoI(S1.sample_mean),random(-jitter, jitter),S1.get1ProbOf(S1.sample_mean));
+      S1x.add(S1.mapXtoI(S1.sample_mean),random(-jitter, jitter),S1.get1ProbOf(S1.sample_mean), S1.sample_se);
+
+      if (checkboxCIs.checked()){
+        let ci = float(inputCI.value());
+        stroke(200,0,0);
+        strokeWeight(3);
+        ellipse(S1.mapXtoI(S1.sample_mean),height/2+200,10,10);
+        line(S1.mapXtoI(S1.sample_mean-ci*S1.sample_se), height/2+200, S1.mapXtoI(S1.sample_mean+ci*S1.sample_se),  height/2+200);
+        stroke(0,0,0,20);
+        strokeWeight(1);
+      }
 
     }
   }
@@ -328,13 +352,54 @@ function draw() {
   }
   if (S2.Sx.length>0){
     v = (5+S2x.getLength()/4)
-    S2x.add(S2.mapXtoI(S2.sample_mean),random(-jitter, jitter),S2.get1ProbOf(S2.sample_mean));
+    S2x.add(S2.mapXtoI(S2.sample_mean),random(-jitter, jitter),S2.get1ProbOf(S2.sample_mean),S2.sample_se);
+    if (checkboxCIs.checked()){
+      let ci = float(inputCI.value());
+      stroke(200,0,0);
+      strokeWeight(3);
+      ellipse(S2.mapXtoI(S2.sample_mean),height/2+250,10,10);
+      line(S2.mapXtoI(S2.sample_mean-ci*S2.sample_se), height/2+250, S2.mapXtoI(S2.sample_mean+ci*S2.sample_se),  height/2+250);
+      stroke(0,0,0,20);
+      strokeWeight(1);
+    }
+
+
+
     }
   }
+  console.log('details');
+  console.log(Px.x, Px.getLength());
+  if(Px.x.length>0){
+    console.log(Px.x[Px.getLength()-1]);
+  }
+  // console.log(Px.x[Px.x.length-1], Px.y[Px.y.length-1]);
+  if(Px.getLength()>0){
+    PlotPoints(Px.x,Px.y,x0=0,y0=height/2+150,r=[2,20],colorx=P.color,100,Marker='rect');
+    // let lst_mean = Px.x[Px.getLength()-1];
+    // console.log(Px.x[Px.getLength()-1], lst_mean);
+    // PlotPoints([lst_mean],[0],x0=0,y0=height/2+150,r=[60,0.5],colorx=[200,0,0],250,Marker='rect');
+    // line(lst_mean-100, height/2+150, lst_mean+100,  height/2+150);
+  }
+  // PlotPoints([500],[0],x0=0,y0=height/2+150,r=[60,0.5],colorx=[200,0,0],250,Marker='rect');
 
-  PlotPoints(Px.x,Px.y,x0=0,y0=height/2+150,r=[2,20],colorx=P.color,100,Marker='rect');
-  PlotPoints(S1x.x,S1x.y,x0=0,y0=height/2+200,r=[2,20],colorx=S1.color,100,Marker='rect');
-  PlotPoints(S2x.x,S2x.y,x0=0,y0=height/2+250,r=[2,20],colorx=S2.color,100,Marker='rect');
+  if(S1x.getLength()>0){
+    PlotPoints(S1x.x,S1x.y,x0=0,y0=height/2+200,r=[2,20],colorx=S1.color,100,Marker='rect');
+  }
+  if(S2x.getLength()>0){
+    PlotPoints(S2x.x,S2x.y,x0=0,y0=height/2+250,r=[2,20],colorx=S2.color,100,Marker='rect');
+  }
+
+  // PlotPoints(Px.x,Px.y,x0=0,y0=height/2+150,r=[50,50],colorx=P.color,100,Marker='rect');
+
+
+  // let ci = float(inputCI.value());
+  // let cix = []
+  // let ciy = []
+  // cix.push(P.mapXtoI(P.sample_mean))
+  // ciy.push(random(-jitter, jitter))
+  // PlotPoints(cix,ciy,x0=0,y0=height/2+150,r=[60,0.5],colorx=[200,0,0],250,Marker='rect');
+
+
 
   strokeWeight(0);
   stroke(0);
@@ -799,11 +864,13 @@ class MEANSObj{
   this.x =[];
   this.y =[];
   this.px =[];
+  this.sd =[];
 }
-  add(x,y,px){
+  add(x,y,px,sd=1){
     this.x.push(x);
     this.y.push(y);
     this.px.push(px);
+    this.sd.push(sd);
 
   }
   getLength(){
@@ -813,9 +880,13 @@ class MEANSObj{
     this.x =[];
     this.y =[];
     this.px =[];
+    this.sd =[];
   }
 
 }
+
+
+
 
 function getConstArray(L,val){
   let x = [];
@@ -948,7 +1019,7 @@ class NormSampler{
   }
 
   plotSamples_X(Ylevel=height/2,r=[10,10],alphax=180){
-    let sy = getConstArray(this.Sy.length,0)
+    let sy  = getConstArray(this.Sy.length,0)
     let syi = getConstArray(this.Sy.length,0)
     //PlotPoints(this.Six,sy,x0=0,y0=Ylevel,r=r,colorx=this.color,alphax=alphax);
     PlotPointsV2(this.Six,syi,x0=0,y0=Ylevel,r=r,colorx=this.color,alphax=alphax);
