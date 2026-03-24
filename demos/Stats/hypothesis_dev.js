@@ -1,7 +1,7 @@
 //Staticsts Demo for Hypothesis testing
 //=======================================
 //Author: Nikesh Bajaj (nikkeshbajaj@gmail.com)
-//Date: 24/04/2026
+//Date: 23/10/2022
 //http://nikeshbajaj.in/
 //shared on ::
 //https://nikeshbajaj.github.io/teaching/demos/Stats/hypothesis
