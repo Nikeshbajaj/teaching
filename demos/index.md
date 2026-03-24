@@ -153,7 +153,7 @@ In addition, this widget helps to undertand the tuning of a threshold for a trai
         <div class="card-body">
           <p><strong>Statistics:</strong> <a class="reference external" href="./Stats/hypothesis_ci" target="_blank">For Hypothesis Testing and T-test</a></p>
           <a class="reference external image-reference" href="./Stats/hypothesis_ci" target="_blank">
-          <img alt="sampling" src="./GIFs/stats_sampling_demo.gif" target="_blank" style="width: 300px;"/></a>
+          <img alt="sampling" src="./GIFs/stats_sampling_v3_demo.png" target="_blank" style="width: 300px;"/></a>
       </div>
     </div>
   </div>
