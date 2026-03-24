@@ -148,7 +148,7 @@ In addition, this widget helps to undertand the tuning of a threshold for a trai
   <td>
   <div class="column-box" style="width: 300px; margin:10px;">
     <div class="card" style="height: 280px;padding-top:5px;">
-    <center><b>Hypothesis Testing +. Confidence Interval (V3)</b></center>
+    <center><b>Hypothesis Testing + Confidence Interval (V3)</b></center>
     <hr style="margin-top:5px;margin-bottom:0px;">
         <div class="card-body">
           <p><strong>Statistics:</strong> <a class="reference external" href="./Stats/hypothesis_ci" target="_blank">For Hypothesis Testing and T-test</a></p>
