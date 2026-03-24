@@ -235,6 +235,17 @@ In addition, this widget helps to undertand the tuning of a threshold for a trai
       </div>
     </div>
   </div>
+  <div class="column-box" style="width: 300px; margin:10px;">
+    <div class="card" style="height: 280px;padding-top:5px;">
+    <center><b>Hypothesis Testing and Confidence Intervel (V3)</b></center>
+    <hr style="margin-top:5px;margin-bottom:0px;">
+        <div class="card-body">
+          <p><strong>Statistics:</strong> <a class="reference external" href="./Stats/hypothesis_ci" target="_blank">For Hypothesis Testing and T-test, and confidence intervel</a></p>
+          <a class="reference external image-reference" href="./Stats/hypothesis_ci" target="_blank">
+          <img alt="sampling" src="./GIFs/stats_sampling_demo.gif" target="_blank" style="width: 300px;"/></a>
+      </div>
+    </div>
+  </div>
 </div>
 
 </div>
