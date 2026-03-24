@@ -33,6 +33,7 @@ let p_alpha=0.05;
 let palpha_choose;
 let ppass=0;
 let pfail=0;
+let backgroundcolor = 200
 
 function setup() {
   //createCanvas(1024, 800);
@@ -150,20 +151,28 @@ function setup() {
   checkboxS2 = createCheckbox(' Group 2', false);
   checkboxHide = createCheckbox('Hide True curve', false);
   checkboxCI   = createCheckbox('Show CI', false);
+  checkbox_background_color   = createCheckbox('BG theme', false);
+  // checkbox_keep_means   = createCheckbox('keep means', true);
   checkboxHide.changed(hidetoggle)
   checkboxCI.changed(hidetoggle)
+  checkbox_background_color.changed(hidetoggle)
+  // checkbox_keep_means.changed(hidetoggle)
 
   checkboxP.position(width-170, 150);
   checkboxS1.position(width-170, 180);
   checkboxS2.position(width-170, 210);
   checkboxHide.position(width-170, 250);
-  checkboxCI.position(width-170, 270);
+  checkboxCI.position(width-170, 270-1);
+  checkbox_background_color.position(width-80, 270-1);
+  // checkbox_keep_means.position(width-80, 285);
 
   checkboxP.style("font-size", "25px");
   checkboxS1.style("font-size", "25px");
   checkboxS2.style("font-size", "25px");
   checkboxHide.style("font-size", "15px");
   checkboxCI.style("font-size", "15px");
+  checkbox_background_color.style("font-size", "15px");
+  // checkbox_keep_means.style("font-size", "15px");
   //checkboxP.changed(myCheckedEvent);
   const box1 = checkboxP.elt.getElementsByTagName('input')[0];
   box1.style.transform = 'scale(2)';
@@ -204,8 +213,13 @@ palpha_choose.selected('0.05');
 }
 
 function draw() {
+  if (checkbox_background_color.checked()){
+    background(127);
+  }else{
+    background(254, 255, 224);
+  }
   // background(127);
-  background(254, 255, 224);
+  // background(244,255, 181);
   dwargrid(50,50);
   textSize(10);
   fill(0);
@@ -404,8 +418,14 @@ function draw() {
 
 
 function redraw_curves(){
-  // background(127);
-  background(254, 255, 224);
+  // background(backgroundcolor);
+  // background(244,255, 181);
+  if (checkbox_background_color.checked()){
+    background(127);
+  }else{
+    background(254, 255, 224);
+  }
+  // background(254, 255, 224);
   dwargrid(50,50);
   textSize(10);
   fill(0);
@@ -1037,10 +1057,16 @@ function PlotPointsV2(x,y,x0=0,y0=height/2,r=[10,10],colorx=[0,250,0],alphax=180
 function setLineDash(list) {
   drawingContext.setLineDash(list);
 }
-// function dwargrid(xd,yd){
+function dwargrid(xd,yd){
   setLineDash([0,0])
-  // stroke(255);
-  stroke(10,10,10);
+  if (checkbox_background_color.checked()){
+    // background(127);
+    stroke(200);
+  }else{
+    // background(254, 255, 224);
+    stroke(10,10,10);
+  }
+  // stroke(10,10,10);
   strokeWeight(0.5);
   let x1 = 0; x2= width +overlay;
   let y1 = 0; y2= height;
