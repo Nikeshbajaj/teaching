@@ -42,19 +42,19 @@ layout: base_art_sidebar
                 <td><b>1.1 Introduction to Data Science and Python</b>
                 <p>This session covers an introduction to Data, Data Science and Python. We also cover the 'Anaconda distribution' and different interfaces it has for python.</p>
                 </td>
-                <td><a href="files/1.1_Introduction_to_Data_Science_and_Python.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
+                <td><a href="./files/1.1_Introduction_to_Data_Science_and_Python.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
             </tr>
             <tr>
                 <td><b>1.2 Getting Started with Python: Lab Session</b>
                 <p>This is a worksheet that covers the instructions on installing Anaconda, Python Interfaces and a few start-up activities to work with.</p>
                 </td>
-                <td><a href="files/1.2_Getting_Started_with_Python.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
+                <td><a href="./files/1.2_Getting_Started_with_Python.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
             </tr>
             <tr>
                 <td><b>1.3 Collection of data</b>
                 <p>This session covers the data types in python that are used for representing collection(s) to Data. They are List, Tuple, Sets, and Dictionary. </p>
                 </td>
-                <td><a href="files/1.3_Collection_of_data.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
+                <td><a href="./files/1.3_Collection_of_data.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
             </tr>
             <tr>
                 <td><b>1.4 Collection of Data: Lab Session</b>
@@ -82,13 +82,13 @@ layout: base_art_sidebar
                 <td><b>2.1 Vectors, Matrices, and Numpy Arrays</b>
                 <p>This session starts with a brief introduction of for-loop and its applications in linear algebra, followed by a details of NumPy Arrays.</p>
                 </td>
-                <td><a href="files/2.1_Vectors_Matrices_Numpy_Arrays.pdf" target="_blank" ><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
+                <td><a href="./files/2.1_Vectors_Matrices_Numpy_Arrays.pdf" target="_blank" ><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
             </tr>
             <tr>
                 <td><b>2.2 More on Numpy Arrays</b>
                 <p>This session continues on Numpy Arrays.</p>
                 </td>
-                <td><a href="files/2.2_More_on_Numpy_Arrays.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
+                <td><a href="./files/2.2_More_on_Numpy_Arrays.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
             </tr>
             <tr>
                 <td><b>2.3 Loop and NumPy: Lab Session</b>
@@ -114,7 +114,7 @@ layout: base_art_sidebar
                 <td><b>3.1 Control Flow: Program Development</b>
                 <p>This session covers the control flow tools such as if-else, nested loops and interruptions</p>
                 </td>
-                <td><a href="files/3.1_Control_Flow_Program_Development.pdf" target="_blank"> <aa class="btn btn-small btn-highlight">PDF</aa></a></td>
+                <td><a href="./files/3.1_Control_Flow_Program_Development.pdf" target="_blank"> <aa class="btn btn-small btn-highlight">PDF</aa></a></td>
             </tr>
             <tr>
                 <td><b>3. 2 Control Flow: Lab Session</b>
@@ -126,13 +126,13 @@ layout: base_art_sidebar
                 <td><b>3.3 Function: Program Development</b>
                 <p>This session covers a more on control flow tools and details of Function.</p>
                 </td>
-                <td><a href="files/3.3_Function_Program_Development.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
+                <td><a href="./files/3.3_Function_Program_Development.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
             </tr>
             <tr>
                 <td><b>3.4 Visualisation with Matplotlib</b>
                 <p>This session covers visualisation of data using Matplotlib library</p>
                 </td>
-                <td><a href="files/3.4_Visualisation_with_Matplotlib.pdf" target="_blank" ><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
+                <td><a href="./files/3.4_Visualisation_with_Matplotlib.pdf" target="_blank" ><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
             </tr>
             </table>
         </div>
@@ -153,7 +153,7 @@ layout: base_art_sidebar
                 <td><b>4.1 Data Handling with Pandas</b>
                 <p>This session covers the Data Handling using Pandas library.</p>
                 </td>
-                <td><a href="files/4.1_Data_Handling_with_Pandas.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
+                <td><a href="./files/4.1_Data_Handling_with_Pandas.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
             </tr>
             <tr>
                 <td><b>4.2 Function, Visualisation, and Pandas : Lab Session</b>
@@ -165,7 +165,7 @@ layout: base_art_sidebar
                 <td><b>4.3 Error Handling</b>
                 <p>This session includes the Error Handling in Python.</p>
                 </td>
-                <td><a href="files/4.3_Error_Handling.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
+                <td><a href="./files/4.3_Error_Handling.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
             </tr>
             <tr>
                 <td><b>4.4 Error Handling: Lab Session</b>
@@ -191,7 +191,7 @@ layout: base_art_sidebar
                 <td><b>5.1 More on File Handling</b>
                 <p>This session covers more on file handling, specifically, text files, numpy files and pickle files. We will also have time for doubts and questions about any topics that we have covered so far.</p>
                 </td>
-                <td><a href="files/5.1_More_on_File_Handling.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
+                <td><a href="./files/5.1_More_on_File_Handling.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
             </tr>
             </table>
         </div>

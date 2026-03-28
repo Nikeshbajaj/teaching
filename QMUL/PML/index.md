@@ -1,24 +1,21 @@
 ---
-title: Principles of Machine Learning
+title: Principles of Machine Learning | A deployment-first perspective
 layout: base_art_sidebar
 ---
 
 # Principles of Machine Learning
-**Date: Oct-Dec 2024**
-
-## In progress ...
+**Date: Oct-Dec 2024/Oct-Dec 2025**
 
 <hr>
 <br>
 
 <div class="panel panel-collapsable is-expanded">
     <div class="panel-heading">
-        <h3>Course Description</h3>
-            <span class="panel-collapsable-trigger"></span>
+    <h3>Course Description</h3>
+    <span class="panel-collapsable-trigger"></span>
     </div>
-    
     <div class="panel-content" style="display: block;">
-        <p></p>
+        <p>This module will introduce learners to some of the most widely-used techniques in machine learning. The module will cover various topics in supervised and unsupervised learning, including linear regression, polynomial regression, classification with logistic regression and clustering. The module will cover both theoretical and practical aspects of machine learning, such as theoretical concepts behind linear and nonlinear regression problems and the practical implementation of logistic regression in Python. At the end of the module, learners will be able to formalise a machine learning task, choose the appropriate numerical method, implement the algorithm in Python and assess the method’s performance.</p>
         <ul>
             <li><a href="" target="_blank">Syllabus</a></li>
             <li><a href="">DOWNLOAD All Course Materials</a></li>
@@ -27,40 +24,79 @@ layout: base_art_sidebar
 </div>
 <br>
 
-<div class="panel panel-collapsable ">
+<div class="panel panel-collapsable is-expanded">
     <div class="panel-heading">
-        <h3>Week 1 - Introduction</h3>
+        <h3>Lecture contents<</h3>
         <span class="panel-collapsable-trigger"></span>
         </div>
-    <div class="panel-content">
+    <div class="panel-content" style="display: block;">
         <div class="heading" style="margin-top: 0">
             <p>Overview</p>
         </div>
         <table>
-            <tr><th colspan="2"></th></tr>
+            <tr><th colspan="2"></th><th>in-class annotated slides</th></tr>
             <tr>
-                <td><b>1.1 Introduction </b>
-                <p>This </p>
+                <td><b>L1: Introduction to Machine Learning </b>
+                <!-- <p>This </p> -->
                 </td>
-                <td><a href="#.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
+                <td><a href="./files/L1_Introduction_to_Machine_Learning.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
+                <td><a href="./files/L1_Introduction_to_Machine_Learning_annotated.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
             </tr>
             <tr>
-                <td><b>1.2 </b>
-                <p>This is .</p>
+                <td><b>L2: Regression</b>
+                <!-- <p>This is .</p> -->
                 </td>
-                <td><a href="#.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
+                <td><a href="./files/L2_Regression.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
+                <td><a href="./files/L2_Regression_annotated.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
             </tr>
             <tr>
-                <td><b>1.3 </b>
-                <p>This  </p>
+                <td><b>L3: Methodology I </b>
+                <!-- <p>This  </p> -->
                 </td>
-                <td><a href="#.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
+                <td><a href="./files/L3_Methodology_I.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
+                <td><a href="./files/L3_Methodology_I_annotated.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
             </tr>
             <tr>
-                <td><b>1.4 </b>
+                <td><b>L4: Classification I</b>
                 <p></p>
                 </td>
-                <td><a href="#.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
+                <td><a href="./files/L4_Classification_I.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
+                <td><a href="./files/L4_Classification_I_annotated.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
+            </tr>
+            <tr>
+                <td><b>L5: Classification II</b>
+                <p></p>
+                </td>
+                <td><a href="./files/L5_Classification_II.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
+                <td><a href="./files/L5_Classification_II_annotated.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
+            </tr>
+            <tr>
+                <td><b>L6: Methodology II</b>
+                <p></p>
+                </td>
+                <td><a href="./files/L6_Methodology_II.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
+                <td><a href="./files/L6_Methodology_II_annotated.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
+            </tr>
+            <tr>
+                <td><b>L7 Structure Analysis</b>
+                <p></p>
+                </td>
+                <td><a href="./files/L7_Structure_Analysis.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
+               <td><a href="./files/L7_Structure_Analysis_annotated.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
+            </tr>
+            <tr>
+                <td><b>L8 Density Estimation</b>
+                <p></p>
+                </td>
+                <td><a href="./files/L8_Density_Estimation.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
+               <td><a href="./files/L8_Density_Estimation_annotated.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
+            </tr>
+            <tr>
+                <td><b>L9 Neural Networks and Deeplearning</b>
+                <p></p>
+                </td>
+                <td><a href="./files/L9_Neural_Networks_Deeplearning.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
+                <td><a href="./files/L9_Neural_Networks_Deeplearning_annotated.pdf" target="_blank"><aa class="btn btn-small btn-highlight">PDF</aa></a></td>
             </tr>
         </table>
         </div>

@@ -1,10 +1,11 @@
 //Staticsts Demo for Hypothesis testing
 //=======================================
 //Author: Nikesh Bajaj (nikkeshbajaj@gmail.com)
-//Date: 24/04/2026
+//Date: 23/10/2022
 //http://nikeshbajaj.in/
 //shared on ::
-//https://nikeshbajaj.github.io/teaching/demos/Stats/hypothesis
+//https://nikeshbajaj.github.io/P/Stats
+//https://c4fa.github.io/projects.html
 //(c)nikeshbajaj
 //License:: Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)
 
@@ -23,17 +24,10 @@ let Psampl=false;
 let G1sampl=false;
 let G2sampl=false;
 let jitter=0;
-let n=5;
-let T=1;
-let CIc=1.96;
-let overlay=300;
+let n=5
+let overlay=300
 let NN=200;
 let sd_rang=5;
-let p_alpha=0.05;
-let palpha_choose;
-let ppass=0;
-let pfail=0;
-let backgroundcolor = 200
 
 function setup() {
   //createCanvas(1024, 800);
@@ -90,9 +84,6 @@ function setup() {
     Scales.push(AM);
   }
 
-
-
-
   let Bn_x = 30;
    buttonP = createButton('Sample ~ P');
    buttonP.mousePressed(PSampler);
@@ -147,32 +138,15 @@ function setup() {
 
 
   checkboxP = createCheckbox(' Population', true);
-  checkboxS1 = createCheckbox(' Group 1', false);
-  checkboxS2 = createCheckbox(' Group 2', false);
-  checkboxHide = createCheckbox('Hide True curve', false);
-  checkboxCI   = createCheckbox('Show CI', false);
-  checkbox_background_color   = createCheckbox('BG theme', false);
-  // checkbox_keep_means   = createCheckbox('keep means', true);
-  checkboxHide.changed(hidetoggle)
-  checkboxCI.changed(hidetoggle)
-  checkbox_background_color.changed(hidetoggle)
-  // checkbox_keep_means.changed(hidetoggle)
+  checkboxS1 = createCheckbox(' Group 1', true);
+  checkboxS2 = createCheckbox(' Group 2', true);
 
   checkboxP.position(width-170, 150);
   checkboxS1.position(width-170, 180);
   checkboxS2.position(width-170, 210);
-  checkboxHide.position(width-170, 250);
-  checkboxCI.position(width-170, 270-1);
-  checkbox_background_color.position(width-80, 270-1);
-  // checkbox_keep_means.position(width-80, 285);
-
   checkboxP.style("font-size", "25px");
   checkboxS1.style("font-size", "25px");
   checkboxS2.style("font-size", "25px");
-  checkboxHide.style("font-size", "15px");
-  checkboxCI.style("font-size", "15px");
-  checkbox_background_color.style("font-size", "15px");
-  // checkbox_keep_means.style("font-size", "15px");
   //checkboxP.changed(myCheckedEvent);
   const box1 = checkboxP.elt.getElementsByTagName('input')[0];
   box1.style.transform = 'scale(2)';
@@ -187,39 +161,10 @@ input.size(35, 35);
 input.style("font-size", "20px");
 //input.value='5';
 n = int(input.value());
-
-inputT = createInput('1');
-inputT.position(width+200+Bn_x, 10+60*5.4);
-inputT.size(35, 35);
-inputT.style("font-size", "20px");
-T = int(inputT.value());
-
-inputCI = createInput('1.96');
-inputCI.position(width+200+Bn_x, 10+51*5.4);
-inputCI.size(30, 20);
-inputCI.style("font-size", "14px");
-CIc = float(inputCI.value());
-
-palpha_choose = createRadio();
-palpha_choose.position(2, height-80);
-// palpha_choose.style("width", "300px");
-palpha_choose.size(60);
-palpha_choose.option('0.01');
-palpha_choose.option('0.05');
-palpha_choose.option('0.001');
-palpha_choose.selected('0.05');
-// palpha_choose.changed(clear_trials());
-
 }
 
 function draw() {
-  if (checkbox_background_color.checked()){
-    background(127);
-  }else{
-    background(254, 255, 224);
-  }
-  // background(127);
-  // background(244,255, 181);
+  background(127);
   dwargrid(50,50);
   textSize(10);
   fill(0);
@@ -232,20 +177,12 @@ function draw() {
   textSize(38);
   //stroke(0,255,0,20);
   fill(0);
-  text("V3.0",width+overlay-50,50)
+  text("V1.1",width+overlay-50,50)
   //fill(0);
   textSize(32);
   stroke(0,0,0,20);
   text('N=',width+60, 60*6)
   n = int(input.value());
-
-  text('T=',width+200, 60*6)
-  T = int(inputT.value());
-
-  textSize(24);
-  text('c=',width+210, 51*6-10)
-  CIc = float(inputCI.value());
-
   //text(int(n),width-50, 60*7)
   textSize(25);
   for (let i=0;i<Mues.length;i++){
@@ -261,22 +198,17 @@ function draw() {
   }
 
 
-
   let v
   if (checkboxP.checked()){
     P = new NormSampler(mu=Mues[0].value(),sigma=Sigmas[0].value(),scaley= Scales[0].value(),
                        N=NN,sd_rang=sd_rang,colorx=[0,0,0]);
     //P.getSamples(n=5);
-    if (!checkboxHide.checked()){
     P.plotCurve(height/2)
-    }
     //P.plotSamples(Ylevel=height/2)
 
     if (Psampl){
       P.getSamples(n=n);
-      if (!checkboxHide.checked()){
       P.plotSamples(Ylevel=height/2);
-      }
       P.plotSamples_X(Ylevel=height/2+40,r=[20,20],alphax=100);
       //P.plotSamples_Y(Ylevel=height/2 + height/4, Xlevel=width+50,r=[10,10],alphax=180)
     }
@@ -290,16 +222,12 @@ function draw() {
     S1 = new NormSampler(mu=Mues[2].value(),sigma=Sigmas[2].value(),scaley= Scales[2].value(),
                        N=NN,sd_rang=sd_rang,colorx=[0,255,0]);
     //S1.getSamples(n=5);
-    if (!checkboxHide.checked()){
     S1.plotCurve(height/2);
-    }
     //S1.plotSamples(Ylevel=height/2);
 
     if (G1sampl){
       S1.getSamples(n=n);
-      if (!checkboxHide.checked()){
       S1.plotSamples(Ylevel=height/2);
-      }
       S1.plotSamples_X(Ylevel=height/2+40,r=[20,20],alphax=100)
     }
 
@@ -315,15 +243,11 @@ function draw() {
   S2 = new NormSampler(mu=Mues[1].value(),sigma=Sigmas[1].value(),scaley= Scales[1].value(),
                      N=NN,sd_rang=sd_rang,colorx=[0,0,255]);
   //S2.getSamples(n=5);
-  if (!checkboxHide.checked()){
   S2.plotCurve(height/2)
-  }
   //S2.plotSamples(Ylevel=height/2)
   if (G2sampl){
     S2.getSamples(n=n);
-    if (!checkboxHide.checked()){
     S2.plotSamples(Ylevel=height/2);
-    }
     S2.plotSamples_X(Ylevel=height/2+40,r=[20,20],alphax=100)
   }
   if (S2.Sx.length>0){
@@ -379,337 +303,18 @@ function draw() {
   //line(0, 0, 150, 0);
   //line(-(width+200), -height, -width+200,  -height/2);
   textSize(45);
-  text("Statistics", -width/5 + 30, (width+270));
-  textSize(20);
-  textStyle(ITALIC);
-  text("©nikeshbajaj", -width/2 - 100, (width+280));
-  textStyle(NORMAL);
+  text("Statistics", -width/5, (width+270));
   pop();
-  stroke(0,0,0);
   strokeWeight(2);
-  setLineDash([5,5])
-  line(width+38, height/2, width+38,  height);        //blue sidelines
-  line(width-210, height-100, width+220,  height-100);
-  setLineDash([1,1])
+  line(width+38, height/2, width+38,  height);
+  line(width+20, height-100, width+220,  height-100);
 
   textSize(15);
-  fill(0);
-  stroke(0,0,0);
-  strokeWeight(1);
-  //text('@nikeshbajaj',50,height/2-10)
-  // text('@nikeshbajaj',50,height-90)
-  text('alpha',35, height-94);
-
-  let a = float(palpha_choose.value());
-  if (a!=p_alpha){
-    console.log('alpha changed');
-    console.log(p_alpha);
-    clear_trials();
-    p_alpha = a;
-  }
-  let pval_tstat = ttest(S1,S2);
-
-  // text(pval_tstat[0],150,height-50);
-  // text(pval_tstat[1],150,height-10);
-
-
-
-}
-
-
-function redraw_curves(){
-  // background(backgroundcolor);
-  // background(244,255, 181);
-  if (checkbox_background_color.checked()){
-    background(127);
-  }else{
-    background(254, 255, 224);
-  }
-  // background(254, 255, 224);
-  dwargrid(50,50);
-  textSize(10);
   fill(0);
   stroke(0,0,0,20);
   strokeWeight(1);
   //text('@nikeshbajaj',50,height/2-10)
-  text("NikB",width+overlay-50,20)
-  strokeWeight(0);
-  textAlign(CENTER, CENTER);
-  textSize(38);
-  //stroke(0,255,0,20);
-  fill(0);
-  text("V3.0",width+overlay-50,50)
-  //fill(0);
-  textSize(32);
-  stroke(0,0,0,20);
-  text('N=',width+60, 60*6)
-  n = int(input.value());
-
-  text('T=',width+200, 60*6)
-  T = int(inputT.value());
-
-  textSize(24);
-  text('c=',width+210, 51*6-10)
-  CIc = float(inputCI.value());
-
-  //text(int(n),width-50, 60*7)
-  textSize(25);
-  for (let i=0;i<Mues.length;i++){
-      if (i==1){
-        text('μ', Mues[i].x -20, Mues[i].y+10); //Sigmas
-        text('σ', Sigmas[i].x -20, Sigmas[i].y+10);
-        text('s', Scales[i].x -20, Scales[i].y+10);
-      }else{
-        text('μ', Mues[i].x + 20 + Mues[i].width, Mues[i].y+10);
-        text('σ', Sigmas[i].x + 20 + Sigmas[i].width, Sigmas[i].y+10);
-        text('s', Scales[i].x + 20 + Scales[i].width, Scales[i].y+10);
-      }
-  }
-  let v
-  if (checkboxP.checked()){
-    if (!checkboxHide.checked()){
-    P.plotCurve(height/2);
-    P.plotSamples(Ylevel=height/2);
-    }
-    P.plotSamples_X(Ylevel=height/2+40,r=[20,20],alphax=100);
-    if (P.Sx.length>0){
-      Px.add(P.mapXtoI(P.sample_mean),random(-jitter, jitter),P.get1ProbOf(P.sample_mean));
-    }
-  }
-
-  if (checkboxS1.checked()){
-    if (!checkboxHide.checked()){
-    S1.plotCurve(height/2);
-    S1.plotSamples(Ylevel=height/2);
-    }
-    S1.plotSamples_X(Ylevel=height/2+40,r=[20,20],alphax=100);
-    if (S1.Sx.length>0){
-      S1x.add(S1.mapXtoI(S1.sample_mean),random(-jitter, jitter),S1.get1ProbOf(S1.sample_mean));
-
-    }
-  }
-
-  if (checkboxS2.checked()){
-    if (!checkboxHide.checked()){
-      S2.plotCurve(height/2);
-      S2.plotSamples(Ylevel=height/2);
-      }
-    S2.plotSamples_X(Ylevel=height/2+40,r=[20,20],alphax=100);
-    if (S2.Sx.length>0){
-      v = (5+S2x.getLength()/4)
-      S2x.add(S2.mapXtoI(S2.sample_mean),random(-jitter, jitter),S2.get1ProbOf(S2.sample_mean));
-      }
-  }
-
-
-
-  PlotPoints(Px.x,Px.y,x0=0,y0=height/2+150,r=[2,20],colorx=P.color,100,Marker='rect');
-  PlotPoints(S1x.x,S1x.y,x0=0,y0=height/2+200,r=[2,20],colorx=S1.color,100,Marker='rect');
-  PlotPoints(S2x.x,S2x.y,x0=0,y0=height/2+250,r=[2,20],colorx=S2.color,100,Marker='rect');
-
-  strokeWeight(0);
-  stroke(0);
-  textAlign(CENTER, CENTER);
-  textSize(25);
-  let meanplot = false;
-  if (Px.x.length>0) {
-    fill(P.color[0],P.color[1],P.color[2]);
-    //noFill();
-    text('P ',50, height/2+150);
-    meanplot = true;
-  }
-  if (S1x.x.length>0){
-    fill(S1.color[0],S1.color[1],S1.color[2]);
-    text('G1',50, height/2+200);
-    meanplot = true;
-  }
-  if (S2x.x.length>0){
-    fill(S2.color[0],S2.color[1],S2.color[2]);
-    text('G2',50, height/2+250);
-    meanplot = true;
-  }
-
-
-
-  P.plotSamples_Y(Ylevel=height-100,Xlevel=width+90,r=[20,20],alphax=60)
-  S1.plotSamples_Y(Ylevel=height-100,Xlevel=width+140,r=[20,20],alphax=60)
-  S2.plotSamples_Y(Ylevel=height-100,Xlevel=width+190,r=[20,20],alphax=60)
-
-  strokeWeight(0);
-  textAlign(CENTER, CENTER);
-  textSize(32);
-  fill(0);
-  push();
-  let angle1 = radians(270);
-  //translate(100, 180);
-  rotate(angle1);
-  // Draw the letter to the screen
-  text("values", -(height/2+150), (width+20));
-  textSize(25);
-  if (meanplot){
-  text('means',-(height/2+200), 18);}
-  //line(0, 0, 150, 0);
-  //line(-(width+200), -height, -width+200,  -height/2);
-  textSize(45);
-  text("Statistics", -width/5 + 30, (width+270));
-  pop();
-  stroke(0,0,0);
-  strokeWeight(2);
-  setLineDash([5,5])
-  line(width+38, height/2, width+38,  height);        //blue sidelines
-  line(width-210, height-100, width+220,  height-100);
-  setLineDash([1,1])
-
-  textSize(15);
-  fill(0);
-  stroke(0,0,0);
-  strokeWeight(1);
-  //text('@nikeshbajaj',50,height/2-10)
-  // text('@nikeshbajaj',50,height-90)
-  text('alpha',35, height-94);
-
-  let a = float(palpha_choose.value());
-  if (a!=p_alpha){
-    console.log('alpha changed');
-    console.log(p_alpha);
-    clear_trials();
-    p_alpha = a;
-  }
-  // let = pval_tstat = ttest(S1,S2)
-}
-
-
-
-
-function hidetoggle(){
-  redraw_curves();
-
-  // if (checkboxP.checked()){
-  //   if (!checkboxHide.checked()){
-  //     P.plotCurve(height/2)
-  //     }
-  //   }
-
-  // if (checkboxS1.checked()){
-  //   if (!checkboxHide.checked()){
-  //     S1.plotCurve(height/2)
-  //     }
-  //   }
-
-
-
-  // if (checkboxS2.checked()){
-  // if (!checkboxHide.checked()){
-  //   S2.plotCurve(height/2)
-  //   }
-  // }
-
-
-
-}
-
-function ttest(S1,S2){
-  let pvalue = -1;
-  let tstats = -1;
-
-  console.log('G1')
-  // for (let x in S1.Sx) {
-  //   console.log(x);
-  // }
-  for (let i = 0; i < S1.Sx.length; i++) {
-    console.log(S1.Sx[i]);
-  }
-
-
-  console.log('G2')
-  // for (let x in S2.Sx) {
-  //   console.log(x);
-  // }
-
-  for (let i = 0; i < S2.Sx.length; i++) {
-    console.log(S2.Sx[i]);
-  }
-
-  if (S1.Sx.length>0){
-    if (S2.Sx.length>0){
-      var s1s2_samples = []
-      // console.log('G1_G2');
-      for (let i = 0; i < S1.Sx.length; i++){
-        s1s2_samples.push({G1x:S1.Sx[i],G2x:S2.Sx[i]})
-        console.log({G1x:S1.Sx[i],G2x:S2.Sx[i]});
-      }
-
-      var testVars = { G1x: 'metric', G2x: 'metric'};
-      var stats = new Statistics(s1s2_samples, testVars);
-      var results = stats.studentsTTestTwoSamples('G1x', 'G2x', { dependent: false });
-      pvalue = Math.round((results['pTwoSided'] + Number.EPSILON) * 10000) / 10000;
-      tstats = Math.round((results['tStatistic'] + Number.EPSILON) * 10000) / 10000;
-      if (pvalue<p_alpha){
-        ppass +=1;
-      }else{
-        pfail+=1
-      }
-      console.log('pvalue');
-      console.log(pvalue,tstats);
-
-
-      //line(width+38, height/2, width+38,  height);        //blue sidelines
-      //line(width+20, height-100, width+220,  height-100);
-      strokeWeight(0);
-      textAlign(LEFT);
-      text('Between G1 and G2',width+70,height-85);
-      textSize(20);
-      text('p-value = ',width+60,height-60);
-      text('t-stats   = ',width+60,height-30);
-      textAlign(RIGHT);
-      text(pvalue,width+220,height-60);
-      text(tstats,width+220,height-30);
-      textSize(15);
-
-
-    }
-
-    let totaltests = ppass+pfail
-    let ppass_per = Math.round((float(ppass/totaltests)) * 1000) / 1000;
-    let fpass_per = Math.round((float(pfail/totaltests)) * 1000) / 1000;
-
-
-    let w = 275
-    stroke(100,5,5);
-    strokeWeight(2);
-    // setLineDash([5,5])
-    line(w-113, height-100, w-113,  height-1);
-    line(w-163, height-100, w-163,  height-1);
-    line(w-210, height-50, w-60,  height-50);
-    line(w-210, height-100, w-60,  height-100);
-    // line(width-200, height-30, width-30,  height-30);
-    setLineDash([1,1])
-
-    strokeWeight(0);
-    textAlign(RIGHT,CENTER);
-    textSize(18);
-
-
-    text('Pass',w-168,height-120);
-    text('Fail',w-125,height-120);
-    text('Total',w-70,height-120);
-
-    // text('Pass',110,height-120);
-    // text('Fail',110+(168-125),height-120);
-    // text('Total',110+(168-70),height-120);
-
-    textAlign(CENTER,CENTER);
-    textSize(16);
-    text(ppass_per,w-185,height-65);
-    text(fpass_per,w-135,height-65);
-    text(ppass,w-185,height-25);
-    text(pfail,w-135,height-25);
-    text(totaltests,w-90,height-25);
-    textSize(15);
-
-  }
-
-  return [pvalue,tstats]
+  text('@nikeshbajaj',50,height-90)
 
 }
 
@@ -717,11 +322,7 @@ function PSampler(){
   //P.getSamples(n=5);
   //P.plotSamples(Ylevel=height/2)
   Psampl=true;
-  if (T>0){
-    for (let i = 0; i < T; i++) {
-    redraw();
-    }
-  }
+  redraw();
   Psampl=false;
 }
 
@@ -729,12 +330,7 @@ function G1Sampler(){
   //S1.getSamples(n=5);
   //S1.plotSamples(Ylevel=height/2)
   G1sampl=true;
-  if (T>0){
-    for (let i = 0; i < T; i++) {
-    redraw();
-    }
-  }
-  // redraw();
+  redraw();
   G1sampl=false;
 }
 
@@ -742,24 +338,14 @@ function G2Sampler(){
   //S2.getSamples(n=5);
   //S2.plotSamples(Ylevel=height/2)
   G2sampl=true;
-  if (T>0){
-    for (let i = 0; i < T; i++) {
-    redraw();
-    }
-  }
-  // redraw();
+  redraw();
   G2sampl=false;
 }
 
 function G12Sampler(){
   G1sampl=true;
   G2sampl=true;
-  if (T>0){
-    for (let i = 0; i < T; i++) {
-    redraw();
-    }
-  }
-  // redraw();
+  redraw();
   G1sampl=false;
   G2sampl=false;
 }
@@ -768,28 +354,16 @@ function PG12Sampler(){
   Psampl=true;
   G1sampl=true;
   G2sampl=true;
-  if (T>0){
-    for (let i = 0; i < T; i++) {
-    redraw();
-    }
-  }
-  // redraw();
+  redraw();
   G1sampl=false;
   G2sampl=false;
   Psampl=false;
-}
-
-
-function clear_trials(){
-  ppass=0;
-  pfail=0;
 }
 
 function clearMeans(){
   Px.clear();
   S1x.clear();
   S2x.clear();
-  clear_trials()
   redraw();
 }
 
@@ -896,22 +470,12 @@ class NormSampler{
     this.sample_mean = this.sample_mean/n;
 
     this.sample_sd = 0;
-    for (let i = 0; i < n; i++) {
-      this.sample_sd += pow(this.sample_mean-this.Sx[i],2)
-    }
+    for (let x in this.Sx) { this.sample_sd += pow(this.sample_mean-x,2)}
 
-    // for (let x in this.Sx) { this.sample_sd += pow(this.sample_mean-x,2)}
 
     this.sample_sd = sqrt(this.sample_sd/(n-1));
 
     this.sample_se = this.sample_sd/(sqrt(n));
-
-    // console.log('MEAN');
-    // console.log(this.sample_mean);
-    // console.log('SD');
-    // console.log(this.sample_sd);
-    // console.log('SE');
-    // console.log(this.sample_se);
   }
   plotCurve(Ylevel){
     //PlotXY(x,y,x0=0,y0=height/2,yx=1,color=(0,0,0))
@@ -921,23 +485,8 @@ class NormSampler{
     strokeWeight(2);
     //setLineDash([5, 5]);
     line(this.mapXtoI(this.mu), 0,this.mapXtoI(this.mu), height);
-    // let ni = int(input.value());
-    // console.log(this.mu, this.mapXtoI(this.mu))
-    // console.log(this.sigma, this.mapXtoI(this.sigma))
-    // console.log(ni, sqrt(ni))
-
-    if (checkboxCI.checked()){
-      strokeWeight(2);
-      setLineDash([5, 5]);
-      CIc = float(inputCI.value());
-      let ni = int(input.value());
-      // let ci = 1.96*250*this.sigma/this.n;
-      let ci = CIc*this.sigma/sqrt(ni);
-      line(this.mapXtoI(this.mu-ci), height-Ylevel+300,this.mapXtoI(this.mu-ci), height-Ylevel+100);
-      line(this.mapXtoI(this.mu+ci), height-Ylevel+300,this.mapXtoI(this.mu+ci), height-Ylevel+100);
-      // console.log(this.mu)
-      setLineDash([1, 1]);
-    }
+    line(this.mapXtoI(this.mu)-250*this.sigma/this.n, height-Ylevel+200,this.mapXtoI(this.mu)-250*this.sigma/this.n, height-Ylevel+100);
+    line(this.mapXtoI(this.mu)+250*this.sigma/this.n, height-Ylevel+200,this.mapXtoI(this.mu)+250*this.sigma/this.n, height-Ylevel+100);
     //setLineDash([1, 1]);
     PlotLine(this.IX,this.Y, x0=0, y0=Ylevel,colorx=this.color);
   }
@@ -1058,15 +607,7 @@ function setLineDash(list) {
   drawingContext.setLineDash(list);
 }
 function dwargrid(xd,yd){
-  setLineDash([0,0])
-  if (checkbox_background_color.checked()){
-    // background(127);
-    stroke(200);
-  }else{
-    // background(254, 255, 224);
-    stroke(10,10,10);
-  }
-  // stroke(10,10,10);
+  stroke(255);
   strokeWeight(0.5);
   let x1 = 0; x2= width +overlay;
   let y1 = 0; y2= height;
