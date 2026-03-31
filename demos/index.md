@@ -290,15 +290,17 @@ In addition, this widget helps to undertand the tuning of a threshold for a trai
 <br>
 <br>
 
-  <h2>List of demos</h2>
-  <hr>
-  <h3 id="about"><a href='./Stats/sampling' target="_blank">1. Statistics - Sampling and Inferencing.</a></h3>
-  <h3 id="about"><a href='./ML/roc_v1.html' target="_blank">2. ROC for PML Course (V1).</a></h3>
-  <h3 id="about"><a href='./ML/roc_v2.html' target="_blank">3. ROC for PML Course (V2).</a></h3>
-  <h3 id="about"><a href='./ML/roc_v3.html' target="_blank">4. ROC for PML Course (V3).</a></h3><p> V3 includes more details and explanation of the widget</p>
-  <h3 id="about"><a href='./SP/sinusoidal_player.html' target="_blank">5. Sinusoidal Player.</a></h3>
-  <h3 id="about"><a href='./Stats/hypothesis' target="_blank">6. Hypothesis Testing (with T-test).</a></h3>
-  <hr>
+<h2>List of demos</h2>
+<hr>
+<h3 id="about"><a href='./Stats/sampling' target="_blank">1. Statistics - Sampling and Inferencing.</a></h3>
+<h3 id="about"><a href='./ML/roc_v1.html' target="_blank">2. ROC for PML Course (V1).</a></h3>
+<h3 id="about"><a href='./ML/roc_v2.html' target="_blank">3. ROC for PML Course (V2).</a></h3>
+<h3 id="about"><a href='./ML/roc_v3.html' target="_blank">4. ROC for PML Course (V3).</a> <font size=3> V3 includes more details and explanation of the widget</font></h3>
+<h3 id="about"><a href='./SP/sinusoidal_player.html' target="_blank">5. Sinusoidal Player.</a></h3>
+<h3 id="about"><a href='./Stats/hypothesis' target="_blank">6. Hypothesis Testing (with T-test).</a></h3>
+<h3 id="about"><a href='./Stats/hypothesis_ci' target="_blank">7. Hypothesis Testing with CI (V3).</a></h3>
+<h3 id="about"><a href='./Stats/hypothesis_dev' target="_blank">8. Hypothesis Testing experimental (beta).</a></h3>
+<hr>
 
 
 
