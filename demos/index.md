@@ -141,6 +141,38 @@ In addition, this widget helps to undertand the tuning of a threshold for a trai
   </table>
 </div>
 
+<!-- Nueral Network -->
+<div style="width:90%; border:1px solid black;border-radius:20px 0 0 20px;margin:20px 0 20px 0;">
+  <table>
+  <tr>
+  <td>
+  <div class="column-box" style="width: 300px; margin:10px;">
+    <div class="card" style="height: 280px;padding-top:5px;">
+    <center><b>Neural Networks</b></center>
+    <hr style="margin-top:5px;margin-bottom:0px;">
+        <div class="card-body">
+          <p><strong>Neural Network:</strong> <a class="reference external" href="../mldl101/cover.gif" target="_blank">For Deeplearning</a></p>
+          <a class="reference external image-reference" href="../mldl101/cover.gif" target="_blank">
+          <img alt="sampling" src="../mldl101/cover.gif" target="_blank" style="width: 300px;"/></a>
+      </div>
+    </div>
+  </div>
+  </td>
+  <td style="vertical-align:top;">
+  <!-- <hr> -->
+  <br>
+  <!-- <br> -->
+  In Deeplerning, often a question comes up, how many layers should I have, and/or how many nodes/neurons I have have in my artchitecture. The answer rely on the complexity of the problem and available data.
+  This widget is desgined understand, how adding a layer of neuron increase the complexity of the decision boundary.
+   In given GIF, you could identify 
+    <ul >
+    <li>• the cases, where layers are adding the complexity of of boundary that is required. requored complexity.</li>
+    <li>• the cases, where some on nodes/neurons are learning same things -  reducndancy of nodes.</li>
+   </ul>
+  </td>
+  </tr>
+  </table>
+</div>
 <!-- Hypothesis V3-->
 <div style="width:90%; border:1px solid black;border-radius:20px 0 0 20px;margin:20px 0 20px 0;">
   <table>
@@ -171,39 +203,6 @@ In addition, this widget helps to undertand the tuning of a threshold for a trai
     <li>• <b>Confidence Interval</b></li>
     <li>• <a class="reference external" href="./Stats/hypothesis_dev" target="_blank">Experimental</a></li>
     </ul>
-  </td>
-  </tr>
-  </table>
-</div>
-
-<!-- Nueral Network -->
-<div style="width:90%; border:1px solid black;border-radius:20px 0 0 20px;margin:20px 0 20px 0;">
-  <table>
-  <tr>
-  <td>
-  <div class="column-box" style="width: 300px; margin:10px;">
-    <div class="card" style="height: 280px;padding-top:5px;">
-    <center><b>Neural Networks</b></center>
-    <hr style="margin-top:5px;margin-bottom:0px;">
-        <div class="card-body">
-          <p><strong>Neural Network:</strong> <a class="reference external" href="../mldl101/cover.gif" target="_blank">For Deeplearning</a></p>
-          <a class="reference external image-reference" href="../mldl101/cover.gif" target="_blank">
-          <img alt="sampling" src="../mldl101/cover.gif" target="_blank" style="width: 300px;"/></a>
-      </div>
-    </div>
-  </div>
-  </td>
-  <td style="vertical-align:top;">
-  <!-- <hr> -->
-  <br>
-  <!-- <br> -->
-  In Deeplerning, often a question comes up, how many layers should I have, and/or how many nodes/neurons I have have in my artchitecture. The answer rely on the complexity of the problem and available data.
-  This widget is desgined understand, how adding a layer of neuron increase the complexity of the decision boundary.
-   In given GIF, you could identify 
-    <ul >
-    <li>• the cases, where layers are adding the complexity of of boundary that is required. requored complexity.</li>
-    <li>• the cases, where some on nodes/neurons are learning same things -  reducndancy of nodes.</li>
-   </ul>
   </td>
   </tr>
   </table>
