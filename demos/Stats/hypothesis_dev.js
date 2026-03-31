@@ -153,11 +153,13 @@ function setup() {
   checkboxCI   = createCheckbox('P: CI', false);
   checkboxCIs   = createCheckbox('S: CI', false);
   checkbox_background_color   = createCheckbox('BG theme', false);
+  checkbox_keep_means   = createCheckbox('Keep X&#772;', true);
   // checkbox_keep_means   = createCheckbox('keep means', true);
   checkboxHide.changed(hidetoggle)
   checkboxCI.changed(hidetoggle)
   checkboxCIs.changed(hidetoggle)
   checkbox_background_color.changed(hidetoggle)
+  checkbox_keep_means.changed(hidetoggle)
   // checkbox_keep_means.changed(hidetoggle)
 
   checkboxP.position(width-170, 150);
@@ -167,7 +169,8 @@ function setup() {
   checkboxCI.position(width-170, 270-1);
   checkboxCIs.position(width-110, 270-1);
   checkbox_background_color.position(width-100, 130-1);
-  // checkbox_keep_means.position(width-80, 285);
+  // checkbox_background_color.position(width-100, 130-1);
+  checkbox_keep_means.position(width-175, 130-1);
 
   checkboxP.style("font-size", "25px");
   checkboxS1.style("font-size", "25px");
@@ -277,15 +280,13 @@ function draw() {
 
     if (Psampl){
       P.getSamples(n=n);
-      if (!checkboxHide.checked()){
-      P.plotSamples(Ylevel=height/2);
-      }
+      if (!checkboxHide.checked()){P.plotSamples(Ylevel=height/2);}
       P.plotSamples_X(Ylevel=height/2+40,r=[20,20],alphax=100);
       //P.plotSamples_Y(Ylevel=height/2 + height/4, Xlevel=width+50,r=[10,10],alphax=180)
     }
     if (P.Sx.length>0){
       //v = (5+Px.getLength()/4)
-
+      if (!checkbox_keep_means.checked()){Px.clear();}
       Px.add(P.mapXtoI(P.sample_mean),random(-jitter, jitter),P.get1ProbOf(P.sample_mean),0);
 
       if (checkboxCIs.checked()){
@@ -319,6 +320,7 @@ function draw() {
 
     if (S1.Sx.length>0){
       //v = (5+S1x.getLength()/4)
+      if (!checkbox_keep_means.checked()){S1x.clear();}
       S1x.add(S1.mapXtoI(S1.sample_mean),random(-jitter, jitter),S1.get1ProbOf(S1.sample_mean), S1.sample_se);
 
       if (checkboxCIs.checked()){
@@ -352,6 +354,7 @@ function draw() {
   }
   if (S2.Sx.length>0){
     v = (5+S2x.getLength()/4)
+    if (!checkbox_keep_means.checked()){S2x.clear();}
     S2x.add(S2.mapXtoI(S2.sample_mean),random(-jitter, jitter),S2.get1ProbOf(S2.sample_mean),S2.sample_se);
     if (checkboxCIs.checked()){
       let ci = float(inputCI.value());
