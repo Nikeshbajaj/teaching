@@ -6,7 +6,7 @@ layout: base
 <br>
 <br>
 
-# Collaborative Projects with Students (UG/PG)
+## Collaborative Projects with Students (UG/PG)
 
 All the projects will be **Open Sourced** for reproducibility and wider impact.
 
@@ -31,7 +31,7 @@ All the projects will be **Open Sourced** for reproducibility and wider impact.
     </div>
   </div>
   </td>
-  <td style="vertical-align:top;">
+  <td style="vertical-align:top; width: 300px;">
   <!-- <hr> -->
   <br>
   <!-- <br> -->
